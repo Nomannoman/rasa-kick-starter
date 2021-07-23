@@ -1,0 +1,36 @@
+version: "2.0" 
+responses: 
+
+  utter_ask_firstname:
+  - text: "Nice to see you. Please provide basic details to service you better. What is your first name?"
+
+  utter_ask_lastname:
+  - text: " {firstname}, please tell what is your last name?"
+
+  utter_ask_email:
+  - text: "Hey  {firstname}, please provide your official email id."
+
+  utter_ask_phno:
+  - text: "{firstname}, please give your phone number."
+
+  utter_confirm_firstname:
+  - text: "Please, confirm that your first name is  {firstname}"
+
+  utter_confirm_lastname:
+  - text: "Please, confirm that your last name is {lastname}"
+
+  utter_exact_first_name:
+  - text: "Please enter your first name"
+
+  utter_exact_last_name:
+  - text: "Please enter your last name"
+
+  utter_slots_values:
+  - text: "Please once check your details:\n
+          First name:   {firstname}\n
+          Last name: {lastname}\n
+          phone number: {phno}\n
+          email: {email}"
+
+  utter_askquestion:
+  - text: "Please ask your questions"

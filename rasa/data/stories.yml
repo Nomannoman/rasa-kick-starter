@@ -1,0 +1,1546 @@
+version: "2.0" 
+
+stories:
+
+- story: path1
+  steps:
+  - intent: q1
+  - action: action_sentiment_analysis
+- story: path2
+  steps:
+  - intent: q2
+  - action: action_sentiment_analysis
+- story: path3
+  steps:
+  - intent: q3
+  - action: action_sentiment_analysis
+- story: path4
+  steps:
+  - intent: q4
+  - action: action_sentiment_analysis
+- story: path5
+  steps:
+  - intent: q5
+  - action: action_sentiment_analysis
+- story: path6
+  steps:
+  - intent: q6
+  - action: action_sentiment_analysis
+- story: path7
+  steps:
+  - intent: q7
+  - action: action_sentiment_analysis
+- story: path8
+  steps:
+  - intent: q8
+  - action: action_sentiment_analysis
+- story: path9
+  steps:
+  - intent: q9
+  - action: action_sentiment_analysis
+- story: path10
+  steps:
+  - intent: q10
+  - action: action_sentiment_analysis
+- story: path11
+  steps:
+  - intent: q11
+  - action: action_sentiment_analysis
+- story: path12
+  steps:
+  - intent: q12
+  - action: action_sentiment_analysis
+- story: path13
+  steps:
+  - intent: q13
+  - action: action_sentiment_analysis
+- story: path14
+  steps:
+  - intent: q14
+  - action: action_sentiment_analysis
+- story: path15
+  steps:
+  - intent: q15
+  - action: action_sentiment_analysis
+- story: path16
+  steps:
+  - intent: q16
+  - action: action_sentiment_analysis
+- story: path17
+  steps:
+  - intent: q17
+  - action: action_sentiment_analysis
+- story: path18
+  steps:
+  - intent: q18
+  - action: action_sentiment_analysis
+- story: path19
+  steps:
+  - intent: q19
+  - action: action_sentiment_analysis
+- story: path20
+  steps:
+  - intent: q20
+  - action: action_sentiment_analysis
+- story: path21
+  steps:
+  - intent: q21
+  - action: action_sentiment_analysis
+- story: path22
+  steps:
+  - intent: q22
+  - action: action_sentiment_analysis
+- story: path23
+  steps:
+  - intent: q23
+  - action: action_sentiment_analysis
+- story: path24
+  steps:
+  - intent: q24
+  - action: action_sentiment_analysis
+- story: path25
+  steps:
+  - intent: q25
+  - action: action_sentiment_analysis
+- story: path26
+  steps:
+  - intent: q26
+  - action: action_sentiment_analysis
+- story: path27
+  steps:
+  - intent: q27
+  - action: action_sentiment_analysis
+- story: path28
+  steps:
+  - intent: q28
+  - action: action_sentiment_analysis
+- story: path29
+  steps:
+  - intent: q29
+  - action: action_sentiment_analysis
+- story: path30
+  steps:
+  - intent: q30
+  - action: action_sentiment_analysis
+- story: path31
+  steps:
+  - intent: q31
+  - action: action_sentiment_analysis
+- story: path32
+  steps:
+  - intent: q32
+  - action: action_sentiment_analysis
+- story: path33
+  steps:
+  - intent: q33
+  - action: action_sentiment_analysis
+- story: path34
+  steps:
+  - intent: q34
+  - action: action_sentiment_analysis
+- story: path35
+  steps:
+  - intent: q35
+  - action: action_sentiment_analysis
+- story: path36
+  steps:
+  - intent: q36
+  - action: action_sentiment_analysis
+- story: path37
+  steps:
+  - intent: q37
+  - action: action_sentiment_analysis
+- story: path38
+  steps:
+  - intent: q38
+  - action: action_sentiment_analysis
+- story: path39
+  steps:
+  - intent: q39
+  - action: action_sentiment_analysis
+- story: path40
+  steps:
+  - intent: q40
+  - action: action_sentiment_analysis
+- story: path41
+  steps:
+  - intent: q41
+  - action: action_sentiment_analysis
+- story: path42
+  steps:
+  - intent: q42
+  - action: action_sentiment_analysis
+- story: path43
+  steps:
+  - intent: q43
+  - action: action_sentiment_analysis
+- story: path44
+  steps:
+  - intent: q44
+  - action: action_sentiment_analysis
+- story: path45
+  steps:
+  - intent: q45
+  - action: action_sentiment_analysis
+- story: path46
+  steps:
+  - intent: q46
+  - action: action_sentiment_analysis
+- story: path47
+  steps:
+  - intent: q47
+  - action: action_sentiment_analysis
+- story: path48
+  steps:
+  - intent: q48
+  - action: action_sentiment_analysis
+- story: path49
+  steps:
+  - intent: q49
+  - action: action_sentiment_analysis
+- story: path50
+  steps:
+  - intent: q50
+  - action: action_sentiment_analysis
+- story: path51
+  steps:
+  - intent: q51
+  - action: action_sentiment_analysis
+- story: path52
+  steps:
+  - intent: q52
+  - action: action_sentiment_analysis
+- story: path53
+  steps:
+  - intent: q53
+  - action: action_sentiment_analysis
+- story: path54
+  steps:
+  - intent: q54
+  - action: action_sentiment_analysis
+- story: path55
+  steps:
+  - intent: q55
+  - action: action_sentiment_analysis
+- story: path56
+  steps:
+  - intent: q56
+  - action: action_sentiment_analysis
+- story: path57
+  steps:
+  - intent: q57
+  - action: action_sentiment_analysis
+- story: path58
+  steps:
+  - intent: q58
+  - action: action_sentiment_analysis
+- story: path59
+  steps:
+  - intent: q59
+  - action: action_sentiment_analysis
+- story: path60
+  steps:
+  - intent: q60
+  - action: action_sentiment_analysis
+- story: path61
+  steps:
+  - intent: q61
+  - action: action_sentiment_analysis
+- story: path62
+  steps:
+  - intent: q62
+  - action: action_sentiment_analysis
+- story: path63
+  steps:
+  - intent: q63
+  - action: action_sentiment_analysis
+- story: path64
+  steps:
+  - intent: q64
+  - action: action_sentiment_analysis
+- story: path65
+  steps:
+  - intent: q65
+  - action: action_sentiment_analysis
+- story: path66
+  steps:
+  - intent: q66
+  - action: action_sentiment_analysis
+- story: path67
+  steps:
+  - intent: q67
+  - action: action_sentiment_analysis
+- story: path68
+  steps:
+  - intent: q68
+  - action: action_sentiment_analysis
+- story: path69
+  steps:
+  - intent: q69
+  - action: action_sentiment_analysis
+- story: path70
+  steps:
+  - intent: q70
+  - action: action_sentiment_analysis
+- story: path71
+  steps:
+  - intent: q71
+  - action: action_sentiment_analysis
+- story: path72
+  steps:
+  - intent: q72
+  - action: action_sentiment_analysis
+- story: path73
+  steps:
+  - intent: q73
+  - action: action_sentiment_analysis
+- story: path74
+  steps:
+  - intent: q74
+  - action: action_sentiment_analysis
+- story: path75
+  steps:
+  - intent: q75
+  - action: action_sentiment_analysis
+- story: path76
+  steps:
+  - intent: q76
+  - action: action_sentiment_analysis
+- story: path77
+  steps:
+  - intent: q77
+  - action: action_sentiment_analysis
+- story: path78
+  steps:
+  - intent: q78
+  - action: action_sentiment_analysis
+- story: path79
+  steps:
+  - intent: q79
+  - action: action_sentiment_analysis
+- story: path80
+  steps:
+  - intent: q80
+  - action: action_sentiment_analysis
+- story: path81
+  steps:
+  - intent: q81
+  - action: action_sentiment_analysis
+- story: path82
+  steps:
+  - intent: q82
+  - action: action_sentiment_analysis
+- story: path83
+  steps:
+  - intent: q83
+  - action: action_sentiment_analysis
+- story: path84
+  steps:
+  - intent: q84
+  - action: action_sentiment_analysis
+- story: path85
+  steps:
+  - intent: q85
+  - action: action_sentiment_analysis
+- story: path86
+  steps:
+  - intent: q86
+  - action: action_sentiment_analysis
+- story: path87
+  steps:
+  - intent: q87
+  - action: action_sentiment_analysis
+- story: path88
+  steps:
+  - intent: q88
+  - action: action_sentiment_analysis
+- story: path89
+  steps:
+  - intent: q89
+  - action: action_sentiment_analysis
+- story: path90
+  steps:
+  - intent: q90
+  - action: action_sentiment_analysis
+- story: path91
+  steps:
+  - intent: q91
+  - action: action_sentiment_analysis
+- story: path92
+  steps:
+  - intent: q92
+  - action: action_sentiment_analysis
+- story: path93
+  steps:
+  - intent: q93
+  - action: action_sentiment_analysis
+- story: path94
+  steps:
+  - intent: q94
+  - action: action_sentiment_analysis
+- story: path95
+  steps:
+  - intent: q95
+  - action: action_sentiment_analysis
+- story: path96
+  steps:
+  - intent: q96
+  - action: action_sentiment_analysis
+- story: path97
+  steps:
+  - intent: q97
+  - action: action_sentiment_analysis
+- story: path98
+  steps:
+  - intent: q98
+  - action: action_sentiment_analysis
+- story: path99
+  steps:
+  - intent: q99
+  - action: action_sentiment_analysis
+- story: path100
+  steps:
+  - intent: q100
+  - action: action_sentiment_analysis
+- story: path101
+  steps:
+  - intent: q101
+  - action: action_sentiment_analysis
+- story: path102
+  steps:
+  - intent: q102
+  - action: action_sentiment_analysis
+- story: path103
+  steps:
+  - intent: q103
+  - action: action_sentiment_analysis
+- story: path104
+  steps:
+  - intent: q104
+  - action: action_sentiment_analysis
+- story: path105
+  steps:
+  - intent: q105
+  - action: action_sentiment_analysis
+- story: path106
+  steps:
+  - intent: q106
+  - action: action_sentiment_analysis
+- story: path107
+  steps:
+  - intent: q107
+  - action: action_sentiment_analysis
+- story: path108
+  steps:
+  - intent: q108
+  - action: action_sentiment_analysis
+- story: path109
+  steps:
+  - intent: q109
+  - action: action_sentiment_analysis
+- story: path110
+  steps:
+  - intent: q110
+  - action: action_sentiment_analysis
+- story: path111
+  steps:
+  - intent: q111
+  - action: action_sentiment_analysis
+- story: path112
+  steps:
+  - intent: q112
+  - action: action_sentiment_analysis
+- story: path113
+  steps:
+  - intent: q113
+  - action: action_sentiment_analysis
+- story: path114
+  steps:
+  - intent: q114
+  - action: action_sentiment_analysis
+- story: path115
+  steps:
+  - intent: q115
+  - action: action_sentiment_analysis
+- story: path116
+  steps:
+  - intent: q116
+  - action: action_sentiment_analysis
+- story: path117
+  steps:
+  - intent: q117
+  - action: action_sentiment_analysis
+- story: path118
+  steps:
+  - intent: q118
+  - action: action_sentiment_analysis
+- story: path119
+  steps:
+  - intent: q119
+  - action: action_sentiment_analysis
+- story: path120
+  steps:
+  - intent: q120
+  - action: action_sentiment_analysis
+- story: path121
+  steps:
+  - intent: q121
+  - action: action_sentiment_analysis
+- story: path122
+  steps:
+  - intent: q122
+  - action: action_sentiment_analysis
+- story: path123
+  steps:
+  - intent: q123
+  - action: action_sentiment_analysis
+- story: path124
+  steps:
+  - intent: q124
+  - action: action_sentiment_analysis
+- story: path125
+  steps:
+  - intent: q125
+  - action: action_sentiment_analysis
+- story: path126
+  steps:
+  - intent: q126
+  - action: action_sentiment_analysis
+- story: path127
+  steps:
+  - intent: q127
+  - action: action_sentiment_analysis
+- story: path128
+  steps:
+  - intent: q128
+  - action: action_sentiment_analysis
+- story: path129
+  steps:
+  - intent: q129
+  - action: action_sentiment_analysis
+- story: path130
+  steps:
+  - intent: q130
+  - action: action_sentiment_analysis
+- story: path131
+  steps:
+  - intent: q131
+  - action: action_sentiment_analysis
+- story: path132
+  steps:
+  - intent: q132
+  - action: action_sentiment_analysis
+- story: path133
+  steps:
+  - intent: q133
+  - action: action_sentiment_analysis
+- story: path134
+  steps:
+  - intent: q134
+  - action: action_sentiment_analysis
+- story: path135
+  steps:
+  - intent: q135
+  - action: action_sentiment_analysis
+- story: path136
+  steps:
+  - intent: q136
+  - action: action_sentiment_analysis
+- story: path137
+  steps:
+  - intent: q137
+  - action: action_sentiment_analysis
+- story: path138
+  steps:
+  - intent: q138
+  - action: action_sentiment_analysis
+- story: path139
+  steps:
+  - intent: q139
+  - action: action_sentiment_analysis
+- story: path140
+  steps:
+  - intent: q140
+  - action: action_sentiment_analysis
+- story: path141
+  steps:
+  - intent: q141
+  - action: action_sentiment_analysis
+- story: path142
+  steps:
+  - intent: q142
+  - action: action_sentiment_analysis
+- story: path143
+  steps:
+  - intent: q143
+  - action: action_sentiment_analysis
+- story: path144
+  steps:
+  - intent: q144
+  - action: action_sentiment_analysis
+- story: path145
+  steps:
+  - intent: q145
+  - action: action_sentiment_analysis
+- story: path146
+  steps:
+  - intent: q146
+  - action: action_sentiment_analysis
+- story: path147
+  steps:
+  - intent: q147
+  - action: action_sentiment_analysis
+- story: path148
+  steps:
+  - intent: q148
+  - action: action_sentiment_analysis
+- story: path149
+  steps:
+  - intent: q149
+  - action: action_sentiment_analysis
+- story: path150
+  steps:
+  - intent: q150
+  - action: action_sentiment_analysis
+- story: path151
+  steps:
+  - intent: q151
+  - action: action_sentiment_analysis
+- story: path152
+  steps:
+  - intent: q152
+  - action: action_sentiment_analysis
+- story: path153
+  steps:
+  - intent: q153
+  - action: action_sentiment_analysis
+- story: path154
+  steps:
+  - intent: q154
+  - action: action_sentiment_analysis
+- story: path155
+  steps:
+  - intent: q155
+  - action: action_sentiment_analysis
+- story: path156
+  steps:
+  - intent: q156
+  - action: action_sentiment_analysis
+- story: path157
+  steps:
+  - intent: q157
+  - action: action_sentiment_analysis
+- story: path158
+  steps:
+  - intent: q158
+  - action: action_sentiment_analysis
+- story: path159
+  steps:
+  - intent: q159
+  - action: action_sentiment_analysis
+- story: path160
+  steps:
+  - intent: q160
+  - action: action_sentiment_analysis
+- story: path161
+  steps:
+  - intent: q161
+  - action: action_sentiment_analysis
+- story: path162
+  steps:
+  - intent: q162
+  - action: action_sentiment_analysis
+- story: path163
+  steps:
+  - intent: q163
+  - action: action_sentiment_analysis
+- story: path164
+  steps:
+  - intent: q164
+  - action: action_sentiment_analysis
+- story: path165
+  steps:
+  - intent: q165
+  - action: action_sentiment_analysis
+- story: path166
+  steps:
+  - intent: q166
+  - action: action_sentiment_analysis
+- story: path167
+  steps:
+  - intent: q167
+  - action: action_sentiment_analysis
+- story: path168
+  steps:
+  - intent: q168
+  - action: action_sentiment_analysis
+- story: path169
+  steps:
+  - intent: q169
+  - action: action_sentiment_analysis
+- story: path170
+  steps:
+  - intent: q170
+  - action: action_sentiment_analysis
+- story: path171
+  steps:
+  - intent: q171
+  - action: action_sentiment_analysis
+- story: path172
+  steps:
+  - intent: q172
+  - action: action_sentiment_analysis
+- story: path173
+  steps:
+  - intent: q173
+  - action: action_sentiment_analysis
+- story: path174
+  steps:
+  - intent: q174
+  - action: action_sentiment_analysis
+- story: path175
+  steps:
+  - intent: q175
+  - action: action_sentiment_analysis
+- story: path176
+  steps:
+  - intent: q176
+  - action: action_sentiment_analysis
+- story: path177
+  steps:
+  - intent: q177
+  - action: action_sentiment_analysis
+- story: path178
+  steps:
+  - intent: q178
+  - action: action_sentiment_analysis
+- story: path179
+  steps:
+  - intent: q179
+  - action: action_sentiment_analysis
+- story: path180
+  steps:
+  - intent: q180
+  - action: action_sentiment_analysis
+- story: path181
+  steps:
+  - intent: q181
+  - action: action_sentiment_analysis
+- story: path182
+  steps:
+  - intent: q182
+  - action: action_sentiment_analysis
+- story: path183
+  steps:
+  - intent: q183
+  - action: action_sentiment_analysis
+- story: path184
+  steps:
+  - intent: q184
+  - action: action_sentiment_analysis
+- story: path185
+  steps:
+  - intent: q185
+  - action: action_sentiment_analysis
+- story: path186
+  steps:
+  - intent: q186
+  - action: action_sentiment_analysis
+- story: path187
+  steps:
+  - intent: q187
+  - action: action_sentiment_analysis
+- story: path188
+  steps:
+  - intent: q188
+  - action: action_sentiment_analysis
+- story: path189
+  steps:
+  - intent: q189
+  - action: action_sentiment_analysis
+- story: path190
+  steps:
+  - intent: q190
+  - action: action_sentiment_analysis
+- story: path191
+  steps:
+  - intent: q191
+  - action: action_sentiment_analysis
+- story: path192
+  steps:
+  - intent: q192
+  - action: action_sentiment_analysis
+- story: path193
+  steps:
+  - intent: q193
+  - action: action_sentiment_analysis
+- story: path194
+  steps:
+  - intent: q194
+  - action: action_sentiment_analysis
+- story: path195
+  steps:
+  - intent: q195
+  - action: action_sentiment_analysis
+- story: path196
+  steps:
+  - intent: q196
+  - action: action_sentiment_analysis
+- story: path197
+  steps:
+  - intent: q197
+  - action: action_sentiment_analysis
+- story: path198
+  steps:
+  - intent: q198
+  - action: action_sentiment_analysis
+- story: path199
+  steps:
+  - intent: q199
+  - action: action_sentiment_analysis
+- story: path200
+  steps:
+  - intent: q200
+  - action: action_sentiment_analysis
+- story: path201
+  steps:
+  - intent: q201
+  - action: action_sentiment_analysis
+- story: path202
+  steps:
+  - intent: q202
+  - action: action_sentiment_analysis
+- story: path203
+  steps:
+  - intent: q203
+  - action: action_sentiment_analysis
+- story: path204
+  steps:
+  - intent: q204
+  - action: action_sentiment_analysis
+- story: path205
+  steps:
+  - intent: q205
+  - action: action_sentiment_analysis
+- story: path206
+  steps:
+  - intent: q206
+  - action: action_sentiment_analysis
+- story: path207
+  steps:
+  - intent: q207
+  - action: action_sentiment_analysis
+- story: path208
+  steps:
+  - intent: q208
+  - action: action_sentiment_analysis
+- story: path209
+  steps:
+  - intent: q209
+  - action: action_sentiment_analysis
+- story: path210
+  steps:
+  - intent: q210
+  - action: action_sentiment_analysis
+- story: path211
+  steps:
+  - intent: q211
+  - action: action_sentiment_analysis
+- story: path212
+  steps:
+  - intent: q212
+  - action: action_sentiment_analysis
+- story: path213
+  steps:
+  - intent: q213
+  - action: action_sentiment_analysis
+- story: path214
+  steps:
+  - intent: q214
+  - action: action_sentiment_analysis
+- story: path215
+  steps:
+  - intent: q215
+  - action: action_sentiment_analysis
+- story: path216
+  steps:
+  - intent: q216
+  - action: action_sentiment_analysis
+- story: path217
+  steps:
+  - intent: q217
+  - action: action_sentiment_analysis
+- story: path218
+  steps:
+  - intent: q218
+  - action: action_sentiment_analysis
+- story: path219
+  steps:
+  - intent: q219
+  - action: action_sentiment_analysis
+- story: path220
+  steps:
+  - intent: q220
+  - action: action_sentiment_analysis
+- story: path221
+  steps:
+  - intent: q221
+  - action: action_sentiment_analysis
+- story: path222
+  steps:
+  - intent: q222
+  - action: action_sentiment_analysis
+- story: path223
+  steps:
+  - intent: q223
+  - action: action_sentiment_analysis
+- story: path224
+  steps:
+  - intent: q224
+  - action: action_sentiment_analysis
+- story: path225
+  steps:
+  - intent: q225
+  - action: action_sentiment_analysis
+- story: path226
+  steps:
+  - intent: q226
+  - action: action_sentiment_analysis
+- story: path227
+  steps:
+  - intent: q227
+  - action: action_sentiment_analysis
+- story: path228
+  steps:
+  - intent: q228
+  - action: action_sentiment_analysis
+- story: path229
+  steps:
+  - intent: q229
+  - action: action_sentiment_analysis
+- story: path230
+  steps:
+  - intent: q230
+  - action: action_sentiment_analysis
+- story: path231
+  steps:
+  - intent: q231
+  - action: action_sentiment_analysis
+- story: path232
+  steps:
+  - intent: q232
+  - action: action_sentiment_analysis
+- story: path233
+  steps:
+  - intent: q233
+  - action: action_sentiment_analysis
+- story: path234
+  steps:
+  - intent: q234
+  - action: action_sentiment_analysis
+- story: path235
+  steps:
+  - intent: q235
+  - action: action_sentiment_analysis
+- story: path236
+  steps:
+  - intent: q236
+  - action: action_sentiment_analysis
+- story: path237
+  steps:
+  - intent: q237
+  - action: action_sentiment_analysis
+- story: path238
+  steps:
+  - intent: q238
+  - action: action_sentiment_analysis
+- story: path239
+  steps:
+  - intent: q239
+  - action: action_sentiment_analysis
+- story: path240
+  steps:
+  - intent: q240
+  - action: action_sentiment_analysis
+- story: path241
+  steps:
+  - intent: q241
+  - action: action_sentiment_analysis
+- story: path242
+  steps:
+  - intent: q242
+  - action: action_sentiment_analysis
+- story: path243
+  steps:
+  - intent: q243
+  - action: action_sentiment_analysis
+- story: path244
+  steps:
+  - intent: q244
+  - action: action_sentiment_analysis
+- story: path245
+  steps:
+  - intent: q245
+  - action: action_sentiment_analysis
+- story: path246
+  steps:
+  - intent: q246
+  - action: action_sentiment_analysis
+- story: path247
+  steps:
+  - intent: q247
+  - action: action_sentiment_analysis
+- story: path248
+  steps:
+  - intent: q248
+  - action: action_sentiment_analysis
+- story: path249
+  steps:
+  - intent: q249
+  - action: action_sentiment_analysis
+- story: path250
+  steps:
+  - intent: q250
+  - action: action_sentiment_analysis
+- story: path251
+  steps:
+  - intent: q251
+  - action: action_sentiment_analysis
+- story: path252
+  steps:
+  - intent: q252
+  - action: action_sentiment_analysis
+- story: path253
+  steps:
+  - intent: q253
+  - action: action_sentiment_analysis
+- story: path254
+  steps:
+  - intent: q254
+  - action: action_sentiment_analysis
+- story: path255
+  steps:
+  - intent: q255
+  - action: action_sentiment_analysis
+- story: path256
+  steps:
+  - intent: q256
+  - action: action_sentiment_analysis
+- story: path257
+  steps:
+  - intent: q257
+  - action: action_sentiment_analysis
+- story: path258
+  steps:
+  - intent: q258
+  - action: action_sentiment_analysis
+- story: path259
+  steps:
+  - intent: q259
+  - action: action_sentiment_analysis
+- story: path260
+  steps:
+  - intent: q260
+  - action: action_sentiment_analysis
+- story: path261
+  steps:
+  - intent: q261
+  - action: action_sentiment_analysis
+- story: path262
+  steps:
+  - intent: q262
+  - action: action_sentiment_analysis
+- story: path263
+  steps:
+  - intent: q263
+  - action: action_sentiment_analysis
+- story: path264
+  steps:
+  - intent: q264
+  - action: action_sentiment_analysis
+- story: path265
+  steps:
+  - intent: q265
+  - action: action_sentiment_analysis
+- story: path266
+  steps:
+  - intent: q266
+  - action: action_sentiment_analysis
+- story: path267
+  steps:
+  - intent: q267
+  - action: action_sentiment_analysis
+- story: path268
+  steps:
+  - intent: q268
+  - action: action_sentiment_analysis
+- story: path269
+  steps:
+  - intent: q269
+  - action: action_sentiment_analysis
+- story: path270
+  steps:
+  - intent: q270
+  - action: action_sentiment_analysis
+- story: path271
+  steps:
+  - intent: q271
+  - action: action_sentiment_analysis
+- story: path272
+  steps:
+  - intent: q272
+  - action: action_sentiment_analysis
+- story: path273
+  steps:
+  - intent: q273
+  - action: action_sentiment_analysis
+- story: path274
+  steps:
+  - intent: q274
+  - action: action_sentiment_analysis
+- story: path275
+  steps:
+  - intent: q275
+  - action: action_sentiment_analysis
+- story: path276
+  steps:
+  - intent: q276
+  - action: action_sentiment_analysis
+- story: path277
+  steps:
+  - intent: q277
+  - action: action_sentiment_analysis
+- story: path278
+  steps:
+  - intent: q278
+  - action: action_sentiment_analysis
+- story: path279
+  steps:
+  - intent: q279
+  - action: action_sentiment_analysis
+- story: path280
+  steps:
+  - intent: q280
+  - action: action_sentiment_analysis
+- story: path281
+  steps:
+  - intent: q281
+  - action: action_sentiment_analysis
+- story: path282
+  steps:
+  - intent: q282
+  - action: action_sentiment_analysis
+- story: path283
+  steps:
+  - intent: q283
+  - action: action_sentiment_analysis
+- story: path284
+  steps:
+  - intent: q284
+  - action: action_sentiment_analysis
+- story: path285
+  steps:
+  - intent: q285
+  - action: action_sentiment_analysis
+- story: path286
+  steps:
+  - intent: q286
+  - action: action_sentiment_analysis
+- story: path287
+  steps:
+  - intent: q287
+  - action: action_sentiment_analysis
+- story: path288
+  steps:
+  - intent: q288
+  - action: action_sentiment_analysis
+- story: path289
+  steps:
+  - intent: q289
+  - action: action_sentiment_analysis
+- story: path290
+  steps:
+  - intent: q290
+  - action: action_sentiment_analysis
+- story: path291
+  steps:
+  - intent: q291
+  - action: action_sentiment_analysis
+- story: path292
+  steps:
+  - intent: q292
+  - action: action_sentiment_analysis
+- story: path293
+  steps:
+  - intent: q293
+  - action: action_sentiment_analysis
+- story: path294
+  steps:
+  - intent: q294
+  - action: action_sentiment_analysis
+- story: path295
+  steps:
+  - intent: q295
+  - action: action_sentiment_analysis
+- story: path296
+  steps:
+  - intent: q296
+  - action: action_sentiment_analysis
+- story: path297
+  steps:
+  - intent: q297
+  - action: action_sentiment_analysis
+- story: path298
+  steps:
+  - intent: q298
+  - action: action_sentiment_analysis
+- story: path299
+  steps:
+  - intent: q299
+  - action: action_sentiment_analysis
+- story: path300
+  steps:
+  - intent: q300
+  - action: action_sentiment_analysis
+- story: path301
+  steps:
+  - intent: q301
+  - action: action_sentiment_analysis
+- story: path302
+  steps:
+  - intent: q302
+  - action: action_sentiment_analysis
+- story: path303
+  steps:
+  - intent: q303
+  - action: action_sentiment_analysis
+- story: path304
+  steps:
+  - intent: q304
+  - action: action_sentiment_analysis
+- story: path305
+  steps:
+  - intent: q305
+  - action: action_sentiment_analysis
+- story: path306
+  steps:
+  - intent: q306
+  - action: action_sentiment_analysis
+- story: path307
+  steps:
+  - intent: q307
+  - action: action_sentiment_analysis
+- story: path308
+  steps:
+  - intent: q308
+  - action: action_sentiment_analysis
+- story: path309
+  steps:
+  - intent: q309
+  - action: action_sentiment_analysis
+- story: path310
+  steps:
+  - intent: q310
+  - action: action_sentiment_analysis
+- story: path311
+  steps:
+  - intent: q311
+  - action: action_sentiment_analysis
+- story: path312
+  steps:
+  - intent: q312
+  - action: action_sentiment_analysis
+- story: path313
+  steps:
+  - intent: q313
+  - action: action_sentiment_analysis
+- story: path314
+  steps:
+  - intent: q314
+  - action: action_sentiment_analysis
+- story: path315
+  steps:
+  - intent: q315
+  - action: action_sentiment_analysis
+- story: path316
+  steps:
+  - intent: q316
+  - action: action_sentiment_analysis
+- story: path317
+  steps:
+  - intent: q317
+  - action: action_sentiment_analysis
+- story: path318
+  steps:
+  - intent: q318
+  - action: action_sentiment_analysis
+- story: path319
+  steps:
+  - intent: q319
+  - action: action_sentiment_analysis
+- story: path320
+  steps:
+  - intent: q320
+  - action: action_sentiment_analysis
+- story: path321
+  steps:
+  - intent: q321
+  - action: action_sentiment_analysis
+- story: path322
+  steps:
+  - intent: q322
+  - action: action_sentiment_analysis
+- story: path323
+  steps:
+  - intent: q323
+  - action: action_sentiment_analysis
+- story: path324
+  steps:
+  - intent: q324
+  - action: action_sentiment_analysis
+- story: path325
+  steps:
+  - intent: q325
+  - action: action_sentiment_analysis
+- story: path326
+  steps:
+  - intent: q326
+  - action: action_sentiment_analysis
+- story: path327
+  steps:
+  - intent: q327
+  - action: action_sentiment_analysis
+- story: path328
+  steps:
+  - intent: q328
+  - action: action_sentiment_analysis
+- story: path329
+  steps:
+  - intent: q329
+  - action: action_sentiment_analysis
+- story: path330
+  steps:
+  - intent: q330
+  - action: action_sentiment_analysis
+- story: path331
+  steps:
+  - intent: q331
+  - action: action_sentiment_analysis
+- story: path332
+  steps:
+  - intent: q332
+  - action: action_sentiment_analysis
+- story: path333
+  steps:
+  - intent: q333
+  - action: action_sentiment_analysis
+- story: path334
+  steps:
+  - intent: q334
+  - action: action_sentiment_analysis
+- story: path335
+  steps:
+  - intent: q335
+  - action: action_sentiment_analysis
+- story: path336
+  steps:
+  - intent: q336
+  - action: action_sentiment_analysis
+- story: path337
+  steps:
+  - intent: q337
+  - action: action_sentiment_analysis
+- story: path338
+  steps:
+  - intent: q338
+  - action: action_sentiment_analysis
+- story: path339
+  steps:
+  - intent: q339
+  - action: action_sentiment_analysis
+- story: path340
+  steps:
+  - intent: q340
+  - action: action_sentiment_analysis
+- story: path341
+  steps:
+  - intent: q341
+  - action: action_sentiment_analysis
+- story: path342
+  steps:
+  - intent: q342
+  - action: action_sentiment_analysis
+- story: path343
+  steps:
+  - intent: q343
+  - action: action_sentiment_analysis
+- story: path344
+  steps:
+  - intent: q344
+  - action: action_sentiment_analysis
+- story: path345
+  steps:
+  - intent: q345
+  - action: action_sentiment_analysis
+- story: path346
+  steps:
+  - intent: q346
+  - action: action_sentiment_analysis
+- story: path347
+  steps:
+  - intent: q347
+  - action: action_sentiment_analysis
+- story: path348
+  steps:
+  - intent: q348
+  - action: action_sentiment_analysis
+- story: path349
+  steps:
+  - intent: q349
+  - action: action_sentiment_analysis
+- story: path350
+  steps:
+  - intent: q350
+  - action: action_sentiment_analysis
+- story: path351
+  steps:
+  - intent: q351
+  - action: action_sentiment_analysis
+- story: path352
+  steps:
+  - intent: q352
+  - action: action_sentiment_analysis
+- story: path353
+  steps:
+  - intent: q353
+  - action: action_sentiment_analysis
+- story: path354
+  steps:
+  - intent: q354
+  - action: action_sentiment_analysis
+- story: path355
+  steps:
+  - intent: q355
+  - action: action_sentiment_analysis
+- story: path356
+  steps:
+  - intent: q356
+  - action: action_sentiment_analysis
+- story: path357
+  steps:
+  - intent: q357
+  - action: action_sentiment_analysis
+- story: path358
+  steps:
+  - intent: q358
+  - action: action_sentiment_analysis
+- story: path359
+  steps:
+  - intent: q359
+  - action: action_sentiment_analysis
+- story: path360
+  steps:
+  - intent: q360
+  - action: action_sentiment_analysis
+- story: path361
+  steps:
+  - intent: q361
+  - action: action_sentiment_analysis
+- story: path362
+  steps:
+  - intent: q362
+  - action: action_sentiment_analysis
+- story: path363
+  steps:
+  - intent: q363
+  - action: action_sentiment_analysis
+- story: path364
+  steps:
+  - intent: q364
+  - action: action_sentiment_analysis
+- story: path365
+  steps:
+  - intent: q365
+  - action: action_sentiment_analysis
+- story: path366
+  steps:
+  - intent: q366
+  - action: action_sentiment_analysis
+- story: path367
+  steps:
+  - intent: q367
+  - action: action_sentiment_analysis
+- story: path368
+  steps:
+  - intent: q368
+  - action: action_sentiment_analysis
+- story: path369
+  steps:
+  - intent: q369
+  - action: action_sentiment_analysis
+- story: path370
+  steps:
+  - intent: q370
+  - action: action_sentiment_analysis
+- story: path371
+  steps:
+  - intent: q371
+  - action: action_sentiment_analysis
+- story: path372
+  steps:
+  - intent: q372
+  - action: action_sentiment_analysis
+- story: path373
+  steps:
+  - intent: q373
+  - action: action_sentiment_analysis
+- story: path374
+  steps:
+  - intent: q374
+  - action: action_sentiment_analysis
+- story: path375
+  steps:
+  - intent: q375
+  - action: action_sentiment_analysis
+
+- story: haystack
+  steps:
+  - intent: call_haystack
+  - action: action_default_fallback
+
+- story: mail
+  steps:
+  - intent: mail
+  - action: action_mail
+
+- story: survey1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  #- intent: affirm
+  - action: details_form
+  - active_loop: details_form
+  - active_loop: 'null'
+  - action: utter_slots_values
+  - intent: affirm
+  - action: utter_askquestion
+
+- story: survey2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  #- intent: affirm
+  - action: details_form
+  - active_loop: details_form
+  - active_loop: 'null'
+  - action: utter_slots_values
+  - intent: deny
+  - action: action_set_first
+  - intent: affirm
+  - action: utter_askquestion
+
+
+# - story: handoff
+#   steps:
+#   - intent: direct_message
+#   - action: action_handoff

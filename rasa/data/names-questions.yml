@@ -1,0 +1,40 @@
+version: "2.0" 
+nlu: 
+  - intent: myname
+    examples: |
+      - [vinith](firstname)
+      - My name is [vinith Kumar](firstname)
+      - [Rakesh rathod](firstname)
+      - name is [Arjun kapoor](firstname)
+      - name [Sarvex](firstname)
+      - My first name is [dilgeet](firstname)
+      - I'm [Suresh](firstname)
+      - I'm [Raina](firstname)
+  - intent: myname_last
+    examples: |
+      - [Galla](lastname)
+      - My name is [Roy](lastname)
+      - [Kapoor](lastname)
+      - name is [Mehta](lastname)
+      - My last name is [Khandewala](lastname)
+      - [adani](lastname)
+      - [advani](lastname)
+  - intent: emailid
+    examples: |
+      - [rakesh.kumar@hub.com](email)
+      - My official email id is [vinith.reddy@mno.com](email)
+      - My email id is [rakesh.tiwari@abc.com](email)
+      - My email id [abcd@qwe.com](email)
+  - intent: phone_number
+    examples: |
+      - [1234567891](phno)
+      - Mobile number is [6789123456](phno)
+      - number is [9246813579](phno)
+      - number [9988776655](phno)  
+
+  - intent: direct_message
+    examples: |
+      - support team
+      - human handoff
+      - direct message
+      - connect to human
