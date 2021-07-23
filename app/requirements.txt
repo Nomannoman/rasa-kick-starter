@@ -1,0 +1,4 @@
+tensorflow-hub
+tensorflow
+spacy
+farm-haystack
