@@ -1,0 +1,1137 @@
+version: "2.0"
+
+responses: 
+  utter_a1:
+  - text : " Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Assert False' from the Select Validator drop down.
+ Step 4: Enter your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a2:
+  - text : "A negative Change Driver is used when you do not want to trigger a CU if the data arrives to it during exeCUtion. If the data doesn't arrive then only CU will be triggered and no error will be shown  {emoji}"
+  utter_a3:
+  - text : "Aadhar reserved CU is where the user can upload the Aadhar card as an image or a file and the details will be extracted as data.  {emoji}"
+  utter_a4:
+  - text : "According to the NSLhub platform, Agent is the one who defines who can input and performs the tasks  {emoji}"
+  utter_a5:
+  - text : "According to the NSLhub platform, Agent is the one who defines who can input the values  {emoji}"
+  utter_a6:
+  - text : "Adding a sequential Change Unit is same as adding a normal Change Unit. .  {emoji}"
+  utter_a7:
+  - text : "After you have given the CU name, Select the CU and you can see the CU types  {emoji}"
+  utter_a8:
+  - text : "After you login to the platform, 
+ Step 1: Select the + Icon on the Library,
+ Step 2: Select Next, 
+ Step 3: Give the Solution Name and Select Next  {emoji}"
+  utter_a9:
+  - text : "Aggregate Function Reserved CU is a reserved Change Unit which is used to calculate an Aggregate Function like min, max etc., on a number data type column. This can also be applied on a subset of records when membership criteria is applied on Attributes to filter records. .  {emoji}"
+  utter_a10:
+  - text : "All the CUs are connected in Sequence until we define their types.  {emoji}"
+  utter_a11:
+  - text : "All the solutions and data will be stored on our NSLhub server and cloud  {emoji}"
+  utter_a12:
+  - text : "An alternative Change Driver will have a corresponding alternative in case its value doesn't arrive. Another Change Driver’s context id will be given in the Change Driver metadata for the CUrrent Change Driver and both will be considered to be alternative for each other. If either of them arrives during exeCUtion, the CU will be triggered and if none of them arrives an error will be shown  {emoji}"
+  utter_a13:
+  - text : "Assert False Validator enables the field only if the assert value is False  {emoji}"
+  utter_a14:
+  - text : "Assert True Validator enables to enter the values if the assert value is True  {emoji}"
+  utter_a15:
+  - text : "Attribute in NSL define the characteristics of an Entity and further distinct an Entity from other entities.  {emoji}"
+  utter_a16:
+  - text : "Audio UI control allows users to add or upload audio files as an input  {emoji}"
+  utter_a17:
+  - text : "Bank Cheque reserved CU is where the user can upload the bank cheque as an image or a file and the details will be extracted as data.  {emoji}"
+  utter_a18:
+  - text : "Boolean Functions under NSLhub Kit is used to create Boolean objects (basically to store one value out of two). It can be used to convert strings into Boolean and vice versa. .  {emoji}"
+  utter_a19:
+  - text : "By design. Considerations will be taken care in the upcoming version  {emoji}"
+  utter_a20:
+  - text : "CCAvenue is a payment gateway service which you can incorporate into a solution to send payment requests  {emoji}"
+  utter_a21:
+  - text : "Car insurance reserved CU is where the user can upload the soft copy as an image or a file, and the details will be extracted in a form of data.  {emoji}"
+  utter_a22:
+  - text : "Complete status defines that the transaction was completed whereas the triggered status defines that the solution was triggered and is yet to complete  {emoji}"
+  utter_a23:
+  - text : "Complete status defines that the transaction was completed.  {emoji}"
+  utter_a24:
+  - text : "Configure option is where you can define or select the layout of the Entity in a solution. It can be a table or Card  {emoji}"
+  utter_a25:
+  - text : "Date Range UI control is used when the user has to define the start and end date for a particular task. Ex: Validity of Passport, date of dep and date of return  {emoji}"
+  utter_a26:
+  - text : "Date UI control allows the users to select the date that maybe from past, present, or future.  {emoji}"
+  utter_a27:
+  - text : "Default value is used to describe an Attribute so that the end-user knows what input is to be provided.  {emoji}"
+  utter_a28:
+  - text : "Deposit slip reserved CU is where the user can upload the soft copy as an image or a file, and the details will be extracted in a form of data.  {emoji}"
+  utter_a29:
+  - text : "Draft mode  {emoji}"
+  utter_a30:
+  - text : "Driving license reserved CU is where the user can upload the soft copy as an image or file, and the details will be extracted in a form of data.  {emoji}"
+  utter_a31:
+  - text : "Embedded GSI is the set of the whole solution which can be used within another solution.  {emoji}"
+  utter_a32:
+  - text : "Extract option is used to extract solutions from sources/files such as programs, measures/metrics, SOPs, flowcharts, best practices, video, audio, and so on.  {emoji}"
+  utter_a33:
+  - text : "Generate Barcode reserved CU can be used to generate the Barcode for the information that we want to display if the code is scanned.  {emoji}"
+  utter_a34:
+  - text : "Generate QR code reserved CU is used to generate the QR code for the information that the user wants to display when the code is scanned.  {emoji}"
+  utter_a35:
+  - text : "Go to Entity library, find the Entity that you wish to update, add the Attribute and follow the approval process. If you have already used this Entity in any of the CUs, replace the previous version of Entity with updated Entity for seamless exeCUtion of solution.  {emoji}"
+  utter_a36:
+  - text : "If you're working in teams you can publish your solution following the below steps
+ Step 1: Save the solution if it was not saved. 
+ Step 2: Select Finish, 
+ Step 3: Select Review , 
+ Step 4: Select Reviewer, 
+ Step 5: Select the Reviewer from the drop down, 
+ Step 6: Select send.
+ Note : Once the reviewer has approved the solution, it gets published.
+ 
+ If you're working as an individual you can publish the solution by following the below steps
+ Step 1: Save the solution if it was not saved. 
+ Step 2: Select Finish, 
+ Step 3: Select Review
+ Step 4: Select Publish
+ Step 5: Select Approve  {emoji}"
+  utter_a37:
+  - text : "In NSL, Change Driver Type provides the flexibility to make the Change Drivers (Entity/Attributes) as optional, negative or alternate in CUs.  {emoji}"
+  utter_a38:
+  - text : "Intermediate marks sheet reserved CU is where the user can upload the intermediate marksheet as an image or file and the details will be extracted as data.  {emoji}"
+  utter_a39:
+  - text : "It's used to measure the CU time while it gets executed. For example OTP time or transaction session timeouts.  {emoji}"
+  utter_a40:
+  - text : "Job description reserved CU can be used for HR and recruiting solutions where the job descriptions can be populated.  {emoji}"
+  utter_a41:
+  - text : "Lab report reserved CU can be used for medical and health care solutions. The user can upload the lab report as an image or a file and the details will be extracted as data.  {emoji}"
+  utter_a42:
+  - text : "Label UI is used to describe or label the Attribute filed under the Attribute  {emoji}"
+  utter_a43:
+  - text : "Length Type Validator is used when you want to restrict the number of characters or items to be entered in an input.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Length Type' from the Select Validator drop down.
+ Step 4: Enter the value that you wish to 
+ Step 5: Enter your error message 
+ Step 6: Select + Icon  {emoji}"
+  utter_a44:
+  - text : "Link option is used to link the CUs and skips to show CUs in a sequence. Example: CU1 to CU3 and skips the CU2 if the CU1 and CU3 are linked  {emoji}"
+  utter_a45:
+  - text : "Lipid profile is where the user can upload the lipid profile as an image or file and the details will be extracted as data.  {emoji}"
+  utter_a46:
+  - text : "Machine agent can be selected if the machine or system is running the operations or automatic triggers are defined.  {emoji}"
+  utter_a47:
+  - text : "Max File Size Type Validator is used to check that the file that has been chosen by the end user meets the maximum file size requirement before uploading in a server. If it does not follow the minimum defined size, an error message is shown  {emoji}"
+  utter_a48:
+  - text : "Max File Size Type Validator is used to check the file that has been chosen by the end user meets the maximum file size requirement before uploading in a server. If it does not follow the minimum defined size, an error message is shown  {emoji}"
+  utter_a49:
+  - text : "Max Type Validator is used when you want the end user to provide value which is smaller than or equal to the specified integer value.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Max Type' from the Select Validator drop down.
+ Step 4: Enter the maximum value that you wish to provide 
+ Step 5: Enter you error message
+ Step 6: Select + Icon  {emoji}"
+  utter_a50:
+  - text : "Max Type Validator sets the condition/limit in the field where the input provided by the end user must be an integer value lower than or equal to the number specified in the field. It is available for Currency, Decimal, Metric and Number UI controls  {emoji}"
+  utter_a51:
+  - text : "Max Type Validator sets the condition/limit to the field where the input provided by the end user must be an integer value lower than or equal to the number specified in the field. It is available for Currency, Decimal, Metric and Number UI controls  {emoji}"
+  utter_a52:
+  - text : "Metadata summarizes the basic information regarding an input or data and it is available at GSI and CU level  {emoji}"
+  utter_a53:
+  - text : "Metric UI is used to predefine the metrics like measurements. The Attribute field will display the Attribute fields': Hight's : xxx FT, cm  {emoji}"
+  utter_a54:
+  - text : "Min File Size Type Validator is used to check the file that has been chosen by the end user meets the minimum file size requirement before uploading in a server. If it does not follow the minimum defined size, an error message is shown  {emoji}"
+  utter_a55:
+  - text : "More option is used to choose the CU type like Alternate, Parallel, so on  {emoji}"
+  utter_a56:
+  - text : "NSL Date Reserved CU can be used to perform various functions on dates such as add years to date, get first day of next month, matching two dates, add days in date etc., The detailed procedure on how to create Date Reserved CU can be seen in the video.  {emoji}"
+  utter_a57:
+  - text : "NSL String functions can be used to perform various functions such as convert upper case to lower case, concatenate, matching two values etc.,  {emoji}"
+  utter_a58:
+  - text : "Negative Type is used when you want the end users to provide an input value which is strictly a negative.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Negative' from the Select Validator drop down.
+ Step 4: Enter your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a59:
+  - text : "Negative or Zero Validator Type is used when you want the end users to provide an input value which is either positive or zero.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select ' Negative or Zero ' from the Select Validator drop down.
+ Step 4: Enter your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a60:
+  - text : "Negative type Validator is used when you want an input value to be strictly negative. If a user provides either a positive value or 0, it will show an error message.  {emoji}"
+  utter_a61:
+  - text : "Nested CUs are triggered based on certain conditions being fulfilled.  {emoji}"
+  utter_a62:
+  - text : "No, Currently the platform does not allow to add DCDs at a CU level.  {emoji}"
+  utter_a63:
+  - text : "No, It's not mandatory to add an agent at the Entity level. You can add agent at GSI/CU/Entity/Attribute levels according to your need  {emoji}"
+  utter_a64:
+  - text : "No, it is not possible to delete the physical layer  {emoji}"
+  utter_a65:
+  - text : "No, the solution will be auto-saved in drafts even if you have not saved it in a Book  {emoji}"
+  utter_a66:
+  - text : "Not Empty type Validator is used when you do not want an input to be empty however can accept 0 as a value. It checks the length of the character should at least be one or the value must have at least have one item  {emoji}"
+  utter_a67:
+  - text : "Not Empty type Validator is used when you do not want an input to be empty.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Not Empty Type' from the Select Validator drop down.
+ Step 4: Type your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a68:
+  - text : "Not Zero Type is used when you want the end users to provide any integer value that is not 0 as an input
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Negative' from the Select Validator drop down.
+ Step 4: Enter your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a69:
+  - text : "Not Zero Type is used when you want the end users to provide any integer value that is not 0 as an input. It is available for Currency, Decimal, Metric, and Number UI Controls  {emoji}"
+  utter_a70:
+  - text : "Number UI control allows the User to add Numerical Values as inputs  {emoji}"
+  utter_a71:
+  - text : "Odometer reserved CU allows the user to upload the odometer reading in a form of a file or image and the system will capture the data and save it in the database.  {emoji}"
+  utter_a72:
+  - text : "Once you are into a solution 
+ Step 1: Hover over Save, 
+ Step 2: Select Save in a Book, 
+ Step 3: Provide your Book Name to create a new book  {emoji}"
+  utter_a73:
+  - text : "Once you have given your solution name you will be asked to select the agent according to the solution  {emoji}"
+  utter_a74:
+  - text : "Once you've selected an agent, you would be provided with an option to assign Rights at the solution design level and at the transaction level.  {emoji}"
+  utter_a75:
+  - text : "Optional Change Driver is used when you want to make a Change Driver optional to trigger a CU. The CU under this condition will be exeCUted even if the data does not arrive to the CU.  {emoji}"
+  utter_a76:
+  - text : "Optional Change Driver is used when you want to make a Change Driver optional to trigger a CU. The CU under this condition will be exeCUted even if the data does not arrive to the CU. For example, while writing a product review, uploading an image for the product is optional and not mandatory. If the image is provided, it would be helpful but even if not the CU should be triggered.  {emoji}"
+  utter_a77:
+  - text : "Optional Type Validator is used when you want an input field (Attribute) to be optional
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Optional Type' from the Select Validator drop down.
+ Step 4: Enter your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a78:
+  - text : "Passport reserved CU is where the passport copy can be uploaded as an image or a file and the details are captured as a form of data.  {emoji}"
+  utter_a79:
+  - text : "Pattern Type Validator is used to define the specific Pattern in which the input should be entered. If the defined pattern is not followed, an error message should occur. For example, Defined: at least one uppercase, one lower case, one number and special character  {emoji}"
+  utter_a80:
+  - text : "Payment Details Instamojo Reserved CU is used when you want to incorporate Instamojo payment gateways for online transactions. .  {emoji}"
+  utter_a81:
+  - text : "Paytm initiate reserved CU is used when you want to incorporate Paytm getaways for online transactions.  {emoji}"
+  utter_a82:
+  - text : "Paytm process transaction reserved CU is used to perform online Paytm transactions. This CU helps in processing the online payment via Paytm.  {emoji}"
+  utter_a83:
+  - text : "Paytm send OTP reserved CU is used to generate and send OTPs for online transactions via Paytm.  {emoji}"
+  utter_a84:
+  - text : "Physical and information layers can be found under each CU level.  {emoji}"
+  utter_a85:
+  - text : "Physical layer consists of all the input entities which are required to be filled by the end-user. You can create entities and Attributes in the physical layer  {emoji}"
+  utter_a86:
+  - text : "Positive Validator is used when you want the end users to provide an input value which is strictly a positive number.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Positive' from the Select Validator drop down.
+ Step 4: Enter your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a87:
+  - text : "Positive Validator is used when you want the end users to provide an input value which is strictly a positive number. If a user provides either a negative value or 0, an error message is shown  {emoji}"
+  utter_a88:
+  - text : "Positive or Zero Validator is used when you want the end users to provide an input value which is either positive or zero.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Positive or Zero' from the Select Validator drop down.
+ Step 4: Enter your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a89:
+  - text : "Quantification UI control is used to show the BETs of a solution in all vantage points  {emoji}"
+  utter_a90:
+  - text : "Razorpay create checkout is used when the user performs a transaction at the checkout time.  {emoji}"
+  utter_a91:
+  - text : "Razorpay verify reserved CU is used to verify the payment details for an online transactions via Razorpay.  {emoji}"
+  utter_a92:
+  - text : "Read QR code reserved CU is used to scan the QR code and displays the information on the code.  {emoji}"
+  utter_a93:
+  - text : "Read, Write and Execute are the Rights that need to be defined for every GSI and CU. Defining the Rights will allow the CU to act accordingly  {emoji}"
+  utter_a94:
+  - text : "Recursive CU is a type of trigger CU which function recursively based on the condition mentioned at the design time. A GSI can also be recursive as it extends the Recursive CU.
+ Step 1: Create a GSI, 
+ Step 2, Add the agent and assign rights, 
+ Step 3: Name and create CUs, 
+ Step 4: Name and Create Entities, 
+ Step 5: Name and Create Attributes, 
+ Step 6: Select the Change Unit that you want to recurring until its condition is met, 
+ Step 7: select more, 
+ Step 8: Select Recursive from the dropdown, 
+ Step 9: Give the value, 
+ Step 9: Select save, 
+ Step 10: Select the same CU again, 
+ Step 11: Select DCD, 
+ Step 12: Add the entities which you want to connect, 
+ Step 13: Select save 
+ .  {emoji}"
+  utter_a95:
+  - text : "Recursive CU is a type of trigger CU which function recursively based on the condition mentioned at the design time. A GSI can also be recursive as it extends the Recursive CU.Step 1: Create a GSI, 
+ Step 2, Add the agent and assign rights, 
+ Step 3: Name and create CUs, 
+ Step 4: Name and Create Entities, 
+ Step 5: Name and Create Attributes, 
+ Step 6: Select the Change Unit that you want to recurring until its condition is met, 
+ Step 7: select more, 
+ Step 8: Select Recursive from the dropdown, 
+ Step 9: Give the value, 
+ Step 9: Select save, 
+ Step 10: Select the same CU again, 
+ Step 11: Select DCD, 
+ Step 12: Add the entities which you want to connect, 
+ Step 13: Select save 
+ .  {emoji}"
+  utter_a96:
+  - text : "Required Validator is used when you an input field must be filled with a value by the end user.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Required' from the Select Validator drop down.
+ Step 4: Enter your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a97:
+  - text : "Reserved CU are created by NSLhub experts and are available for use in a solutions  {emoji}"
+  utter_a98:
+  - text : "Reserved CUs can be added from the NSLHUB Kit available on the NSL Platform.
+ Step 1: Select Name your CU, 
+ Step 2: Select NSLhub kit on the extreme left of the canvas. 
+ Step 3: Search for the reserved CU function you wish to add, 
+ Step 4: Select + icon to add NSL_ Functions  {emoji}"
+  utter_a99:
+  - text : "SMS reserve CU can be used to trigger SMS notification to the users. .  {emoji}"
+  utter_a100:
+  - text : "SSC Marks reserved CU is where the user can upload the marksheet as an image or a file and the details are captured and saved as data.  {emoji}"
+  utter_a101:
+  - text : "Schedule notification reserved CU is used to schedule and send notifications according to a schedule date and time.  {emoji}"
+  utter_a102:
+  - text : "Sharable Content Object Reference Model.  {emoji}"
+  utter_a103:
+  - text : "Show unlink option is used to view all the CUs which are not linked together.  {emoji}"
+  utter_a104:
+  - text : "Statistical Function Reserved CU is used to execute statistical functions in a solution. It has wide range of functions. .  {emoji}"
+  utter_a105:
+  - text : "Step 1: Create a GSI
+ Step 2: Add the Agent and assign rights, 
+ Step 3: Create the CU, 
+ Step 4: Create the Entity, 
+ Step 5: Add and create the Attributes
+ Step 6: Select Select UI control, 
+ Step 7: Add the required UI Control, 
+ Step 8: Select edit CU1, 
+ Step 9: Select CU 1 as alternate, 
+ Step 10: Alternate 1 CU as embedded GSI, 
+ Step 11: alternate CU2 as another CU  {emoji}"
+  utter_a106:
+  - text : "Step 1: Create a GSI, 
+ Step 2, Add the agent and assign rights, 
+ Step 3: Name and create CUs, 
+ Step 4: Name and Create Entities, 
+ Step 5: Name and Create Attributes, 
+ Step 6: Hover over the CUs that you want to create as alternates and delete them from the canvas, 
+ Step 7: Hover over the CU where you the alternates CU should play out, 
+ Step 8: Select Alternate, 
+ Step 9: Select Choose Alternate CU, 
+ Step 10: Select Add from library to add the first CUs which should be played out as alternate, 
+ Step 11: Select Next, 
+ Step 12: Hover over and choose the main CU to define the logic for the alternate CU. 
+ Step 13: Select Alternate, 
+ Step 14: Hover over the first CU and Select Edit, 
+ Step 15: Select the dropdown on the left and choose the Entity that you want to provide the logic for. 
+ Step 16: Similarly provide the logic for the other alternate CU, 
+ Step 17: Select Next,  {emoji}"
+  utter_a107:
+  - text : "Step 1: Create a GSI, 
+ Step 2, Add the agent and assign rights, 
+ Step 3: Name and create CUs, 
+ Step 4: Name and Create Entities, 
+ Step 5: Name and Create Attributes, 
+ Step 6: Hover over the CUs that you want to create as alternates and delete them from the canvas, 
+ Step 7: Hover over the CU where you the alternates CU should play out, 
+ Step 8: Select Alternate, 
+ Step 9: Select Choose Alternate CU, 
+ Step 10: Select Add from library to add the first CUs which should be played out as alternate, 
+ Step 11: Select Next, 
+ Step 12: Hover over and choose the main CU to define the logic for the alternate CU. 
+ Step 13: Select Alternate, 
+ Step 14: Hover over the first CU and Select Edit, 
+ Step 15: Select the dropdown on the left and choose the Entity that you want to provide the logic for. 
+ Step 16: Similarly provide the logic for the other alternate CU, 
+ Step 17: Select Next, 
+ .  {emoji}"
+  utter_a108:
+  - text : "Step 1: Create a GSI, 
+ Step 2: Add the agent and assign rights, 
+ Step 3: Name and create the CU, 
+ Step 4: Name and create Entities, 
+ Step 5: Name and create Attributes, 
+ Step 6: Select NSLhub kit on the extreme left of the canvas.
+ Step 7: Search for the Currency function, 
+ Step 8: Select + icon to add NSL_Currency Function, 
+ Step 9: Select the CU where you want to add the Currency function, 
+ Step: 10 Link the Attributes or entities through DCDs.  {emoji}"
+  utter_a109:
+  - text : "Step 1: Create a GSI, 
+ Step 2: Add the agent and assign rights, 
+ Step 3: Name and create the CU, 
+ Step 4: Name and create Entities, 
+ Step 5: Name and create Attributes, 
+ Step 6: Select NSLhub kit on the extreme left of the canvas. 
+ Step 7: Search for the reserved CU function you wish to add, 
+ step 8: Select + icon to add NSL_ Functions, 
+ Step 9: Select the CU where you want to add the Reserved CU function, 
+ Step:10 Select DCD, 
+ Step 11: select the Entity or the Attribute that you want to link. 
+ Step 12: Select select Target and choose the reserved CU which you wish to Link at the Attribute or the Entity level .  {emoji}"
+  utter_a110:
+  - text : "Step 1: Create a GSI, 
+ Step 2: Name and create CUs, 
+ Step 3: Name and create Entity , 
+ Step 4: Name and create Attribute, 
+ Step 5: Product ID and select UI , 
+ Step 6: search 'auto identifier' and add 
+ Step 7: Name verification CU and connect DCD, 
+ Step 8: CU1 > DCD and add DCD, 
+ Step 9: Go to trigger CES and Product ID and select Target as ' Display or the required field to display product ID,
+ Step 10: add more DCD.
+ .  {emoji}"
+  utter_a111:
+  - text : "Step 1: Create your GSI, 
+ Step 2: Select Name you Change Unit, 
+ Step 3: Name Your Change Unit. 
+ Step 4: Select Enter  {emoji}"
+  utter_a112:
+  - text : "Step 1: Hover over Entity Icon
+ Step 2: select the edit icon 
+ Step 3: Edit the Entity  {emoji}"
+  utter_a113:
+  - text : "Step 1: Hover over Save, 
+ Step 2: Select Save in a Book, 
+ Step 3: Select 'add from library' book icon and select book from the library.  {emoji}"
+  utter_a114:
+  - text : "Step 1: Name and Create CUs, 
+ Step 2: Select the CU where you want to create DCD connection, 
+ Step 3: Select DCD, 
+ Step 4: Add the Entity or the Attribute that you wish to send to the other CU. 
+ Step 5: Select select target, 
+ Step 6: Add the Entity or the Attribute where you want to receive the Attribute or the Entity of the selected CU, 
+ Step 7: Select Add More DCD  {emoji}"
+  utter_a115:
+  - text : "Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Asserttrue' from the Select Validator drop down.
+ Step 4: Enter your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a116:
+  - text : "Step 1: Select Name your Change Unit, 
+ Step 2: Select Add from Library, 
+ Step 3: Search for the CU on the search bar, 
+ Step 4: Select + icon to add the CU.  {emoji}"
+  utter_a117:
+  - text : "Step 1: Select Name your Change Unit., 
+ Step 2: Name your Change Unit, 
+ Step 3: Select Enter, 
+ Step 4: Hover over the CU and Select edit Icon. 
+ Step 5: Add Agent and assign Rights, 
+ Step 6: Select Physical or Information Layer, 
+ Step 7: Select Create Entity, 
+ Step 8: Name Your Entity  {emoji}"
+  utter_a118:
+  - text : "Step 1: Select Physical or Information Layer, 
+ Step 2: Select Add from Library, 
+ Step 3: Search for the Entity that you wish to add, 
+ Step 4: Select + icon to add the Entity
+ .  {emoji}"
+  utter_a119:
+  - text : "Step 1: Select Physical or Information Layer, 
+ Step 2: Select Create Entity, 
+ Step 3: Name Your Entity. 
+ Step 4: Select +Attribute. 
+ Step 5: Name your Attribute  {emoji}"
+  utter_a120:
+  - text : "Step 1: Select Physical or Information Layer, 
+ Step 2: Select Create Entity, 
+ Step 3: Name Your Entity. 
+ Step 4: Select +Attribute. 
+ Step 5: Name your Attribute
+ Step 6: Select Select UI Control
+ Step 7: Choose UI control from the Dropdown 
+ Step 8: Select + icon to add the UI Control  {emoji}"
+  utter_a121:
+  - text : "Step 1: Select on the extract icon. 
+ Step 2: Name the Solution, 
+ Step 3: Select the file type
+ Step 4: Add the file to be extracted
+ Step 5: Browse the file and add the file
+ Step 6: Select the file type - Doc, PDF, Image , Video
+ Step 7: Select Extract  {emoji}"
+  utter_a122:
+  - text : "Step 1: Select the + Icon on the Library, 
+ Step 2: Select Next
+ Step 3: Select the icon prompting Add From Library
+ Step 4: Search for the solution
+ Step 5: Select + icon to add the solution.  {emoji}"
+  utter_a123:
+  - text : "Step 1: Select the + Icon on the Library, 
+ Step 2: Select Next, 
+ Step 3: Name your solution or GSI, 
+ Step 4: Select Next  {emoji}"
+  utter_a124:
+  - text : "Step 1: Select the + Icon on the Library, 
+ Step 2: Select Next, 
+ Step 3: Name your solution, 
+ Step 4: Hover over Save, 
+ Step 5: Select Save in a Book, 
+ Step 6: Provide your Book Name or Add a pre-existing book from Library  {emoji}"
+  utter_a125:
+  - text : "Step 1: Select the + Icon on the Library, 
+ Step 2: Select the Change Unit Icon.
+ Step 3: Select create below the search 
+ Step 4: Create your CU  {emoji}"
+  utter_a126:
+  - text : "Step 1: Select the + Icon on the Library, 
+ Step 2: Select the Entity Icon.
+ Step 3: Select create below the search
+ Step 4: Create your Entity  {emoji}"
+  utter_a127:
+  - text : "Step 1: Select the Bulb Icon, 
+ Step 2: Search the solution name on the search bar, 
+ Step 3, Select the solution, 
+ Step 4: Edit the content what you wish to, 
+ Step 5: Select Submit
+ .  {emoji}"
+  utter_a128:
+  - text : "Step 1: Select the CU where DCD was added, 
+ Step 2: Select DCD 
+ Step 3: hover on the linked DCD 
+ Step 4: Edit the DCD  {emoji}"
+  utter_a129:
+  - text : "Step 1: Select the CU where DCD was added, 
+ Step 2: Select DCD 
+ Step 3: hover on the linked DCD 
+ Step 4: Edit the DCD 
+ .  {emoji}"
+  utter_a130:
+  - text : "Step:1 Select the caret down icon (⏷) on the top right of the canvas.
+ Step 2: Choose the Book radio button
+ Step 3: Select apply
+ Step 4: Search the book name on the search bar, 
+ Step 5: Select the Book.
+ OR
+ Step:1 Select the caret down icon (⏷) on the top right of the canvas.
+ Step 2: Choose the solution radio button
+ Step 3: Select apply
+ Step 4: Search the solution name on the search bar, 
+ Step 5: Select the Solution.  {emoji}"
+  utter_a131:
+  - text : "TDS reserved CU is where the user can upload his Form 16 or TDS files as an image or a file. The details will be captured in the form of data and saved into the database.  {emoji}"
+  utter_a132:
+  - text : "Template reserved CU is where you can give the values in a format or layout and the data will be saved into a database  {emoji}"
+  utter_a133:
+  - text : "Text in UI controls is the option where the end-user can give the text of a sentence or a word and you can use Rich Text UI Control when you want to incorporate multiple formatting styles and sizes.  {emoji}"
+  utter_a134:
+  - text : "The Aggregate Functions allowed are “ min, max, sum, avg, count” and should be given exact names while CU execution. (Case insensitive)  {emoji}"
+  utter_a135:
+  - text : "The Currency UI Control is used to give visual and non-visual CUs to the end-user to enter the amount in a specified Currency  {emoji}"
+  utter_a136:
+  - text : "The Email UI control allows the users to provide email in the field, it allows special characters.  {emoji}"
+  utter_a137:
+  - text : "The File UI control allows the users to upload or insert any file or a document into a solution  {emoji}"
+  utter_a138:
+  - text : "The HTML UI allows the users to enter a URL and play it as a link inside a solution. The users can open a URL within a solution.  {emoji}"
+  utter_a139:
+  - text : "The Hyperlink UI allows users to insert a URL as a hyperlink or provide the hyperlink to redirect toward the webpage  {emoji}"
+  utter_a140:
+  - text : "The Multi Select UI allows the users to select multiple options from the list provided below.  {emoji}"
+  utter_a141:
+  - text : "The Pan card reserved CU is where the user can upload the PAN card and the details will be extracted as data  {emoji}"
+  utter_a142:
+  - text : "The SCORM video UI allows users to insert a SCROM video into a solution.  {emoji}"
+  utter_a143:
+  - text : "The SCROM progress UI helps to display the progress of the SCROM files.  {emoji}"
+  utter_a144:
+  - text : "The SEC (Stakeholder Engagement Center) contains all the entities that matter to the agent whereas MCC deals with entities that matter for each stakeholder (human agent). It dynamically gives access to entities that the agents deal with  {emoji}"
+  utter_a145:
+  - text : "The Time UI control allows the users to input time as a value in the fields  {emoji}"
+  utter_a146:
+  - text : "The Typeahead UI allows the user to search with a drop down. When the user types anything in the field they will get the search results in dropdown  {emoji}"
+  utter_a147:
+  - text : "The WebEx UI control allows the users to control and manage the WebEx with the inputs  {emoji}"
+  utter_a148:
+  - text : "The agents available in the GSI would be Orghead, Customer, etc., which are available on the left side  {emoji}"
+  utter_a149:
+  - text : "The browse option is used to upload a file from your local system as an Entity or Attribute  {emoji}"
+  utter_a150:
+  - text : "The checkbox UI control allows the users to check or select multiple options from a list  {emoji}"
+  utter_a151:
+  - text : "The constant Change Drivers can be found in Attribute allocation and you can select whether it can be changed constantly or not by selecting Yes or No  {emoji}"
+  utter_a152:
+  - text : "The decimal UI control allows users to define the values with decimals in the field  {emoji}"
+  utter_a153:
+  - text : "The display option under Configure is used to choose the size of the layout. It may be Small, Medium, Big  {emoji}"
+  utter_a154:
+  - text : "The distance UI control allows the user to define the distance in terms of Km, Meter, and miles  {emoji}"
+  utter_a155:
+  - text : "The dropdown UI control allows users to select an item of any one value from a list that “drops down” once we Select it.  {emoji}"
+  utter_a156:
+  - text : "The encrypt text allows users to enter text in the fields and save it as an encrypted text  {emoji}"
+  utter_a157:
+  - text : "The events under UI control is a drop down where you can choose the dependencies. Ex: City dropdown is dependent on the States dropdown Attribute  {emoji}"
+  utter_a158:
+  - text : "The functional agents available in the CU are Human and Machine and the common agents available are orghead and Customer. you can select either of them depending on the CU and solution  {emoji}"
+  utter_a159:
+  - text : "The image UI control allows the users to upload or insert image files into the solution / database  {emoji}"
+  utter_a160:
+  - text : "The location UI control allows the users to define the location  {emoji}"
+  utter_a161:
+  - text : "The mobile number UI allows users to add the 10 digit mobile number in a specified format  {emoji}"
+  utter_a162:
+  - text : "The number function reserved CUs which are available under NSLhub Kit provides several constructs and ways to perform mathematical functions like average, sum, round off, min max, etc.,  {emoji}"
+  utter_a163:
+  - text : "The password UI control allows the users to give the password with some conditions and security. The values that are typed in the field will be encrypted  {emoji}"
+  utter_a164:
+  - text : "The preview UI control allows the users to preview the file as a thumbnail or any other format without opening it in another window.  {emoji}"
+  utter_a165:
+  - text : "The probability UI allows the users to calculate the probability between the defined values  {emoji}"
+  utter_a166:
+  - text : "The progress UI control is used to display the status or progress with predefined value. You can use it for Project Status, Percentage of work etc.  {emoji}"
+  utter_a167:
+  - text : "The push notification reserved CU is used when you want to integrate push notification feature into your solution  {emoji}"
+  utter_a168:
+  - text : "The radio button is the UI control where the end-user can select any one option. It is a circular element that works simply as multiple options.  {emoji}"
+  utter_a169:
+  - text : "The reserved CU 'CCAvenue verify response' is used to verify the payment request by the provider.  {emoji}"
+  utter_a170:
+  - text : "The reserved CU 'template generation QR code ' is used to generate the template for the QR code scan which defines the layout of the information.  {emoji}"
+  utter_a171:
+  - text : "The reserved CU 'validate OTP Paytm' can be used to verify Paytm OTP for online transactions.  {emoji}"
+  utter_a172:
+  - text : "The reserved CU Read QR Code is a predefined template to display the information once the QR code is scanned.  {emoji}"
+  utter_a173:
+  - text : "The resume reserved CU is where the user can upload the resume as a file and the important details are captured as data and saved into a database.  {emoji}"
+  utter_a174:
+  - text : "The signature UI allows the users to insert their signature. It can be used for documents signing and other authentications  {emoji}"
+  utter_a175:
+  - text : "The solution design Rights are read and write, where the solution developer can read and write the solution  {emoji}"
+  utter_a176:
+  - text : "The solution which was sent for approval would be under the collaborator tab which is at the top right corner on Canvas.  {emoji}"
+  utter_a177:
+  - text : "The system will redirect you to the back page  {emoji}"
+  utter_a178:
+  - text : "The video UI control allows the users to upload or insert a video file into a solution  {emoji}"
+  utter_a179:
+  - text : "There are several options available for the UI controls. .  {emoji}"
+  utter_a180:
+  - text : "There is no restriction of number of DCDs that can be given from a CU. Any number of DCDs can be given.  {emoji}"
+  utter_a181:
+  - text : "This UI control allows the users to insert or give Boolean values into the fields  {emoji}"
+  utter_a182:
+  - text : "This UI control allows users to add or upload audio files as an input  {emoji}"
+  utter_a183:
+  - text : "This UI control allows users to display and give the Current time and date  {emoji}"
+  utter_a184:
+  - text : "This UI control allows users to select the date and time from the list of fields. It can be used for to book appointments, etc.  {emoji}"
+  utter_a185:
+  - text : "To Create a solution with number functions, add a Number function CU from NSLhub Kit and define the values in the other CUs. .  {emoji}"
+  utter_a186:
+  - text : "To Delete a CU, Just hover over the CU and Select the red color delete Icon.  {emoji}"
+  utter_a187:
+  - text : "To edit Change Unit, place the Cursor on Change Unit and press edit icon.  {emoji}"
+  utter_a188:
+  - text : "To review the solution, 
+ Step 1: Go to the canvas
+ Step 2: Select the + Icon on the Library
+ Step 3: Select Next
+ Step 4: Select Collaborator
+ Step 5: Select Version notifications
+ Step 6: Select review the solution
+ Step 7: Select Approve.  {emoji}"
+  utter_a189:
+  - text : "To review the solution, 
+ Step 1: Go to the canvas
+ Step 2: Select the + Icon on the Library
+ Step 3: Select Next
+ Step 4: Select Collaborator
+ Step 5: Select Version notifications
+ Step 6: Select review the solution
+ Step 7: Select Reject.  {emoji}"
+  utter_a190:
+  - text : "Transaction Rights consists of Read write and execute where the solution should have a transaction and execution  {emoji}"
+  utter_a191:
+  - text : "Triggered status defines that the solution was triggered and is yet to complete  {emoji}"
+  utter_a192:
+  - text : "UI control under the entities section is an option to select the input type that the end-user can provide.  {emoji}"
+  utter_a193:
+  - text : "Unlink option is used to disable the link between the CUs  {emoji}"
+  utter_a194:
+  - text : "Update Reserved Change Unit as the name suggests is used for updating records of a particular Entity. It replaced create reserved CU which no longer works for updating records scenario. Create Reserved CU is strictly restricted to creating Entity records.  {emoji}"
+  utter_a195:
+  - text : "Utility bill reserved CU is where the user can upload the utility bill and the bill details and fields will be captured as data.  {emoji}"
+  utter_a196:
+  - text : "Validators are use to give the validations / conditions to an inputs.  {emoji}"
+  utter_a197:
+  - text : "Vehicle registration reserved CU is where the users can upload the RC and the details will be captured as data and saved into a database.  {emoji}"
+  utter_a198:
+  - text : "We can integrate any type of API into a solution. If the API is not integrated or found in the canvas, you can contact the solution team.  {emoji}"
+  utter_a199:
+  - text : "When you hover over the GSI, you can see the edit option to edit the GSI name  {emoji}"
+  utter_a200:
+  - text : "Yes you can Create a solution which generates auto product IDs  {emoji}"
+  utter_a201:
+  - text : "Yes you can delete the GSI  {emoji}"
+  utter_a202:
+  - text : "Yes, Aadhar reserved CU is where the user can upload the Aadhar card as an image or a file and the details will be extracted as data.  {emoji}"
+  utter_a203:
+  - text : "Yes, Attributes can be added, deleted and updated in a solution  {emoji}"
+  utter_a204:
+  - text : "Yes, Email reserve CU can be used to trigger email notification to the users and you can Create a solution that can send Emails. .  {emoji}"
+  utter_a205:
+  - text : "Yes, You can incorporate or integrate the payment gateways in your solutions. .  {emoji}"
+  utter_a206:
+  - text : "Yes, it is possible to incorporate WebEx widgets into your solutions using WebEx function.  {emoji}"
+  utter_a207:
+  - text : "Yes, logics are case sensitive, you can use the same names with Caps on and Caps off  {emoji}"
+  utter_a208:
+  - text : "Yes, the GSI and CU are case sensitive  {emoji}"
+  utter_a209:
+  - text : "Yes, the solution will be auto-saved in drafts even if you have not saved it in a Book  {emoji}"
+  utter_a210:
+  - text : "Yes, we can add several payment options in the payment type  {emoji}"
+  utter_a211:
+  - text : "Yes, we can add several payment options in the payment type. .  {emoji}"
+  utter_a212:
+  - text : "Yes, we have integrated the WebEx API to use it in your solutions  {emoji}"
+  utter_a213:
+  - text : "Yes, we have some functions which can verify between two Attributes  {emoji}"
+  utter_a214:
+  - text : "Yes, you can Create CUs directly in the library without creating a GSI first. However, to complete a solution you need to add your CUs to the GSI.
+ To directly create a CU - 
+ Step 1: Select the + Icon on the Library, 
+ Step 2: Select the Change Unit Icon.
+ Step 3: Select create below the search 
+ Step 4: Create your CU'  {emoji}"
+  utter_a215:
+  - text : "Yes, you can Create ERP solutions on our platform  {emoji}"
+  utter_a216:
+  - text : "Yes, you can Create a solution that can generate invoices for your Customers with a defined template  {emoji}"
+  utter_a217:
+  - text : "Yes, you can Create a solution with an option to upload videos into a solutions.  {emoji}"
+  utter_a218:
+  - text : "Yes, you can Create a solutions for payment gateways and transactions  {emoji}"
+  utter_a219:
+  - text : "Yes, you can Create a solutions for transactions like Paytm and google Pay.  {emoji}"
+  utter_a220:
+  - text : "Yes, you can Create a solutions for transactions.  {emoji}"
+  utter_a221:
+  - text : "Yes, you can Create any kind of websites on our platform  {emoji}"
+  utter_a222:
+  - text : "Yes, you can add existing solution while creating a new solution.  {emoji}"
+  utter_a223:
+  - text : "Yes, you can add several payment options in the payment type  {emoji}"
+  utter_a224:
+  - text : "Yes, you can add the reserved CU to upload PDF in the solution  {emoji}"
+  utter_a225:
+  - text : "Yes, you can assign embedded GSI as an alternate CU  {emoji}"
+  utter_a226:
+  - text : "Yes, you can change the Entity name with the edit option  {emoji}"
+  utter_a227:
+  - text : "Yes, you can change the name of the reserved CU if it is a template. If the CU starts with 'NSL_ ' you should not change the name  {emoji}"
+  utter_a228:
+  - text : "Yes, you can change the name of your Change Unit  {emoji}"
+  utter_a229:
+  - text : "Yes, you can connect two GSIs,  {emoji}"
+  utter_a230:
+  - text : "Yes, you can convert an image to a PDF in a solutions  {emoji}"
+  utter_a231:
+  - text : "Yes, you can create Entities directly in the library without creating a CU first. However, to complete a solution you need to add your entities to CUs
+ To directly create an Entity - 
+ Step 1: Select the + Icon on the Library, 
+ Step 2: Select the Entity Icon. 
+ Step 3: Select create below the search 
+ Step 4: Create your Entity  {emoji}"
+  utter_a232:
+  - text : "Yes, you can create WebEx Authentication in your solutions.  {emoji}"
+  utter_a233:
+  - text : "Yes, you can create dependent dropdown in the solution. .  {emoji}"
+  utter_a234:
+  - text : "Yes, you can create the entities in Trigger CES, to trigger the inputs with conditions  {emoji}"
+  utter_a235:
+  - text : "Yes, you can delete or edit an Entity  {emoji}"
+  utter_a236:
+  - text : "Yes, you can delete the CU at anytime once created  {emoji}"
+  utter_a237:
+  - text : "Yes, you can delete the DCD connections  {emoji}"
+  utter_a238:
+  - text : "Yes, you can delete the entities from the trigger CES  {emoji}"
+  utter_a239:
+  - text : "Yes, you can develop any complex solution/module of CRM using the features available in the platform.  {emoji}"
+  utter_a240:
+  - text : "Yes, you can edit or make changes to the solutions that are published  {emoji}"
+  utter_a241:
+  - text : "Yes, you can edit or make changes to the solutions that are published.  {emoji}"
+  utter_a242:
+  - text : "Yes, you can edit the UI options once selected or you can delete the Attribute and add another Attribute with a new UI  {emoji}"
+  utter_a243:
+  - text : "Yes, you can edit the content of a message or SMS after publishing the solution. However, the message will not be changed at the destination once it was sent without edits  {emoji}"
+  utter_a244:
+  - text : "Yes, you can edit the reserved CUs. However, make sure that you are not disturbing triggers  {emoji}"
+  utter_a245:
+  - text : "Yes, you can edit your GSI name and save it in the Book  {emoji}"
+  utter_a246:
+  - text : "Yes, you can extract the files with the option Extract  {emoji}"
+  utter_a247:
+  - text : "Yes, you can incorporate WhatsApp in your solutions to send messages. .  {emoji}"
+  utter_a248:
+  - text : "Yes, you can incorporate or integrate any APIs into a solution and the platform supports it.  {emoji}"
+  utter_a249:
+  - text : "Yes, you can see the recently used CUs and Entities in the search bar on the left  {emoji}"
+  utter_a250:
+  - text : "Yes, you can use Pattern Type Validator to define a specific pattern in which input should be entered. It validates the input with the pattern defined in the regexp element.  {emoji}"
+  utter_a251:
+  - text : "Yes, you can use multiple Validators for a single Attribute.  {emoji}"
+  utter_a252:
+  - text : "Yes, you can use your previous GSI/CUs/Entities/Attributes in the Current solution.  {emoji}"
+  utter_a253:
+  - text : "Yes, you have many functions which can generate different bills and receipts  {emoji}"
+  utter_a254:
+  - text : "Yes, you have the Currency Converter CU which can be used to convert the Currency values  {emoji}"
+  utter_a255:
+  - text : "Yes, you should connect your physical layer to the information layer to flow the Entity set after the Attribute values are given  {emoji}"
+  utter_a256:
+  - text : "Yes. By selecting the edit icon of an Entity, it can be edited and more Attributes can be added  {emoji}"
+  utter_a257:
+  - text : "Yes. Rights can be provided at GSI Level or Change Unit level or Entity Level or Attribute level according to the requirement of the user.  {emoji}"
+  utter_a258:
+  - text : "Yes. Rights can be provided at GSI Level/Change Unit level/Entity Level/Attribute level according to your requirement.  {emoji}"
+  utter_a259:
+  - text : "You Can create a CU and then provide time and space option  {emoji}"
+  utter_a260:
+  - text : "You can Create a basic solution with 2 to 3 CUs  {emoji}"
+  utter_a261:
+  - text : "You can Create a solution that can perform mathematical calculation. The function 'Total' will help you to calculate the sum of the given values  {emoji}"
+  utter_a262:
+  - text : "You can Create a solution which can verify the condition and answer it is true or false based on the condition. .  {emoji}"
+  utter_a263:
+  - text : "You can Create a solution with the feature 'Save as PDF' to save the content in PDF format  {emoji}"
+  utter_a264:
+  - text : "You can Create a solution with the feature 'Save content as Text File' to save the content in PDF format  {emoji}"
+  utter_a265:
+  - text : "You can Create a solution with the feature 'save content as password protected pdf file' to save the content in PDF format  {emoji}"
+  utter_a266:
+  - text : "You can Create a solution with the feature to add items to a list with the function 'add items to list'.  {emoji}"
+  utter_a267:
+  - text : "You can Create a solution with the feature to remove items from a list with the function 'remove items from list'.  {emoji}"
+  utter_a268:
+  - text : "You can Create a solution with the feature which can convert text into Boolean values. .  {emoji}"
+  utter_a269:
+  - text : "You can Create a solution with the features to remove all elements from a list with the function ' Clear list'. .  {emoji}"
+  utter_a270:
+  - text : "You can Create a solution with the function ' Get Maximum' that can calculate the maximum of two given values  {emoji}"
+  utter_a271:
+  - text : "You can Create a solution with the function ' check if even' that can check for even values  {emoji}"
+  utter_a272:
+  - text : "You can Create a solution with the function ' check if odd' to check the odd values  {emoji}"
+  utter_a273:
+  - text : "You can Select change event if the Attributes need to change according to another Attribute or list of Attributes  {emoji}"
+  utter_a274:
+  - text : "You can Select focus event if there is no dependency  {emoji}"
+  utter_a275:
+  - text : "You can Select load event if the Attribute should change according to the change that is loaded on another Attribute  {emoji}"
+  utter_a276:
+  - text : "You can choose the CU type once you have given the CU name  {emoji}"
+  utter_a277:
+  - text : "You can connect CUs by linking the entities and Attributes of the CUs through DCDs  {emoji}"
+  utter_a278:
+  - text : "You can connect the physical layer to the information layer at the time of adding DCDs.  {emoji}"
+  utter_a279:
+  - text : "You can create the Parallel CU if you want to connect two GSI with one CU and do not have common entities in both the GSIs.  {emoji}"
+  utter_a280:
+  - text : "You can create the entities as a piece of information in the information layer. The user cannot give any inputs for the entities in the information layer  {emoji}"
+  utter_a281:
+  - text : "You can edit Attributes by hovering over the Attribute and select edit  {emoji}"
+  utter_a282:
+  - text : "You can edit the CU Name, Physical Layer, Information Layer, and all the other elements  {emoji}"
+  utter_a283:
+  - text : "You can find the Validator at the time of defining the UI control. A Validator may be text or a number to predefine the min and max values that can be entered as an input  {emoji}"
+  utter_a284:
+  - text : "You can find the solution approval request in notifications tab with bell Icon on the left bottom on the canvas.  {emoji}"
+  utter_a285:
+  - text : "You can find the unsaved solutions in Drafts under my library  {emoji}"
+  utter_a286:
+  - text : "You can go back to GSI and then select the CU you wish to edit.  {emoji}"
+  utter_a287:
+  - text : "You can just review the solution at the time of review. If you wish to edit the solution, you can go back to your library  {emoji}"
+  utter_a288:
+  - text : "You can retrieve them by selecting the option 'Add from Library' while creating the solution  {emoji}"
+  utter_a289:
+  - text : "You can save as many solutions as possible  {emoji}"
+  utter_a290:
+  - text : "You can save your solution in a pre-existing book or in a new book  {emoji}"
+  utter_a291:
+  - text : "You can search for your solutions from the option add from library and select the previous solution you wish to use  {emoji}"
+  utter_a292:
+  - text : "You can search your books in MY Library at the search bar just beside your account icon  {emoji}"
+  utter_a293:
+  - text : "You can see reserved, alternate, sequential, Parallel, nested, embedded, exception, and recursive CUs  {emoji}"
+  utter_a294:
+  - text : "You can upload files from the system with the option 'Browse' under Create Entity  {emoji}"
+  utter_a295:
+  - text : "You can use 'Length Type' Validator if you want the length of the characters or items must fall within a specified range. For example, if you want the length of password be at most 10 characters long, you can use Length Type Validator to limit the length of the password.  {emoji}"
+  utter_a296:
+  - text : "You can use 'Multi Value' function to provide multiple values/data at an Entity or Attribute level. For example, if you select multi value at an Entity level you can create multiple records within one CU. Multiple data can be recorded for an Attribute if it is selected at an Attribute level  {emoji}"
+  utter_a297:
+  - text : "You can use 'Optional Type' Validator when you want an input field (Attribute) to be optional, where the user may or may not enter the values. For Example, you can make alternate phone number as an optional Attribute, giving the choice to the end user to enter it or not.  {emoji}"
+  utter_a298:
+  - text : "You can use 'Positive or Zero' Validator when you want the end users to provide an input value which is either positive or zero. If the users input a negative value, it will show an error message  {emoji}"
+  utter_a299:
+  - text : "You can use 'Required' Validator when you want an input field (Attribute) must be filled with some value by the end user before submitting a form.  {emoji}"
+  utter_a300:
+  - text : "You can use File Name Length Type Validator if you want an input field to accept a filename which meets specified character length  {emoji}"
+  utter_a301:
+  - text : "You can use File Name Length Type Validator if you want an input field to accept a filename which meets specified character length.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select ' File Name Length Type' from the Select Validator drop down.
+ Step 4: Enter the maximum value as per your wish 
+ Step 5: Enter your error message
+ Step 6: Select + Icon'  {emoji}"
+  utter_a302:
+  - text : "You can use File Name Pattern Type Validator if you want an input field to accept a specified file name pattern.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Pattern Type' from the Select Validator drop down.
+ Step 4: Define the pattern in RegExp 
+ Step 5: Type your error message 
+ Step 6: Select + Icon  {emoji}"
+  utter_a303:
+  - text : "You can use File Name Pattern Type Validator if you want an input field to accept a specified file name pattern. To specify file name patterns, you can use regular expressions field.  {emoji}"
+  utter_a304:
+  - text : "You can use Future Type Validator, when you want an input field to accept a date or time in the Future.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Future Type' from the Select Validator drop down.
+ Step 4: Type your error message 
+ Step 5: Fill in the required information in the fields
+ Step 6: Select + Icon  {emoji}"
+  utter_a305:
+  - text : "You can use Future Type Validator, when you want an input field to accept a date or time in the Future. It is available for CUrrent Date Time, Date, and Date time UI Controls  {emoji}"
+  utter_a306:
+  - text : "You can use Max File Size Type Validator, when you want an input field to accept a file or doCUment which meets maximum size requirement.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Max File Size Type' from the Select Validator drop down.
+ Step 4: Enter the values and units as per your wish 
+ Step 5: Enter your error message
+ Step 6: Select + Icon  {emoji}"
+  utter_a307:
+  - text : "You can use Min File Size Type Validator, when you want an input field to accept a file or doCUment which meets minimum size requirement.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Min File Size Type' from the Select Validator drop down.
+ Step 4: Enter the values and units as per your wish 
+ Step 5: Enter your error message
+ Step 6: Select + Icon  {emoji}"
+  utter_a308:
+  - text : "You can use Multi line UI control when you want to add multiple lines of text to your Attribute field. Whereas, you can use Rich Text UI Control when you want to incorporate multiple formatting styles and sizes.  {emoji}"
+  utter_a309:
+  - text : "You can use Negative or Zero Type Validator when you want user to provide an input value which is either negative or zero. If a positive value is entered, it will show an error message  {emoji}"
+  utter_a310:
+  - text : "You can use Past Type Validator, when you want an input field to accept a date or time in the Past.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Past Type' from the Select Validator drop down.
+ Step 4: Type your error message 
+ Step 5: Fill in the required information in the fields
+ Step 6: Select + Icon  {emoji}"
+  utter_a311:
+  - text : "You can use Past Type Validator, when you want an input field to accept a date or time in the Past. It is available for CUrrent Date Time, Date, and Date time UI Controls  {emoji}"
+  utter_a312:
+  - text : "You can use Past or Present Validator, when you want an input field to accept a date or time in the Past or in the present. 
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Past or Present' from the Select Validator drop down.
+ Step 4: Type your error message 
+ Step 5: Fill in the required information in the fields
+ Step 6: Select + Icon  {emoji}"
+  utter_a313:
+  - text : "You can use Past or Present Validator, when you want an input field to accept a date or time in the Past or in the present. It is available for CUrrent Date Time, Date, and Date time UI Controls  {emoji}"
+  utter_a314:
+  - text : "You can use Pattern Type Validator to define specific pattern in which input should be entered.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Pattern Type' from the Select Validator drop down.
+ Step 4: Define the pattern in RegEx 
+ Step 5: Type your error message 
+ Step 6: Select + Icon  {emoji}"
+  utter_a315:
+  - text : "You can use Pattern Type Validator to define specific pattern in which input should be entered.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Pattern Type' from the Select Validator drop down.
+ Step 4: Define the pattern in RegExp 
+ Step 5: Type your error message 
+ Step 6: Select + Icon  {emoji}"
+  utter_a316:
+  - text : "You can use Present Validator, when you want an input field to accept a date or time in the present . 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Present' from the Select Validator drop down.
+ Step 4: Type your error message 
+ Step 5: Fill in the required information in the fields
+ Step 6: Select + Icon  {emoji}"
+  utter_a317:
+  - text : "You can use Present Validator, when you want an input field to accept a date or time in the present . It is available for CUrrent Date Time, Date, and Date time UI Controls  {emoji}"
+  utter_a318:
+  - text : "You can use Present or Future Validator, when you want an input field to accept a date or time in the present or in the future. 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Present or Future' from the Select Validator drop down.
+ Step 4: Type your error message 
+ Step 5: Fill in the required information in the fields
+ Step 6: Select + Icon  {emoji}"
+  utter_a319:
+  - text : "You can use Present or Future Validator, when you want an input field to accept a date or time in the present or in the future. It is available for CUrrent Date Time, Date, and Date time UI Controls  {emoji}"
+  utter_a320:
+  - text : "You can use Text for simple words like Name, City, etc. and Multiple lines for description example feedbacks  {emoji}"
+  utter_a321:
+  - text : "You can use the decimal number function for very precise mathematical calculations involving decimals. .  {emoji}"
+  utter_a322:
+  - text : "You can use the function ' Get First Day of Current Month ' to fetch the first day of the Current month in a solution  {emoji}"
+  utter_a323:
+  - text : "You can use the function ' Get Time Zone' which displays the time zone name in the solution  {emoji}"
+  utter_a324:
+  - text : "You can use the function 'Add Days in Date' to add (subtract) number of days to (from) a specified local local date in a solution.  {emoji}"
+  utter_a325:
+  - text : "You can use the function 'Add Hours in Date' to add (subtract) number of specified hours to (from) a specified local time in a solution.  {emoji}"
+  utter_a326:
+  - text : "You can use the function 'Add Minutes in Date' to add (subtract) number of specified minutes to (from) a specified local time in a solution.  {emoji}"
+  utter_a327:
+  - text : "You can use the function 'Add Months in Date' to add (subtract) number of months to (from) a specified local date in a solution.  {emoji}"
+  utter_a328:
+  - text : "You can use the function 'Add Nanoseconds in Date' to add (subtract) number of specified Nanoseconds to (from) a specified local time in a solution.  {emoji}"
+  utter_a329:
+  - text : "You can use the function 'Add Seconds in Date' to add (subtract) number of specified Seconds to (from) a specified local time in a solution.  {emoji}"
+  utter_a330:
+  - text : "You can use the function 'Add Weeks in Date' to add (subtract) number of specified weeks to (from) a specified local date in a solution.  {emoji}"
+  utter_a331:
+  - text : "You can use the function 'Add Years in Date' to add (subtract) number of specified years to (from) a specified local date in a solution.  {emoji}"
+  utter_a332:
+  - text : "You can use the function 'Convert to Local Datetime' to convert a zoned time date to a local time and date in a solution.  {emoji}"
+  utter_a333:
+  - text : "You can use the function 'Convert to Local time' to convert the local time into a readable string in a solution  {emoji}"
+  utter_a334:
+  - text : "You can use the function 'Convert to Lower Case' to convert strings to lowercase letters in a solution.  {emoji}"
+  utter_a335:
+  - text : "You can use the function 'Convert to local date' to convert a date into a readable string in a solution.  {emoji}"
+  utter_a336:
+  - text : "You can use the function 'Date Difference in Nanoseconds' to calculate the difference between two dates in nanoseconds in a solution.  {emoji}"
+  utter_a337:
+  - text : "You can use the function 'Date Difference in Seconds' to calculate the difference between two dates in seconds in a solution.  {emoji}"
+  utter_a338:
+  - text : "You can use the function 'Day Name of Week' to get the name of the day of a week against a date in a solution.  {emoji}"
+  utter_a339:
+  - text : "You can use the function 'Day Number in Year' to get day of a year against a date which can be in the range of 1-365 or 366 in case of leap years.  {emoji}"
+  utter_a340:
+  - text : "You can use the function 'Day Number of Month' to get the day of a particular date which is in range 1-31 in a solution.  {emoji}"
+  utter_a341:
+  - text : "You can use the function 'Ends With' to check if a text or string ends with a given suffix in a solution.  {emoji}"
+  utter_a342:
+  - text : "You can use the function 'First Day of Current Year ' to get the First day of the Current year from the Current system date in a solution.  {emoji}"
+  utter_a343:
+  - text : "You can use the function 'First Day of Next Month ' to get the first day of the next month from the Current system date in a solution.  {emoji}"
+  utter_a344:
+  - text : "You can use the function 'First Day of Next Year ' to get the first day of the next year from the Current system date in a solution.  {emoji}"
+  utter_a345:
+  - text : "You can use the function 'Get Current Datetime' to get the Current date and time from the system clock in a solution.  {emoji}"
+  utter_a346:
+  - text : "You can use the function 'Get Local Time' to represent time as hour-minute-second without additional information such as timezone and date in a solution.  {emoji}"
+  utter_a347:
+  - text : "You can use the function 'Get Time Delay' to get the time delay difference between a local time and UTC in milliseconds in the solution.  {emoji}"
+  utter_a348:
+  - text : "You can use the function 'Get Timezone' to get the timezone, for example Etc./UTC/Asia/CalCUtta in a solution.  {emoji}"
+  utter_a349:
+  - text : "You can use the function 'Get length of text' to count the total number of elements in a text or a string in a solution.  {emoji}"
+  utter_a350:
+  - text : "You can use the function 'Hour of the Day' to get the hour of day against a local time which ranges from 0-23 in a solution.  {emoji}"
+  utter_a351:
+  - text : "You can use the function 'Last Day of Current Month ' to get the last day of the Current month from the Current system date in a solution.  {emoji}"
+  utter_a352:
+  - text : "You can use the function 'Last Day of Current Year ' to get the last day of the Current year from the Current system date in a solution.  {emoji}"
+  utter_a353:
+  - text : "You can use the function 'Minute of the Time' to fetch the minutes of an hour against a local time which ranges from 0-59 in a solution.  {emoji}"
+  utter_a354:
+  - text : "You can use the function 'Name of Month in Year' to get the month of the year for a specified date which ranges from 0-11, where 0 represents January, 1 is for February, and so on.  {emoji}"
+  utter_a355:
+  - text : "You can use the function 'Update Minute Value' to alter minutes of an hour in a solution  {emoji}"
+  utter_a356:
+  - text : "You can use the function 'Update Minute Value' to alter seconds of a minute of a local time in a solution  {emoji}"
+  utter_a357:
+  - text : "You can use the function 'Update Month Value' to alter the month in a solution.  {emoji}"
+  utter_a358:
+  - text : "You can use the function 'Update Old With New' to replace an old string with a new in a solution.  {emoji}"
+  utter_a359:
+  - text : "You can use the function 'Update nano seconds Value' to alter nanoseconds of a local time in a solution  {emoji}"
+  utter_a360:
+  - text : "You can use the function 'Update year day' to alter a day of a year in a solution.  {emoji}"
+  utter_a361:
+  - text : "You can use the function 'Update year value' to alter a year of a local date in a solution.  {emoji}"
+  utter_a362:
+  - text : "You can use the function 'convert Boolean to text ' to convert Boolean value into text.  {emoji}"
+  utter_a363:
+  - text : "You can use the function' is list empty' to check if a list is empty. .  {emoji}"
+  utter_a364:
+  - text : "You can use the list function reserved CU to store ordered collection. It can be used to insert, search, delete, update, duplicate elements and much more.  {emoji}"
+  utter_a365:
+  - text : "You can use the triggers in every CU and create condition-based Attributes  {emoji}"
+  utter_a366:
+  - text : "You have a function 'Get Minimum' to calculate the minimum of two given values  {emoji}"
+  utter_a367:
+  - text : "You have a function' contains' to check if a list contains sequence of characters or elements. .  {emoji}"
+  utter_a368:
+  - text : "You have a function' get size' to get the total number of elements in a list.  {emoji}"
+  utter_a369:
+  - text : "You have a function' sublist' which fetches the sublist of a list.  {emoji}"
+  utter_a370:
+  - text : "You have an option on NSL to extract the programming languages and convert it into a NSL solution  {emoji}"
+  utter_a371:
+  - text : "You will receive a pop up on stating the error  {emoji}"
+  utter_a372:
+  - text : "Your solutions can be deployed once you feel the solution is completed and published  {emoji}"
+  utter_a373:
+  - text : "Your unpublished solutions would be saved as drafts under the solution library  {emoji}"
+  utter_a374:
+  - text : "Zero Validator is used when you want 0 as an input value.
+ 
+ Step 1: Name your Attribute
+ Step 2: Select UI control
+ Step 3: Select 'Zero' from the Select Validator drop down.
+ Step 4: Enter your error message 
+ Step 5: Select + Icon  {emoji}"
+  utter_a375:
+  - text : "Zero Validator is used when you want 0 as an input value. It's available for Currency, decimal, Metric and number UI controls  {emoji}"
