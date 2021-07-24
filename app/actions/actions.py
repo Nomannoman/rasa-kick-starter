@@ -21,7 +21,6 @@ from haystack.file_converter.txt import TextConverter
 #from haystack.file_converter.docx import DocxToTextConverter
 from haystack.preprocessor.preprocessor import PreProcessor
 from email.mime.text import MIMEText
-
 from tensorflow import keras
 import tensorflow_hub as hub
 from rasa_sdk.forms import FormAction
@@ -29,7 +28,6 @@ from spacy import displacy
 import json
 import re
 import en_core_web_md
-
 nlp = en_core_web_md.load()
 from rasa_sdk.events import SlotSet, FollowupAction
 import requests
@@ -42,6 +40,7 @@ model = keras.models.load_model(os.getcwd() + '/actions/savedmodel')
 def predict_sentiment(sentence):
     sentiment_faces = [ "🤑", "😷", "😡"]
     sent = embed([sentence]).numpy()
+    print(type(model))
     pred = model.predict(sent)
     if pred[0] <= 0.4:
         return sentiment_faces[2]
@@ -68,9 +67,9 @@ class ActionSentimentAnalysis(Action):
             #return []
 
 document_store = FAISSDocumentStore()
-#converter1 = DocxToTextConverter()
-#converter2 = PDFToTextConverter()
+
 converter3 = TextConverter()
+
 processor = PreProcessor(clean_empty_lines=True,
                          clean_whitespace=True,
                          clean_header_footer=True,
@@ -89,11 +88,10 @@ for filename in os.listdir(doc_dir):
         docs.extend(d)
 
 document_store.write_documents(docs)
-model = "deepset/roberta-base-squad2"
-reader = FARMReader(model, use_gpu=False)
+model_doc = "deepset/roberta-base-squad2"
+reader = FARMReader(model_doc, use_gpu=False)
 retriever = TfidfRetriever(document_store=document_store)
 pipe = ExtractiveQAPipeline(reader, retriever)
-
 
 class ActionDefaultFallback(Action):
     def name(self) -> Text:
@@ -131,8 +129,8 @@ class ActionMail(Action):
 
         dispatcher.utter_message(text="Started")
         headers = {
-            'X-Auth-Token': '-KZ2caN5yqsOX_lfKiBC4zHVpXUUawLXiNA1jSrop38',
-            'X-User-Id': 'bHQAzx2PPBHvDAFDD'
+            'X-Auth-Token': 'YrSyXcaoUsbphi1FpJk1BmJY9ANWwk5WNqws3yc5M2r',
+            'X-User-Id': 'Gd8wWh6bup3rat3ej'
         }
         conversation_id = tracker.sender_id
         dispatcher.utter_message(
@@ -148,7 +146,7 @@ class ActionMail(Action):
         index = []
         i = 0
         while response["messages"][i]["msg"] != "Hey! How are you?":
-            if response["messages"][i]["u"]["username"] == "bot_rasa":
+            if response["messages"][i]["u"]["username"] == "yantr":
                 Bot.append(response["messages"][i]["msg"])
                 index.append("B")
             else:

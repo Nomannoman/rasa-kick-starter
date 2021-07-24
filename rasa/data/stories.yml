@@ -1520,7 +1520,7 @@ stories:
   #- intent: affirm
   - action: details_form
   - active_loop: details_form
-  - active_loop: 'null'
+  - active_loop: null
   - action: utter_slots_values
   - intent: affirm
   - action: utter_askquestion
@@ -1532,7 +1532,7 @@ stories:
   #- intent: affirm
   - action: details_form
   - active_loop: details_form
-  - active_loop: 'null'
+  - active_loop: null
   - action: utter_slots_values
   - intent: deny
   - action: action_set_first

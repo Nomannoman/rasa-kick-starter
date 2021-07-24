@@ -1,16 +1,100 @@
+###Large file###
+app/actions/universal_sentence_encoder/variables/variables.data-00000-of-00001
+
+
 ### Rasa ###
-/bot_rasa/models
+rasa/models/
 rasa_core.log
 
 ### Rocketchat ###
+data/
+uploads/
+data_db/
+chat/
 
-/data
-uploads
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
+# AWS User-specific
+.idea/**/aws.xml
 
+# Generated files
+.idea/**/contentModel.xml
 
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
-# Created by https://www.gitignore.io/api/vim,linux,macos,python
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+cmake-build-*/
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
+{"mode":"full","isActive":false}
+
+### VScode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
 
 ### Linux ###
 *~
@@ -165,11 +249,4 @@ Session.vim
 # auto-generated tag files
 tags
 
-### Rocket.chat ###
-# Rocket.chat directory
-chat/
-
-### Rasa ###
-bot_rasa/models/dialogue/policy_metadata.json
-rasa_core.log
-# End of https://www.gitignore.io/api/vim,linux,macos,python
+packfile
