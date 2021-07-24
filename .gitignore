@@ -1,6 +1,7 @@
 ###Large file###
 app/actions/universal_sentence_encoder/variables/variables.data-00000-of-00001
-
+app/actions/savedmodel
+app/actions/universal_sentence_encoder
 
 ### Rasa ###
 rasa/models/
