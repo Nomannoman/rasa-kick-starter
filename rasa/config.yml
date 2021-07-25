@@ -37,5 +37,4 @@ policies:
   - name: TEDPolicy
     max_history: 0
     epochs: 100
-  - name: MappingPolicy
-  - name: FormPolicy
+  - name: RulePolicy

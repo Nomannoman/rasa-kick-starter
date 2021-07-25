@@ -96,4 +96,10 @@ nlu:
   - intent: mail
     examples: |
       - mail
+
+  - intent: createdirect
+    examples: |
+      - I want to chat with support team
+      - support team
+      - talk to support team
  

@@ -1510,37 +1510,77 @@ stories:
 
 - story: mail
   steps:
+  - intent: goodbye
+  - action: action_sentiment_analysis
+  - action: action_mail
+
+- story: mail2
+  steps:
   - intent: mail
   - action: action_mail
 
 - story: survey1
   steps:
-  - intent: greet
-  - action: utter_greet
-  #- intent: affirm
-  - action: details_form
-  - active_loop: details_form
-  - active_loop: null
-  - action: utter_slots_values
-  - intent: affirm
-  - action: utter_askquestion
-
+    - intent: greet
+    - action: action_sentiment_analysis
+    - intent: affirm
+    - action: details_form
+    - active_loop: details_form
+    - active_loop: null
+    - action: utter_slots_values
+    - intent: affirm
+    - action: utter_askquestion
+  
 - story: survey2
   steps:
-  - intent: greet
-  - action: utter_greet
-  #- intent: affirm
-  - action: details_form
-  - active_loop: details_form
-  - active_loop: null
-  - action: utter_slots_values
-  - intent: deny
-  - action: action_set_first
-  - intent: affirm
-  - action: utter_askquestion
+    - intent: greet
+    - action: action_sentiment_analysis
+    - intent: affirm
+    - action: details_form
+    - active_loop: details_form
+    - active_loop: null
+    - action: utter_slots_values
+    - intent: deny
+    - action: action_set_first
+    - action: details_form
+    - active_loop: details_form
+    - active_loop: null
+    - action: utter_slots_values
+    - intent: affirm
+    - action: utter_askquestion
 
 
 # - story: handoff
 #   steps:
 #   - intent: direct_message
 #   - action: action_handoff
+
+- story: survey direct message
+  steps:
+  - intent: createdirect
+  - action: action_create_direct_message
+
+
+
+# Stories for general conversations
+- story: path_happy
+  steps:
+  - intent: bot_challenge
+  - action: action_sentiment_analysis
+
+- story: sad path 2
+  steps:
+  - intent: mood_unhappy
+  - action: action_sentiment_analysis
+  - action: utter_did_that_help
+  - intent: deny
+  - action: action_sentiment_analysis
+
+
+- story: sad path 1
+  steps:
+  - intent: mood_unhappy
+  - action: action_sentiment_analysis
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: action_sentiment_analysis

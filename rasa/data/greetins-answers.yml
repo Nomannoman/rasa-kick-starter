@@ -1,18 +1,28 @@
 version: "2.0" 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! How can I help you? {emoji}"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: "Here is something to cheer you up: {emoji}"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Did that help you? {emoji}"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Great, carry on! {emoji}"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye {emoji}"
 
+  utter_bot_challenge:
+  - text: "I am a bot powered by Rasa {emoji}"
+
+  utter_mood_unhappy:
+  - text: "Here is something to cheer you up: {emoji}"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+
+  utter_deny:
+  - text: "Sorry {emoji}"

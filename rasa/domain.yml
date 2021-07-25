@@ -389,6 +389,7 @@ intents:
   - phone_number
   - mail
   - call_haystack
+  - createdirect
 
 slots:
     email:
@@ -404,11 +405,17 @@ slots:
       type: unfeaturized
       auto_fill: false
 
-entities:
-    - email
-    - phno
-    - firstname
-    - lastname
+forms:
+  details_form:
+    required_slots:
+      firstname:
+      - type: from_text
+      lastname:
+      - type: from_text
+      email:
+      - type: from_text
+      phno:
+      - type: from_text
 
 
 actions:
@@ -417,11 +424,8 @@ actions:
   - action_mail
   - action_set_first
   - action_default_fallback
-
-forms:
-   - details_form
-
-
+  - validate_details_form
+  - action_create_direct_message 
 
 session_config:
   session_expiration_time: 60
