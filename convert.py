@@ -52,7 +52,7 @@ with open("help", "w") as f1:
     while(i<len(a)):
         a[i]=str(a[i])
         a[i]=a[i].replace('"',"'")
-        f1.write("  utter_a"+str(i+1)+":\n"+"  - text : "+'"'+a[i]+'  {emoji}"\n')
+        f1.write("  utter_a"+str(i+1)+":\n"+"  - text : "+'"{emoji} '+a[i]+' "\n')
         i=i+1
 
 # t1 = 1

@@ -85,7 +85,7 @@ class ActionCreateDirectMessage(Action):
                 "msg": "method",
                 "method": "createDirectMessage",
                 "id": "42",
-                "params": ["root"]
+                "params": ["customer"]
             }
 
             await rocketChatSocket.send(json.dumps(sub))
@@ -183,11 +183,15 @@ class ActionDefaultFallback(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="🙋 I did not understand that.. Searching in the documents")
-        dispatcher.utter_message(
-            text=pipe.run(query=tracker.latest_message['text'],
+        dispatcher.utter_message(text="🙋 I did not find anything in FAQs... Searching the knowledge base")
+        text=pipe.run(query=tracker.latest_message['text'],
                           top_k_retriever=1,
-                          top_k_reader=1)["answers"][0]["answer"])
+                          top_k_reader=1)["answers"][0]["answer"]
+        if len(text)!=0:
+            dispatcher.utter_message(text)
+        else:
+            dispatcher.utter_message(text="🙋 I did not find anything in Knowledge base... Shall I transfer it to human agent?")
+        
 
         return []
 

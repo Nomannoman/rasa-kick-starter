@@ -1523,7 +1523,6 @@ stories:
   steps:
     - intent: greet
     - action: action_sentiment_analysis
-    - intent: affirm
     - action: details_form
     - active_loop: details_form
     - active_loop: null
@@ -1535,7 +1534,6 @@ stories:
   steps:
     - intent: greet
     - action: action_sentiment_analysis
-    - intent: affirm
     - action: details_form
     - active_loop: details_form
     - active_loop: null
@@ -1584,3 +1582,13 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: action_sentiment_analysis
+
+
+#Doc search trigger from fallback
+
+- story: fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+  - intent: affirm
+  - action: action_create_direct_message
