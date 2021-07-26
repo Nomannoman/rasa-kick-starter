@@ -1,15 +1,3 @@
-2011.00027v1 [quant-ph] 30 Oct 2020
-
-arX1Vv
-
-The power of quantum neural networks
-
-Amira Abbas!?, David Sutter!, Christa Zoufal'?, Aurelien Lucchi?,
-Alessio Figalli?, and Stefan Woerner?*
-
-‘TBM Quantum, IBM Research — Zurich
-? University of KwaZulu-Natal, Durban
-SETH Zurich
 
 Abstract
 
@@ -52,12 +40,9 @@ riously difficult. Further, using the VC dimension to bound generalisation error
 unrealistic assumptions, including that the model has access to infinite data [15,16]. The measure
 also scales with the number of parameters in the model and ignores the distribution of data. Since
 modern deep neural networks are heavily overparameterised, generalisation bounds based on the
-VC dimension, and other measures alike, are typically vacuous [17, 18].
+VC dimension, and other measures alike, are typically vacuous.
 
- 
-
-*wor@zurich.ibm.com
-In [19], the authors analysed the expressive power of parameterised quantum circuits using
+The authors analysed the expressive power of parameterised quantum circuits using
 memory capacity, and found that quantum neural networks had limited advantages over classical
 neural networks. Memory capacity is, however, closely related to the VC dimension and is thus,
 subject to similar criticisms.
@@ -120,21 +105,6 @@ Paster training implies a model will reach a lower training error than another c
 ber of training iterations. We deem two models comparable if they share the same number of trainable parameters
 and the same input and output size.
 
-?Easy and hard refer to the ability of a classical computer to simulate the particular data encoding strategy.
- 
-   
-
-\9}
-> 2
-2 Gale) = lao) ant:
-8 = |go\e :
-7 Z : ° 5 ¥
-: id
-> 0) i>
-feature map variational model measurement
-
-Uy Ge f@=y
-
 Figure 1: Overview of the quantum neural network used in this study. The input « € R*=
 is encoded into an S-qubit Hilbert space by applying the feature map |7z) := Uz jaye", This
 state is then evolved via a variational form |ge{x)) := Go |Wz), where the parameters 6 € © are
@@ -163,10 +133,9 @@ We benchmark this quantum neural network against classical feedforward neural ne
 full connectivity and consider all topologies for a fixed number of trainable parameters.” We also
 adjust the feature map of the quantum neural network to investigate how data encoding impacts
 capacity and trainability. We use a simple feature map that is easy to reproduce classically and
-thus, refer to it as an easy quantum model.®
+thus, refer to it as an easy quantum model.
 
-3 Information geometry, effective dimension, and trainabil-
-ity of quantum neural networks
+3 Information geometry, effective dimension, and trainability of quantum neural networks
 
 We approach the notion of complexity from an information geometry perspective. In doing so,
 
@@ -175,19 +144,18 @@ subsequently use them to study the capacity and trainability of neural networks.
 
  
 
-3In general, these encoding operations can be repeated by an arbitrary amount. The amount of repetitions is
+In general, these encoding operations can be repeated by an arbitrary amount. The amount of repetitions is
 termed the depth of the feature map.
 
-4This is conjectured to be difficult for depth > 2.
+This is conjectured to be difficult for depth > 2.
 
-5Networks with and without biases and different activation functions are explored. In particular, RELU, leaky
+Networks with and without biases and different activation functions are explored. In particular, RELU, leaky
 RELU, tanh and sigmoid activations are considered. We keep the number of hidden layers and neurons per layer
 variable and initialise with random weights sampled from [—1, 1]?.
 
 ®We use a straightforward angle encoding scheme, where data points are encoded via RY-gates on each qubit
 without entangling them, with rotations equal to feature values normalised to [—1,1]. See Appendix A for further
 details.
-3.1 The Fisher information
 
 The Fisher information presents itself as a foundational quantity in a variety of fields, from physics
 to computational neuroscience [41]. It plays a fundamental role in complexity from both a com-
@@ -204,15 +172,7 @@ distribution and the conditional distribution, p{y|x;@) describes the input-outp
 model for a fixed @ € @. The full parameter space 0 forms a Riemannian space which gives rise
 to a Riemannian metric, namely, the Fisher information matrix
 
-a a T dxd
-F(6) = Eve y)~p Fe log pla, y5 ®) a5 logp(z. 456) | ERO,
-that can be approximated by the empirical Fisher information matrix
-
-k
-ly? a py2 apy
-Fel) = 5D ag OB Plas wi) og log p(xj, 453) , (1)
-
-where (xj,us)F 4 are iid. drawn from the distribution p(a, y;@) [33].8 By definition, the Fisher
+By definition, the Fisher
 information matrix is positive semidefinite and hence, its eigenvalues are non-negative, real num-
 bers.
 
@@ -240,9 +200,6 @@ Definition 3.1. The effective dimension of a statistical model Mo := {p(-,-;9) :
 respect to y € (0,1), a d-dimensional parameter space @ C R? and n €N, n > 1 data samples is
 defined as
 
-log (te fy [det (ida + = P(O)) as)
-
-log ( Sarton n )
 
 ‘This is achieved by applying an appropriate post-processing function in both classical and quantum networks. In
 the classical network, we apply a softmax function to the last layer. In the quantum network, we obtain probabilities
@@ -251,16 +208,6 @@ based on the post-processing parity function. Both techniques are standard in pr
 8It is important that (aj .45 yey are drawn from the true distribution p(x, y; 8) in order for the empirical Fisher
 information to approximate the Fisher information, i.e., img. Fx (8) = F(9) [33]. This is ensured in our numerical
 analysis by design.
-
- 
-
-dyn(Me) := 2 (2)
-
- 
-where Vg := f{,d@ € Ry is the volume of the parameter space. F(0) € R®¢ is the normalised
-Fisher information matrix defined as
-
-i; —_— Vo we
 
 where the normalisation ensures that ve to tr(F(0))d@ = d.
 
@@ -308,14 +255,6 @@ all @ € ©. Let dy denote the effective dimension of Me as defined in (2). Fur
 E:P() x P(Y) — [-B/2,B/2] for B > 0 be a loss function that is a-Hélder continuous with
 constant M in the first argument w.r.t. the total variation distance for some a € (0,1]. Then
 there exists a constant ca, such that for y € (0,1] and alln EN, we have
-
-d
-
-27 logn ynile = 16M ?nlogn
-P { sup |R(@) — R,(6)| > 4M, | ——— |] <caa () exp (-“*) , (5)
-9c yn Bey
-
-where M = Mf'Mo.
 
  
 
@@ -378,52 +317,17 @@ dyn <d+7/|logn| for some constant Tt > 0.
 conduct experiments over a wide range of n and ensure that conclusions are drawn from results where the choice of
 n is sufficient.
 
-13For example, under the use of certain loss functions.
-set as
-1 ” i< la
-Ra(8) = ——Iog ( J] plyiless8)) = —— Slog plyrlais8),
-i=l i=l
 
 where p(y;|2:;8) is the conditional distribution for a data pair (x;,y;).1° From Bayes rule, note
 that the derivative of the empirical risk function is then equal to the derivative of the log of the
 joint distribution summed over all data pairs, i-e.,
 
-a alc 1d
-5 Rn(8) = a5 Dos (yl 8) =-= 57 bsnl i, yis8) = —— » 5p log (m, 4139)
 
 since the prior distribution p(-) does not depend on 6. From [23], we know that we are in a barren
 plateau if, for parameters @ uniformly sampled from ©, each element of the gradient of the loss
 function with respect to @ vanishes exponentially in the number of qubits, S. In mathematical
 terms this means
 
-n
-
- 
-
- 
-
- 
-
-0 1a a 1 8
-wm -|oo[23 2 orsuacn =| 9m 2 aeons son
-| 6 ay Fo) 6 no BB; og p(2i, yi3 9) no 6 56, og p(ti, yi ®)| | < ws
-for all 7 = 1,...d and for some nonnegative constant ws that goes to zero exponentially fast with
-
-increasing S. The barren plateau result also tells us that Vare[s3- Rr, (6)] < wg for models in a
-
-barren plateau. By definition of the empirical Fisher information in (1), the entries of the Fisher
-matrix can be written as
-
-o o
-
-6)——R,,(8) ,
-pan)
-
-for j,k =1,...,d. Hence we can write
-
-O
-
-Eo[F(@);;] = Eo (cel). = Varg aan) + (= [Zrwo)]) <wg +we,
 
 which implies tr(Ee[F(@)|) < d(ws +w%). Due to the positive semidefinite nature of the Fisher
 information matrix and by definition of the Hilbert-Schimdt norm, all matrix entries will approach
@@ -437,8 +341,6 @@ We investigate the spectra of quantum and classical neural networks in the follo
 and verify the trainability of these models with numerical experiments, including results from real
 quantum hardware.
 
- 
-
 4 Numerical experiments and results
 
 In this section, we compare the Fisher information spectrum, effective dimension and training
@@ -446,7 +348,6 @@ performance of the quantum neural network to feedforward models with different t
 also include the easy quantum model with a classically simulable feature map to understand the
 impact of data encoding on model expressibility and trainability. Trainability is further verified
 
- 
 
 14Minimising the empirical risk with a log-likelihood loss function coincides with the task of minimising the relative
 entropy D(-||-} between the distribution induced by applying the neural network to the observed input distribution
@@ -472,60 +373,6 @@ parameters uniformly on © = [—1, 1? and compute the Fisher information matrix
 a standard Gaussian prior.'© The resulting average distributions of the eigenvalues of these 100
 matrices are plotted in Figure 2 for d = 40, sin) = 4 and say = 2.
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-classical neural network easy quantum model quantum neural network
-1.0 1.0 1.0
-10 16 20
-2 os os 0.8 4 os a8 4 as
-a
-a
-8 08 oe ‘
-yg 0.64 0.64 0.6 4
-oD
-3B os oa
-3
-044 02 044 on4 044 aa
-3
-4
-oa , oa » + —
-ved a T 2 : v2 4 nan 025 9.50 0.75 100 128 Tea] yy | om 02 at ob Ok 1a
-0.0 T T T T 0.0 “7 T T T 0.0 — T T T T
-0 5 10 15 20 0 2 4 6 0 1 2 3 4
-
-eigenvalue size (bins 5)
 
 Figure 2: Average Fisher information spectrum plotted as a histogram for the classical
 feedforward neural network and the quantum neural network with two different feature maps.
@@ -576,52 +423,6 @@ Fisher information spectrum. In Figure 3a, we plot the normalised effective dime
 models. The normalisation ensures that the effective dimension lies between 0 and 1 by simply
 dividing by d.
 
- 
-
- 
-
-    
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-oO .
-‘ o.8 classical neural network
-os easy quantum model
-5 09 7 quantum neural network
-2 — ibmq_montrcal backend
-® © os
-£ os = a
-3 &
->
-©
-3 goon
-3 07 &
-eS
-vo Od
-og
-®
-QZ 06
-“s 0.3
-&
-a
-2 —_—
-2 os vol rrr nnn SSS ESSE SESS
-oo 02 oa 8 os an a 20 40 60 80 100
-number of data number of iterations
-(a) (b)
-
 Figure 3: (a) Normalised effective dimension plotted for the quantum neural network in
 green, the easy quantum model in blue and the classical feedforward neural network in red. We
 fix the input size si, = 4, the output size $44; = 2 and number of trainable parameters d = 40.
@@ -645,13 +446,6 @@ and lastly, the classical model. Capacity calculations using the Fisher-Rao norm
 trends. The average Fisher-Rao norm over 100 trials is roughly 250% higher in the quantum
 neural network than in the classical neural network, after training the models on a simple dataset
 for a fixed number of iterations (see Appendix C.3 for details).
-
- 
-
-19Tn the limit n > oo, all models will converge to an effective dimension equal to the maximum rank of the Fisher
-information matrix.
-20See Remark 3.3.
-4.3 Trainability
 
 Upon examining the quantum neural network over an increasing system size (see Appendix C.2),
 the eigenvalue distribution of the Fisher information matrix remains more or less constant, and a
@@ -745,36 +539,6 @@ feature map employed in the easy quantum model, is simply the first sets of Hada
 gates, as done in Figure 4 and is not repeated.
 
  
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-|o) RZ(a1)
-(0) b[R@2) 4
-I) RZ(z2) BJ R2(2123) -B—-B RZ(¢202) -—
-
- 
-
-‘ar
-\0} RZ(es) —® Db
-
- 
-
  
 
  
@@ -803,32 +567,6 @@ where S is equal to the input size of the data sj, due to the choice of both fea
 in this study and D is the depth of the circuit (i.e. how many times the entanglement and RY
 operations are repeated).
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-eee
-\0.) —frven)}/-—e [RY (@s+2) R——
-lo) —frv(ea) oo {RY (@s42) ——
-(0) —]R¥ (6s) —4
 
 Figure 5: Variational circuit used in both quantum models is plotted in this figure. The circuit
 contains parameterised RY-gates, followed by CNOT-gates and another set of parameterised RY-
@@ -847,195 +585,10 @@ Lemma B.1. Let @ = [—1,1]", and let N(e) denote the number of boxes of side le
 to cover the parameter set O, the length being measured with respect to the metric Fi;(@). Under
 the assumption of Theorem 3.2, there exists a dimensional constant cq < co such that for y € (0, 1]
 
-and for alln EN, we have
-N 27 logn < eq yn dyn /2
-yn 27 logn
-
-Proof. The result follows from the arguments presented in [20]. More precisely, thanks to the
-bound ||V¢ log F'(@)|| < A, which holds by assumption, it follows that
-
- 
-
-|) —F(0)|| <caAFO)|| and ||P) — F(0)|| S cal F(8)|| VAC. 6)
-
-In the following, we set ¢ := \/2mrlogn/{yn). Note that, if B-(@,) is a box centered at #, € ©
-
-and of length ¢ (the length being measured with respect to the metric Fy), then this box contains
-(1+ caA)~/?B.(6x), where
-
-B.(O,) = {9 € © : LE(O)- (6 —O,),8 — 9) < e7}.
-
-Up to a rotation, we can diagonalise the Fisher information matrix as F(0) = diag(s?,..., 53).
-Then, we see that n the number of boxes of the form (1 + cah)~/?B.(65) needed to cover © is
-
-12
-given by”?
-
- 
-
- 
-
-= éq(1 + egA)"/?, | det (ite a” F))
-
- 
-
-<éa(1 + ca (ia. + Tropa + cah)P(@))
-
-<6é d : yr
-< ég(1 + cagA)", j det (ia + tt ie)) ;
-
-where the second inequality follows from (6) and the fact that the determinant is operator monotone
-on the set of positive definite matrices, ie., 0 <A < B implies det(A) < det(B) (55, Exercise 12
-in Section 82].
-
-Since the number of boxes of size < (with respect to the metric Fy) needed to cover O is
-bounded by the number of boxes of the form (1+ caA)~!/?B.(@,), averaging the bound above with
-respect to 6 € © we proved that
-
- 
-
-yn
-27 logn
-
- 
-
-N(e) < éa(1 + cgA)t | det. (ia +
-Vo eo
-
-which implies the inequality in the statement of Lemma B.1 by recalling the definition of the
-
-effective dimension and ¢ := 4/27 logn/(yn). oO
-
-Lemma B.2. Let ¢ € (0,1). Under the assumption of Theorem 3.2, we have
-
-P( supine) aioe) <2 ((z5)"") om (See).
-
-where N(e) denotes the number of balls of side length c, with respect to F, required to cover the
-parameter set ©.
-
-Proof. The proof is a slight generalisation of a result found in [56, Chapter 3]. Let S(@) :=
-R(@) — R,(). Then
-
-'S(81) — S(62)| < |R(A1) — R(G2)| + |Fen(A1) — Rn(62)| < 2M||01 — G25, (7)
-
-where the final step uses the fact that R(-) as well as R,(-) are a-Holder continuous with constant
-M for M = MPMp. To see this recall that by definition of the risk, we find for the observed input
-and output distributions r € P(A’) and ¢ € P()), respectively,
-
-Ex IZ (p(yla;1)r(2), aty)) | — Eng L(wlyler 62)r(z), aty))| |
-< Eng ||D(plyles1)r(x), a(y)) — L(e(yles62)r(2),a(y)) ||
-
-< MoE, | ||p(y|@; 61)r(@) — p(y|a; 42)r(2) IF |
-
-< Ma \|p(y\a; 61) — p(yl2; 2) 15 Er [lr(@) IF |
-
-= Mz ||p(yla; 1) — plyl#; 92)II5
-
-< M2M¢ ||. — ell, »
-
-\R(1) — R(O2)| =
-
- 
-
-where the third step uses the continuity assumption of the loss function and the fourth step follows
-from Hélder’s inequality. The final step uses the Lipschitz continuity assumption of the model.
-Equivalently we see that
-
-|Fin(@1) — Rn(O2)| < MoM? ||#1 — O2ll5, -
-
- 
-
-22Here 4 depends on the orientation of [—-1, 1]? with respect to the boxes Be (6,}. In particular ég < 2Vd (the
-length of the diagonal of [-1,1]*}, and if the boxes B-(6,) are aligned along the canonical axes, then é4 = 2.
-
-13
-Assume that © can be covered by & subsets By,..., By, ie. 0 = By U...U By. Then, for any
-
-e>0dO,
-k k
-P S(@¢)| >e) =P S(O)| > Ee S(@)| >e), 8
-(2piswize) =? (Uspisinize) sd (qpiswize). 0
-
-where the inequality is due to the union bound. Finally, let k = N(()*) and let B,,..., By
-be balls of radius (<q)Ve centered at 61,...,@, covering ©. Then the following inequality holds
-for alli=1,...,k,
-
-P (sup |S(®)| > :) <P (\s(@,)) > §). (9)
-
-To prove (9), observe that by using (7) we have for any 6 € B,,
-
-a J é
-
-|S(8) — $(:)| < 2M||@ — Bll S 5.
-
-The last inequality implies that, if |S(@)| > ¢, it must be that |$(@;)| > §. This in turns implies (9).
-To conclude, we apply Hoeffding’s inequality, which yields
-
-2
-
-P (|S(6)) = $) =P (IR() — Ra(6)| > $) < 2exn (SE). (10)
-
- 
-
-Combined with (8), we obtain
-
-P (sp \s()| = :) <
-
-9cO
-
-P (sup \S(6)| = :)
-
-6EB;
-
-Me iM
-
-lA
-
-P (\$()| = 5)
-
-é \lVe —ner
-(az) ee (apr)
-where the second step uses (9). The final step follows from (10) and by recalling that k =
-Nain"). o
-
-Having Lemma B.1 and Lemma B.2 at hand we are ready to prove the assertion of Theorem 3.2.
-
-Lemma B.2 implies for ¢ = 444 ,/27 logn/(yn)
-P( sup |R(@) — Rn(6)| > 4M /20 foan/ 7) |
-dco
-Qn logn\ 3 16M?r logn
-< ——_ es
-sew ((SF)") (ae
-
-l/a 4 2
-can (78 ) ) ex (-= =)
-
-1
-
-3.
-ll
-
-lA
-=
-
-ynile By
-a nife
-l/a Fz 16M2 l
-yn tlogn
-<4 ——_ —— 11
-<tes( =) exp (EY) a)
-where the penultimate step uses
-(Pen) 5 (2am)
-yn = ynile ,
-for all A € (0,1] and a@ € (0,1). The final step in (11) uses Lemma B.1. oO
-
 14
 Remark B.3 (Improved scaling for relative entropy loss function). The relative entropy is com-
 monly used as a loss function. Note that the relative entropy is log-Lipschitz in the first argument
 which is better than Hélder continuous.*? As a result we can improve the bound from Lemma B.2
-
-to
-P( sup|R@) — R,,(8)| > :) < wv (qi) exp (-=)
 
 by following the proof given above and utilising the log-Lipschitz property of the relative entropy in
 its first argument and the fact that the inverse of t|log(t)| behaves like s/|log(s)| near the origin.*+
@@ -1071,56 +624,9 @@ it can be unitarily diagonalised. By definition of the effective dimension, we s
 of generality, F'(@) can be diagonal, ie. F(@) = diag(A1(6),...,Ar,(@),0 ...,0). Furthermore we
 define the normalisation constant
 
-Vo
-
-B= dF Ob’
-
-such that F(0) = BF(@). Let ky = Irloan and consider n to be sufficiently large such that Ky > 1.
-By definition of the effective dimension we find
-
-dan = 2log (Zs I 4/det(idg + nF) / log (Kn)
-
-= 2log (= I V+ en 1(8)) «(1 nrg (@)a8) /log (Kn)
-
- 
-
-< 2log (=, kr? (1 + BA1(@)} ... (1 + BArg (@)28) / log (Kn)
-
- 
-
-*3Recall that the function f(t) = ¢log(t) is log-Lipschitz with constant 1, i-e., | f(t) — f(s)| < |é—s|log(|¢ — s|) for
-Jé-s| < 1/e.
-24More precisely we can choose k = NE) in the proof above.
-
-15
- 
-
-0.22 7
-
-0.20 4
-
-0.18 4
-
-0.16 4
-
-0.14 4
-
-0.12 4
 
 normalised effective dimension
 
-0.10 4
-
-0.08 4
-
- 
-
- 
-
- 
-
-0.0 0.1 0.2 0.3 0.4 0.5
-% of randomised labels
 
 Figure 6: Generalisation behaviour of the effective dimension. We plot the normalised effective
 dimension for a network trained on confusion sets with increasing randomisation, averaged over
@@ -1128,25 +634,9 @@ dimension for a network trained on confusion sets with increasing randomisation,
 dimension correctly increases as the data becomes “more random” and is thus, able to accurately
 capture a model’s generalisation behaviour.
 
-il?
-< 2log (a I \/ (1+ 618)... = parla) /log (Kn) ,
 
-where the final step uses that the Fisher information matrix is positive definite. Taking the limit
-n — co gives
 
-im din SP + lim 2log (Ge [ve + BAr(8))... (1+ Brr(0))48) /log (Kn) =F.
-
-To see the other direction, let A:= {@ € @: rg =7} and denote its volume by |A|. By definition
-of the effective dimension we obtain
-
-lim dyn 2 2log (= I, 4/ det(idg + nF (@))a /log (tn)
-= lim 2log(|A|/Ve)/log (rn) + lim 2 log (= I, 4/ det(idg + nF (0) /log (tn)
-> lim 2log (= |, Veertnt@)a8) / log (Kn)
-=F + lim 2log (= [, vaee*@pa0) / log (Kn)
-
-=F.
-
-This proves the other direction and concludes the proof. O
+This proves the other direction and concludes the proof. 
 
 B.4 A geometric depiction of the effective dimension
 
@@ -1202,19 +692,6 @@ disjoint simplices, where each simplex is generated by x; and one of the faces o
 set of all these simplices by {O¢}7~,, where m = 24«%. Note that {Oe}7~, is a regular triangulation
 of 0.
 
-Now, let Me = {p'")(.,-0): 8 € QO} be a discretised version of Mo such that p\) is affine on
-each simplex @,.2° Note that, with this definition, the Fisher information matrix of the discretised
-model F'“) (9) is constant inside each simplex @». We note that, by construction, 8 p\“)(-, 5 6) is
-
- 
-
-25For this, it suffices to define p(., -;0) = p(-,-;@) whenever @ coincides with one of the vertices of O, for some
-£, and then one extends p‘*) inside each simplex ©, as an affine function.
-
-17
-still M,-Lipschitz continuous.° The risk function with respect to the discretised model is denoted
-
-by R™,
 
 Theorem B.5 (Generalisation bound for effective dimension without rank constraint). Let @ =
 [-1,1]¢ and consider a statistical model Mo := {pl-,-;9) : 6 € O} satisfying (4), For x € N,
@@ -1224,16 +701,6 @@ for B > 0 be a loss function that is a-Hélder continuous with constant M2 in th
 w.r.t. the total variation distance for some a € {0,1]. Then, there exists a dimensional constant
 cq such that for y € (0,1) and for alln CN, we have
 
-go)
-
-1/ aa 2
-
-ar logn ynel 2 16M*nx logn
-
-P (9) — R®)(6)| > 4M, f ——= | <eg ( — —_— 12
-(spin (8) — Ry” (8)| = sn) <8 \ Smognive exp By , (12)
-
-where M = Mf'Mo.
 
 To prove the statement of the theorem we need a preparatory lemma that is the discretised
 version of Lemma B.1.
@@ -1242,10 +709,6 @@ Lemma B.6. Let 9 = {—1,1]¢, and let N“*)(e) denote the number of boxes of s
 to cover the parameter set Q, the length being measured with respect to the metric BAS (@). Under
 the assumption of Theorem B.5, there exists a dimensional constant cq < co such that vat y € (0, 1]
 and for alln EN, we have
-
-an /2
-Nw) an logn < eq yn
-yn 27 logn
 
 Proof. Recall that we work in the discretised model ME ), so our metric FAS) (@) is constant on
 each element ©, of the partition. So, we fix 2, and we count first the number of boxes of side length
@@ -1256,62 +719,6 @@ Note that @, has Euclidean diameter bounded by 2«~! and volume «~¢. Also, if 
 centered at 6 € Og and of length ¢, then
 
  
-
-Ty 8a):
-) is a ball
-
-d
-
-B-(82) 1 Oe := {9 € Oe : 5 s?[(0 — 6p) - ei]? < *}.
-
-wl
-
-Then, the number of balls of size « needed to cover QO, is bounded by
-
- 
-
-- cant | ,/det (ida + e-2F*(8) a8,
-Oe
-
-where Gg is a positive dimensional constant, and the last equality follows from the fact that the
-volume of ©» is equal to «@ and that F(*) is constant on Ov.
-Summing this bound over = 1,...,m, we conclude that (note that Vo = 24)
-
-1 -
-Ce \< d 26) (6 — 6,4¢— : —2 F(x)
-N ea2 » ‘Lh, det (ida + e- B (8) )ae ea" I det (ida +e Ft)(0) ) ag
-
- 
-
-26Indeed, recall that we defined p‘“) = p on the vertices of the simplices and then we extended p‘*) as an affine
-function inside each simplex. With this construction, the Lipschitz constant of p‘*) is bounded by the Lipschitz
-constant of p (since the affine extension does not increase the Lipschitz constant}.
-
-18
-Applying this bound with e = \/2mlogn/{yn) and recalling the definition of the effective dimen-
-sion, the result follows. Oo
-
-Proof of Theorem B.5. We start be noting that Lemma B.2 remains valid for the discretised setting
-and under the assumption of Theorem B.5,7" ie.,
-
-oe 2
-P (sup R (6) — RIM(@)| > 2) < 2 ((22)""") exp (2), (13)
-
-9cO
-
-where N (2) denotes the number of balls of side length ¢, with respect to Fle), required to cover
-the parameter set ©. This can be seen by going through the proof of Lemma B.2. Hence, by
-
-Lemma B.6, we find for ¢ = 4M 4/2n logn/(yn)
-P( sup |R%) (6) — R&*(8)| > 4M \/2r log nn) |
-
-GeO
-l/a Fz 16M2 l
-yn nt logn
-<4 ——_ —_———_ ].. 14
-~ «(stear) exp ( Bey ) a4
-
-O
 
 Remark B.7 (How to choose the discretisation parameter «). In this remark we discuss conditions
 such that the generalisation bound of Theorem B.5 for the discretised model Me) is a good
@@ -1349,68 +756,7 @@ work, however, maintains a more uniform spectrum over increasing sj, and d, show
 avoiding unfavourable qualities, such as barren plateaus.
 
  
-
-27Lemma B.2 does not require the full rank assumption of the Fisher information matrix.
-
-19
-n=1c4 n=1c7 n=1c13
-
  
-
- 
-
- 
-
-      
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-1.0 1.0 1.0
-0.8 0.8 0.84
-——
-0.6 ES 0.6 SE 6)
-FI A
-3
-3
-4 O04 OA 044
-a
-x
-a —sin 4, d 8
-5 0.2 0.2 0.2 4 Sq 6, d =12
-S s,, —8, d —16
-5 —s,, —10, d —20
-0.0 ' ' ' ' 0.0 ' 1 r 1 + 0.0 r 1 1 r 1
-D 20 40 60 80 100 20 10 60 80 100 20 40 60 80 100
-z
-Z 10 1.0 1.0
-3
-z
-a
-0.8 0.8 0.8 |
-3
-5
-0.6 0.6 0.64
-el —
-0.4 04 0.4
-Sn 4, d —40
-0.2 0.2 0.24 Sin =6, d =60
-Sin —8, d —80
-—s,, =10, d =100
-0.0 r r 1 r 0.0 r 1 r r 0.0 r r r r 1
-20 40 60 80-100 20 40 60 so 100 20 40 60 so 100
-
 number of data and parameter samples used
 
 Figure 8: Sensitivity analysis of the normalised effective dimension to different numbers of
@@ -1430,89 +776,10 @@ has the highest Fisher-Rao norm and lowest training loss on average.
 
  
 
-Model Training loss | Fisher-Rao norm
-Classical neural network 37.90% 46.45
-Easy quantum model 43.05% 104.89
-Quantum neural network 23.14% 117.84
-
-Table 1: Average training loss and average Fisher-Rao norm for all three models, using 100
-different trials with 100 training iterations.
-
- 
-
-28We choose 9 = [-1, 1]? as the sample space for the initial parameters, as well as for the parameter sample space
+We choose 9 = [-1, 1]? as the sample space for the initial parameters, as well as for the parameter sample space
 in the effective dimension. Another convention is to use [—27, Qn]? as the parameter space for initialisation of the
 quantum model, however, we stick with [-1, 1]? to be consistent and align with classical neural network literature.
 We note that for the effective dimension, using either parameter space does affect the observed results.
-
-20
-classical neural network
-
-easy quantum model
-
-quantum neural network
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-1.0 1.0 1.0
-Al A2 A3
-0.87 0.8 4 0.8 4
-0.67 0.6 4 0.6 4
-0.47 0.4 7 0.4 7
-0.27 0.2 7 0.2 7
-0.07 0.07 0.0 T
-0 10 20 30 40 0 1 2 3 4 5 1 2 3
-1.0 1.0 1.0
-Bl B2 B3
-2 084 0.84 0.8 4
-<
-3
-9
-. 0.64 0.6 4 0.6 4
-~ . . .
-o
-2
-a 0.44 0.4 4 0.4 4
-a
-°
-s
-0.27 0.2 4 0.2 4
-0.07 0.07 0.0
-0 5 10 15 0 2 4 6 8 10 1 2 3
-1.0 1.0 1.0
-C1 C2 C3
-0.84 0.8 4 0.8 4
-0.649 0.64 0.6 4
-0.44 044 0.4 4
-0.24 0.24 0.2 7
-0.07 0.0 7 0.0
-0 20 40 60 0 2 4 6 8 10 1 2 3 4
-
- 
-
-Figure 9: Average Fisher information spectrum plotted as a histogram for all three model
-types, over increasing input size, sin. Row A contains models with si, = 6 and d = 60, row B has
-Sin = 8 and d = 80 and row C has si, = 10 and d = 100. In all cases, sou; = 2.
 
 C.4 Training the quantum neural network on real hardware
 
@@ -1531,299 +798,3 @@ neural network discussed in Appendix A, the circuit contains parameterised RZ an
 that depend on the data, as well as parameterised RY-gates with 8 trainable parameters. Note
 the different entanglement structure presented here as opposed to the circuits in Figures 4 and 5.
 This is to reduce the number of CNOT-gates required, in order to incorporate current hardware
-
-21
-constraints. The full circuit repeats the feature map encoding once before the variational form is
-applied.
-
- 
-
-RY(@5
-
- 
-
- 
-
- 
-
- 
-
- 
-
-[0 RZ(e2) RZ(2i22) Hq .—| RY (62) H4 RY (66
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-0) RZ (zs) © RZ(e223) +6 RY @s) fry (6r)
-(0) RZ(ea) rz (232) H— [Rv (6) }--_$ rv (os)
-
-Figure 10: Circuit implemented on quantum hardware. First, Hadamard gates are applied.
-Then the data is encoded using RZ-gates applied to each qubit whereby the Z-rotations depend
-on the feature values of the data. Thereafter, CNOT entangling layers with RZ-gates encoding
-products of feature values are applied. The data encoding gates, along with the CNOT-gates are
-repeated to create a depth 2 feature map. Lastly, parameterised RY-gates are applied to each
-qubit followed by linear entanglement and a final layer of parameterised RY-gates. The circuit has
-a total of 8 trainable parameters.
-
-References
-
-[1] I. Goodfellow, Y. Bengio, and A. Courville. Deep Learning. MIT Press, 2016.
-http://www.deeplearningbook. org.
-
-[2] P. Baldi and R. Vershynin. The capacity of feedforward neural networks. Neural networks,
-116:288-311, 2019. DOI: 10.1016/j .neunet .2019.04.009.
-
-[3] G. K. Dziugaite and D. M. Roy. Computing nonvacuous generalization bounds for
-deep (stochastic) neural networks with many more parameters than training data, 2017.
-arXiv:1703.11008.
-
-[4] M.  Schuld. Supervised learning with quantum computers. Springer, 2018.
-DOI: 10.1007/978-3-319-96424-9.
-
-[5] C. Zoufal, A. Lucchi, and 8. Woerner. Quantum generative adversarial networks for
-learning and loading random distributions. npj Quantum Information, 5{1):1-9, 2019.
-DOI: 10.1038/s41534-019-0223-2.
-
-[6] J. Romero, J. P. Olson, and A. Aspuru-Guzik. Quantum autoencoders for efficient
-compression of quantum data. Quantum Science and Technology, 2(4):045001, 2017.
-DOI: 10.1088/2058-9565/aa8072.
-
-[7] V. Dunjko and H. J. Briegel. Machine learning & artificial intelligence in the quantum
-domain: a review of recent progress. Reports on Progress in Physics, 81(7):074001, 2018.
-DOI: 10.1088/1361-6633/aab406.
-
-[8] ©. Ciliberto, M. Herbster, A. D. Ialongo, M. Pontil, A. Rocchetto, S. Severini, and
-L. Wossnig. Quantum machine learning: a classical perspective. Proceedings of the Royal
-Society A: Mathematical, Physical and Engineering Sciences, 474(2209):20170551, 2018.
-DOI: 10.1098/rspa.2017.0551.
-
-[9] N. Killoran, T. R. Bromley, J. M. Arrazola, M. Schuld, N. Quesada, and 8. Lloyd.
-Continuous-variable quantum neural networks. Phys. Rev. Research, 1:033063, 2019.
-DOI: 10.1103/PhysRevResearch. 1.033063.
-
-22
-[10] M. Schuld, I. Sinayskiy, and F. Petruccione. The quest for a quantum neural network. Quan-
-tum Information Processing, 13(11):2567-2586, 2014. DOI: 10.1007/s11128-014-0809-8.
-
-[11] E. Farhi and H. Neven. Classification with quantum neural networks on near term processors.
-2018. arXiv:1802.06002.
-
-[12] §. Aaronson. Read the fine print. Nature Physics, 11(4):291-293, 2015.
-DOI: 10. 1038/nphys3272.
-
-[13] V. Vapnik. The Nature of Statistical Learning Theory, volume 8, pages 1-15. 2000.
-DOI: 10.1007/978-1-4757-3264-1.1.
-
-[14] V.N. Vapnik and A. Y. Chervonenkis. On the uniform convergence of relative frequencies of
-events to their probabilities. Theory of Probability & Its Applications, 16({2):264-280, 1971.
-DOI: 10.1137/1116025.
-
-[15] E. D. Sontag. VC dimension of neural networks. NATO ASI Series F Computer and Systems
-Sciences, 168:69-96, 1998.
-
-[16] V. Vapnik, E. Levin, and Y. L. Cun. Measuring the VC-dimension of a learning machine.
-Neural computation, 6(5):851-876, 1994. DOI: 10.1162/neco.1994.6.5.851.
-
-[17] B. Neyshabur, 8. Bhojanapalli, D. McAllester, and N. Srebro. Exploring generalization in
-deep learning. In Advances in neural information processing systems, pages 5947-5956, 2017.
-DOI: 10.5555/3295222. 3295344.
-
-[18] S. Arora, R. Ge, B. Neyshabur, and Y. Zhang. Stronger generalization bounds for deep nets
-via a compression approach, 2018. arXiv:1802.05296.
-
-[19] L. G. Wright and P. L. McMahon. The capacity of quantum neural networks, 2019.
-arXiv:1908.01364.
-
-[20] O. Berezniuk, A. Figalli, R. Ghigliazza, and K. Musaelian. A scale-dependent notion of
-effective dimension, 2020. arXiv:2001.10872.
-
-[21] J. J. Rissanen. Fisher information and stochastic complexity. IEEE Transactions on Infor-
-mation Theory, 42(1):40-47, 1996. DOI: 10.1109/18.481776.
-
-[22] T. M. Cover and J. A. Thomas. Elements of Information Theory. Wiley Interscience, 2006.
-DOI: 10.1002/047174882x.
-
-[23] J. R. McClean, 8. Boixo, V. N. Smelyanskiy, R. Babbush, and H. Neven. Barren plateaus
-in quantum neural network training landscapes. Nature communications, 9(1):1-6, 2018.
-DOI: 10.1038/s41467-018-07090-4.
-
-[24] S. Wang, E. Fontana, M. Cerezo, K. Sharma, A. Sone, L. Cincio, and P. J. Coles. Noise-
-induced barren plateaus in variational quantum algorithms. 2020. arXiv:2007.14384.
-
-[25] M. Cerezo, A. Sone, T. Volkoff, L. Cincio, and P. J. Coles. Cost-function-dependent barren
-plateaus in shallow quantum neural networks, 2020. arXiv:2001.00550.
-
-[26] G. Verdon, M. Broughton, J. R. McClean, K. J. Sung, R. Babbush, Z. Jiang, H. Neven, and
-M. Mohseni. Learning to learn with quantum neural networks via classical neural networks,
-2019. arXiv:1907.05415.
-
-[27] T. Volkoff and P. J. Coles. Large gradients via correlation in random parameterized quantum
-circuits, 2020. arXiv:2005.12200.
-
-[28] A. Skolik, J. R. McClean, M. Mohseni, P. van der Smagt, and M. Leib. Layerwise learning
-for quantum neural networks, 2020. arXiv:2006.14904.
-
-[29] P. Huembeli and A. Dauphin. Characterizing the loss landscape of variational quantum cir-
-cuits, 2020. arXiv:2008.02785.
-
-23
-[30]
-
-[31]
-
-[32|
-
-[33]
-
-[35
-
-[36]
-
-(37
-
-[38]
-
-[39]
-
-(40)
-
-(41
-
-[43]
-[43]
-
-(44
-
-(46)
-
-(47
-
-C. Bishop. Exact calculation of the Hessian matrix for the multilayer perceptron, 1992.
-DOI: 10.1162/neco.1992.4.4.494.
-
-Y. A. LeCun, L. Bottou, G. B. Orr, and K.-R. Miiller. Efficient BackProp, pages 9-48.
-Springer Berlin Heidelberg, Berlin, Heidelberg, 2012. DOI: 10. 1007/978-3-642-35289-8_3.
-
-M. Cerezo and P. J. Coles. Impact of barren plateaus on the Hessian and higher order
-derivatives, 2020. arXiv:2008.07454.
-
-F. Kunstner, P. Hennig, and L. Balles. Limitations of the  empir-
-ical Fisher approximation for natural gradient descent. In Advances
-in Neural Information Processing Systems 32, pages 4156-4167. 2019.
-http://papers .nips.cc/paper/limitations-of-fisher-approximation.
-
-R. Karakida, S. Akaho, and S.-I. Amari. Universal statistics of Fisher informa-
-tion in deep neural networks: Mean field approach. volume 89 of Proceedings
-of Machine Learning Research, pages 1032-1041. PMLR, 2019. Available online:
-http://proceedings .mlr. press/v89/karakida19a. html.
-
-M. Schuld, A. Bocharov, K. M. Svore, and N. Wiebe. Circuit-centric quantum classifiers.
-Physical Review A, 101(3):032308, 2020. DOI: 10.1103/PhysRevA. 101.032308.
-
-M. Schuld, R. Sweke, and J. J. Meyer. The effect of data encoding on the expressive power of
-variational quantum machine learning models, 2020. arXiv:2008.08605.
-
-S. Lloyd, M. Schuld, A. Ijaz, J. Izaac, and N. Killoran. Quantum embeddings for machine
-learning, 2020. arXiv:2001.03622.
-
-I. Cong, 8. Choi, and M. D. Lukin. Quantum convolutional neural networks. Nature Physics,
-15(12):1273-1278, 2019. DOI: 10. 1038/s41567-019-0648-8.
-
-V. Havliéek, A. D. Cércoles, K. Temme, A. W. Harrow, A. Kandala, J. M. Chow, and
-J. M. Gambetta. Supervised learning with quantum-enhanced feature spaces. Nature,
-567(7747):209-212, 2019. DOI: 10. 1038/s41586-019-0980-2.
-
-S. Sim, P. D. Johnson, and A. Aspuru-Guzik. Expressibility and entangling capability of
-parameterized quantum circuits for hybrid quantum-classical algorithms. Advanced Quantum
-Technologies, 2(12):1900070, 2019. DOI: 10.1002/qute. 201900070.
-
-B. R. Frieden. Science from Fisher Information: A Unification. Cambridge University Press,
-2004. DOI: 10.1017/CB09780511616907.
-
-P. D. Grinwald. The minimum description length principle. MIT press, 2007.
-
-S.-I. Amari. Natural gradient works efficiently in learning. Neural computation, 10(2):251-276,
-1998. DOT: 10.1162/089976698300017 746.
-
-T. Liang, T. Poggio, A. Rakhlin, and J. Stokes. Fisher-Rao metric, geometry, and complexity
-of neural networks. volume 89 of Proceedings of Machine Learning Research, pages 888-896.
-PMLIR, 2019. Available online: http: //proceedings.mlr.press/v89/liang19a.html.
-
-B. Neyshabur, R. R. Salakhutdinov, and N. Srebro. Path-sgd: Path-normalized optimization
-in deep neural networks. In Advances in Neural Information Processing Systems, pages 2422—
-2430, 2015. DOT: 10.5555/2969442 .2969510.
-
-B. Neyshabur, R. Tomioka, and N. Srebro. Norm-based capacity control in neural networks.
-volume 40 of Proceedings of Machine Learning Research, pages 1376-1401, Paris, France, 2015.
-PMLR. Available online: http: //proceedings .mlr.press/v40/Neyshabur15.html.
-
-P. L. Bartlett, D. J. Foster, and M. J. Telgarsky. Spectrally-normalized margin bounds for
-neural networks. In Advances in Neural Information Processing Systems 30, pages 6240-6249.
-Curran Associates, Inc., 2017. http://papers.nips.cc/paper/7204-spectrally-normalized.
-
-24
-[48]
-
-[49]
-
-[50]
-
-(51
-
-Z. Jia and H. Su. Information-theoretic local minima characterization and regularization,
-2019. arXiv:1911.08192.
-
-A. Virmaux and K. Scaman. Lipschitz regularity of deep neural networks: analysis and efficient
-estimation. In Advances in Neural Information Processing Systems 31, pages 3835-3844. 2018.
-http://papers .nips.cc/paper/lipschitz-regularity-of-deep-neural-networks.
-
-R. Sweke, F. Wilde, J. J. Meyer, M. Schuld, P. K. Fahrmann, B. Meynard-Piganeau, and
-J. Eisert. Stochastic gradient descent for hybrid quantum-classical optimization. Quantum,
-4:314, 2020. DOI: 10.22331/q-2020-08-31-314.
-
-J. Pennington and P. Worah. The spectrum of the Fisher information ma-
-trix of a single-hidden-layer neural network. In Advances in Neural Infor-
-mation Processing Systems $31, pages 5410-5419. Curran Associates, Inc., 2018.
-http://papers .nips.cc/paper/7786-the-spectrum- of -the-fisher.
-
-Z. Liao, T. Drummond, I. Reid, and G. Carneiro. Approximate fisher information matrix to
-characterise the training of deep neural networks. IEEE Transactions on Pattern Analysis
-and Machine Intelligence, PP:1—1, 2018. DOI: 10.1109/TPAMI.2018. 2876413.
-
-H. Abraham et al. Qiskit: An open-source framework for quantum computing, 2019.
-DOI: 10.5281/zenodo. 2562110.
-
-D. Dua and ©. Graff. UCI machine learning repository, 2017. Available online:
-http://archive.ics.uci.edu/ml.
-
-P. Halmos. Finite-Dimensional Vector Spaces. Springer-Verlag New York, 1958.
-DOI: 10.1007/978-1-4612-6387-6.
-
-M. Mohri, A. Rostamizadeh, and A. Talwalkar. Foundations of machine learning. MIT press,
-2018. Available online: https: //cs.nyu.edu/~mohri/mlbook/.
-
-F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel,
-P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher,
-M. Perrot, and E. Duchesnay. Scikit-learn: Machine learning in Python. Journal of Machine
-Learning Research, 12:2825-2830, 2011. DOI: 10.5555/1953048. 2078195.
-
-25
-

@@ -38,6 +38,45 @@ import websockets
 #from rocketchat.api import RocketChatAPI
 #from requests.auth import HTTPBasicAuth 
 
+
+class ActionCreateUser(Action):
+     def name(self) -> Text:
+         return "action_create_user"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+         
+         #AllUsers()
+         Body = {'client_id': 'ptest', 'username': 'ptesttenantadmin', 'password': 'test', 'grant_type': 'password'}
+    
+         #headers = {'Accept': 'application/json, text/plain, */*', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36', 'Content-Type' :'application/x-www-form-urlencoded', 'Accept-Language': 'en'}
+    
+         response = requests.post("https://iam.nslhub.com/auth/realms/ptest/protocol/openid-connect/token",data = Body)
+         print(response.status_code)
+         auth_response_json = response.json()
+         auth_token = auth_response_json["access_token"]
+         auth_token_header_value = "bearer %s" % auth_token
+
+         headers1 = {'authority' : 'ptest.qa3.nslhub.com', 'sec-ch-ua': '" Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"', 'traceparent': '00-2b29240176c0f89ead3e743c85736650-774d330740f0dddf-01', 'accept-language': 'en', 'sec-ch-ua-mobile': '?0', 'authorization':auth_token_header_value, 'content-type':'application/json', 'accept':'application/json, text/plain, */*', 'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36', 'origin':'https://ptest.qa3.nslhub.com', 'sec-fetch-site':'same-origin', 'sec-fetch-mode':'cors', 'sec-fetch-dest':'empty', 'referer':'https://ptest.qa3.nslhub.com/admin/adduser','cookie':'_ga=GA1.1.738583816.1615352728; _ga_GSGN4DSWQV=GS1.1.1615352728.1.1.1615352744.0'}
+         Body1 = json.dumps({
+            "isEnabled": True,
+            "name": tracker.get_slot("firstname"),
+            "password": "test",
+            "firstName": tracker.get_slot("firstname"),
+            "lastName": tracker.get_slot("lastname"),
+            "email": tracker.get_slot("email"),
+            "environments": [
+            "development"
+            ]
+         })
+         response1 = requests.post("https://ptest.qa3.nslhub.com/dsd-orch/cdm/api/cdm/create/user", headers=headers1, data = Body1)
+         print(response1.status_code)
+         print(response1.text)
+         return []
+
+
+
 class ActionCreateDirectMessage(Action):
 #
     def name(self) -> Text:
@@ -184,14 +223,18 @@ class ActionDefaultFallback(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         dispatcher.utter_message(text="🙋 I did not find anything in FAQs... Searching the knowledge base")
-        text=pipe.run(query=tracker.latest_message['text'],
-                          top_k_retriever=1,
-                          top_k_reader=1)["answers"][0]["answer"]
-        if len(text)!=0:
+
+        try:
+            search = pipe.run(query=tracker.latest_message['text'], top_k_retriever=1, top_k_reader=1)
+        except Exception as e:
+            search = {'query': tracker.latest_message['text'],'answers': [{'answer': None,'score': 0,'probability': 0,'context': None,'offset_start': 0,'offset_end': 0,'document_id': None, 'meta': {}}]}
+
+        text=search["answers"][0]["answer"]
+        confidence=search["answers"][0]["probability"]
+        if text != "None" and confidence>0.05:
             dispatcher.utter_message(text)
         else:
             dispatcher.utter_message(text="🙋 I did not find anything in Knowledge base... Shall I transfer it to human agent?")
-        
 
         return []
 

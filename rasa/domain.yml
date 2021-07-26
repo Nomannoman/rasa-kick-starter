@@ -425,6 +425,7 @@ actions:
   - action_set_first
   - action_default_fallback
   - validate_details_form
+  - action_create_user
   - action_create_direct_message 
 
 session_config:
