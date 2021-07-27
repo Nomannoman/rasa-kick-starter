@@ -17,7 +17,7 @@ from haystack.utils import print_answers
 from haystack.retriever.sparse import TfidfRetriever
 from haystack.pipeline import ExtractiveQAPipeline
 from haystack.file_converter.txt import TextConverter
-from haystack.file_converter.pdf import PDFToTextConverter
+#from haystack.file_converter.pdf import PDFToTextConverter
 #from haystack.file_converter.docx import DocxToTextConverter
 from haystack.preprocessor.preprocessor import PreProcessor
 from email.mime.text import MIMEText
@@ -235,7 +235,7 @@ class ActionSentimentAnalysis(Action):
 
 document_store = FAISSDocumentStore()
 
-converter2 = PDFToTextConverter()
+#converter2 = PDFToTextConverter()
 converter3 = TextConverter()
 
 processor = PreProcessor(clean_empty_lines=True,
@@ -255,12 +255,12 @@ for filename in os.listdir(doc_dir):
         d = processor.process(d)
         docs.extend(d)
 
-    if filename.split('.')[-1] == 'pdf':
-        print("Pdf file: ",filename)
+    # if filename.split('.')[-1] == 'pdf':
+    #     print("Pdf file: ",filename)
  
-        d = converter2.convert(os.path.join(doc_dir,filename), meta={"name": filename})
-        d = processor.process(d)
-        docs.extend(d)
+    #     d = converter2.convert(os.path.join(doc_dir,filename), meta={"name": filename})
+    #     d = processor.process(d)
+    #     docs.extend(d)
 
 document_store.write_documents(docs)
 model_doc = "deepset/roberta-base-squad2"
@@ -276,7 +276,15 @@ class ActionDefaultFallback(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         dispatcher.utter_message(text="🙋 I did not find anything in FAQs... Searching the knowledge base")
+        return [FollowupAction(name="action_search")]
 
+
+class Actionsearch(Action):
+    def name(self) -> Text:
+        return "action_search"
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
         try:
             search = pipe.run(query=tracker.latest_message['text'], top_k_retriever=1, top_k_reader=1)
         except Exception as e:
@@ -287,9 +295,7 @@ class ActionDefaultFallback(Action):
         if text != "None" and confidence>0.01:
             dispatcher.utter_message(text)
         else:
-            dispatcher.utter_message(text="🙋 I did not find anything in Knowledge base... Shall I transfer it to human agent?")
-
-        return []
+            dispatcher.utter_message(text="🙋 I did not find anything in Knowledge base... Shall I transfer it to human agent?")    
 
 
 class ActionMail(Action):

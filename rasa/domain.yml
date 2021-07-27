@@ -427,7 +427,7 @@ actions:
   - validate_details_form
   - action_create_user
   - action_create_direct_message 
-
+  - action_search
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
