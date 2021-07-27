@@ -17,7 +17,7 @@ from haystack.utils import print_answers
 from haystack.retriever.sparse import TfidfRetriever
 from haystack.pipeline import ExtractiveQAPipeline
 from haystack.file_converter.txt import TextConverter
-#from haystack.file_converter.pdf import PDFToTextConverter
+from haystack.file_converter.pdf import PDFToTextConverter
 #from haystack.file_converter.docx import DocxToTextConverter
 from haystack.preprocessor.preprocessor import PreProcessor
 from email.mime.text import MIMEText
@@ -133,13 +133,60 @@ class ActionCreateDirectMessage(Action):
             a4 = json.loads(await rocketChatSocket.recv())
             room = a4['result']['rid']
 
+            #Sending chat history
+            headers = {
+            'X-Auth-Token': 'YrSyXcaoUsbphi1FpJk1BmJY9ANWwk5WNqws3yc5M2r',
+            'X-User-Id': 'Gd8wWh6bup3rat3ej'
+        }
+            #conversation_id = tracker.sender_id
+            #dispatcher.utter_message("The conversation id is {}".format(conversation_id))
+            response = requests.get(
+                "http://rocketchat:3000/api/v1/channels.messages?roomName=general",
+                headers=headers)
+
+            response = json.loads(response.text)
+            #msg = response[0]
+            User = []
+            Bot = []
+            index = []
+            i = 0
+            while "Hey! How can I help you?" not in response["messages"][i]["msg"]:
+                if response["messages"][i]["u"]["username"] == "yantr":
+                    Bot.append(response["messages"][i]["msg"])
+                    index.append("B")
+                else:
+                    User.append(response["messages"][i]["msg"])
+                    index.append("U")
+                i = i + 1
+            Bot.append(response["messages"][i]["msg"])
+            index.append("B")
+            i = i + 1
+            User.append(response["messages"][i]["msg"])
+            #index.append("U")
+            b = len(Bot) - 1
+            u = len(User) - 1
+            ind = len(index) - 1
+            strz = "Thanks for contacting NSLHUB\n This is user's chat history with the bot : "
+            strz = strz+("User: " + User[u] + "\n")
+            u = u - 1
+            while ind >= 0:
+                if index[ind] == "U":
+                    strz = strz + ('\033[1m'+"USER  : "+'\033[0m' + User[u] + "\n")
+                    u = u - 1
+                if index[ind] == "B":
+                    strz = strz + ('\033[1m'+"YANTR  : " +'\033[1m'+ Bot[b] + "\n")
+                    b = b - 1
+                ind = ind - 1
+            strz= strz+ "\n####################################\n"
+            strz= strz+ "####################################\n"
+            strz= strz +"####################################\n\n\nMoving ahead,How can I help you today...\n"
             message = {
                 "msg": "method",
                 "method": "sendMessage",
                 "id": "42",
                 "params": [{
                     "rid": room,
-                    "msg": "Thanks for contacting NSLHUB\nHow can I help you today..."
+                    "msg": strz
                 }]
             }
 
@@ -148,12 +195,10 @@ class ActionCreateDirectMessage(Action):
             await rocketChatSocket.recv()
 
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text="Transferring to human chat..")
-        asyncio.get_event_loop().run_until_complete(self.hello())
-        return []
+    def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            dispatcher.utter_message(text="Transferring to human chat..")
+            asyncio.get_event_loop().run_until_complete(self.hello())
+            return []
 
 embed = hub.load(os.getcwd() + "/actions/universal_sentence_encoder")
 
@@ -190,6 +235,7 @@ class ActionSentimentAnalysis(Action):
 
 document_store = FAISSDocumentStore()
 
+converter2 = PDFToTextConverter()
 converter3 = TextConverter()
 
 processor = PreProcessor(clean_empty_lines=True,
@@ -206,6 +252,13 @@ for filename in os.listdir(doc_dir):
         print("txt file: ", filename)
         d = converter3.convert(os.path.join(doc_dir, filename),
                                meta={"name": filename})
+        d = processor.process(d)
+        docs.extend(d)
+
+    if filename.split('.')[-1] == 'pdf':
+        print("Pdf file: ",filename)
+ 
+        d = converter2.convert(os.path.join(doc_dir,filename), meta={"name": filename})
         d = processor.process(d)
         docs.extend(d)
 
@@ -231,7 +284,7 @@ class ActionDefaultFallback(Action):
 
         text=search["answers"][0]["answer"]
         confidence=search["answers"][0]["probability"]
-        if text != "None" and confidence>0.05:
+        if text != "None" and confidence>0.01:
             dispatcher.utter_message(text)
         else:
             dispatcher.utter_message(text="🙋 I did not find anything in Knowledge base... Shall I transfer it to human agent?")
@@ -323,9 +376,13 @@ class ActionFirstName(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-      
-           dispatcher.utter_message(text="Recollecting details..")
-           return [SlotSet('firstname', None),SlotSet('lastname', None),SlotSet('email', None),SlotSet('phno', None)]
+            for event in tracker.events:
+                if event.get("event") == "bot":
+                    str = event.get("text")
+            if "Please once check your details:" not in str:
+                return[FollowupAction(name="action_default_fallback")]
+            dispatcher.utter_message(text="Recollecting details..")
+            return [SlotSet('firstname', None),SlotSet('lastname', None),SlotSet('email', None),SlotSet('phno', None)]
 
 
 class DetailsForm(FormValidationAction):

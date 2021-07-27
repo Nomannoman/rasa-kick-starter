@@ -1,0 +1,1081 @@
+﻿
+
+
+Solution User Guide Template (V1.0)
+
+
+
+
+
+
+
+
+Solution User Guide
+Health Insurance Policy Administration - NSLHIPA
+Version: 1.1
+Date: 21/04/2021
+
+
+<The consumers of this document would be end-users of the solution.>
+
+
+
+
+
+1	Introduction	1
+1.1	Purpose	2
+1.2	Solution Overview	2
+1.3	Glossary	2
+2	Solution Details	2
+2.1	Basic Details	2
+2.2	Main Features of the Solution	2
+2.3	Change Units	2
+2.4	Solution Navigation (User Story)	2
+2.5	List of Documents	3
+2.6	Expected TATs	3
+2.7	Report Generation	3
+2.8	Solution User Guide	3
+2.9	Solution Training & Support	3
+2.9.1	Video Tutorials	3
+2.9.2	Online Training & Support	3
+2.9.3	Support Forums	3
+2.9.4	Help	4
+
+
+
+
+1 INTRODUCTION
+Vision: Health insurance policy administration solution is a powerful and flexible solution helping the insurers deliver seamless end to end online policy management services resulting in digitising core backend processes with highly automated solution thereby delighting the customers.
+
+○ 1.1 Purpose
+END USER PER SE : The purpose of this user manual is intended to give assistance to the users transacting the NSL solution, “Health Insurance Policy Administration”. (HIPA)
+SOLUTION PER SE : Health Insurance Policy Administration provides an end to end solution on health insurance policies both for customers and insurance company users perspective. NSL HIPA manages the full policy administration life cycle of an insurance policy, enabling the creation and administration of policies, from inception through renewal or cancellation as well as customer portal that helps easy member management systems.
+The Insurers can use the solution to deliver seamless end to end online policy management services thereby modernizing their administrative process by achieving higher automation levels and digitalising core backend processes.
+The key features of NSL-HIPA include: 
+● Cloud based solution
+● Mobile-enablement and easy access from multiple devices and platforms 
+● Full and flexible policy administration life cycle ; including Quote management, Policy enquiry, enrollments, Issuance, Renewals, Reinstatements, Automated MTA’s (rewriting), Changes, Cancellations with lapse history, Underwriting and especially customer portal to provide the best of the customer experience 
+● Scalable and flexible structure that allows easy adoption of new features and customers without any programming requirements
+● Integration with third-party systems (TBD)
+● Enhances Operational Efficiency that helps in reducing operational costs through highly streamlined business processes, easy online member management
+● Unique one touch access to various modules, effective access to the information
+● Individual screen sets for policy subsystems (modules) where needed which can be anchored in the same underlying business process
+● Clear and intuitive user interface design that improves user experience and boosts efficiency.
+
+○ 1.2 Solution Overview
+The following figure illustrates the individual workflow of the health insurance policy administration.
+
+
+○ 1.3 Glossary
+
+S.No.
+Term
+Definition
+1
+Insurance
+Is a contract, represented by a policy, in which an individual or entity receives financial protection or reimbursement against losses. 
+1
+
+
+2
+Insurer
+Person or company providing you with financial support in the case of specific, bad events listed in your insurance policy.
+
+
+
+3
+Insured
+Person or entity legally entitled to receive the benefits of an insurance policy during the losses.
+
+
+
+4
+Premium
+An amount to be paid for a contract of insurance.
+
+
+
+5
+Sum Insured
+Maximum value for a particular year that the insurance company can pay if you are hospitalized.
+
+
+
+6
+Quote
+Is an estimate of premium for the insurance coverage that an insured selected and information entered.
+
+
+
+7
+Reinstatement
+Reactivation of temporarily inactivated insurance policy.
+
+
+8
+Waiting Period
+Time span during which the insured cannot claim some or all benefits of the health insurance from his/her insurance company.
+
+
+S.No.
+Abbreviation
+Full Form
+1
+GSI
+Global Statement of Intent
+
+
+
+2
+NSL-HIPA
+Natural Solution Language Health Insurance Policy Administration
+
+
+
+3
+IRDR
+Information Rights Decision Rights
+
+
+
+4
+BMI
+The body mass index accounts for differences in body composition by defining the level of adiposity. This is done according to the height and weight in an individual.
+
+
+
+5
+KYC
+Know Your Customer
+
+
+
+6
+IRDA
+Insurance Regulatory and Development Authority
+
+
+
+7
+KPI
+Key Performance Indicators
+
+
+
+8
+HIPAA
+Health Insurance Portability and Accountability Act
+
+
+
+9
+GDPR
+General Data Protection Regulation
+
+
+
+10
+DCD
+Drivers of change drivers
+
+
+
+
+
+2 SOLUTION DETAILS
+The solution is detailed in 8 modules which completes the NSL HIPA life cycle. The modules with individual overview is listed below
+
+Module
+Overview Of The Module
+Policy Quote
+In quote management you can see a user visiting the portal becoming a potential customer by exploring various products and comparing the quotes of the products as needed. Unlike routine workflow, one time documents and details submission can be seen here avoiding multiple communications with the customer for verification purposes. 
+Policy Issuance
+This module is the core part of the solution where the insurance policy document for auto clear cases gets issued to the customer in less than 30 minutes from the time of the quote purchase which is a huge differentiator in the current health insurance industry.
+
+Policy Change
+In the change module a customer can amend any basic details from his/her existing records and also can request a customer care executive to amend on their behalf. The changes are divided into 2 levels i.e., (i) Basic Level (ii) Advanced Level. Based on the change type further segregation of the workflow and underwriting analysis will be seen.
+Policy Renewal
+Policy renewal is the stage where the continuation of the customer coverage will be seen with minor changes incorporated to the existing policy as requested by the customer. More or less the customer continues the same policy and completes the renewal by revised premium payment followed by transaction confirmation.
+Policy Reinstatement
+This module deals with the re-activation of the customer policy that was temporarily inactivated / terminated  due to customer delay in premium payment. This is basically the process of putting back the lapsed policy of the customer to normal and active state with an adjustment amount in the form of penalty charges.
+Policy Rewrite
+In this module reissuance of the same customer policy with revised terms and conditions as per customer preference is seen with new activation and renewal dates. This is interconnected with the cancellation module where the existing policy gets cancelled first and then followed by reissuance as per customer choice.
+Policy Cancellation
+In the cancellation module you can see the termination of the customer policy contract before it’s expiration due to various circumstances. The cancellation involves active and passive customer retention methods followed by a refund process (If customer is eligible) ultimately connecting the accounting phase.
+Customer Portal
+This module is a connecting interface between the customer and the Insurer. The customer gets complete visibility on the existing personal records which can be amended and updated here with the support of customer care executives as needed. Adding to this customer can track the key metrics, reminders, support requests or other information such as reference or supporting documents that can be easily shared in this module.
+
+○ 2.1 Basic Details
+The Health Insurance Policy Administration Solution leads the track with the help of application roles that were previously  incorporated in the solution which navigates and executes each transaction as per the IRDR (Information Rights/Decision Rights) assigned.
+Application roles are the roles that you will witness in the user interface supporting the transaction execution. Each role is unique with it’s own IRDR and based on the IRDR itself one can access and execute the solution.
+Below are the solution incorporated roles and their responsibilities that you can correlate with the solution.
+
+Role / Agent
+What does this role do?
+Customer
+The user who purchases the policy by exploring various available products in the solution becoming the potential customer.
+● Tracks the individual profile dashboard
+● Amends existing records, tracks support requests, key metrics etc.
+Insurance Agent Broker
+The professional representing the best in class consumers in their search for the best customer insurance policy needs.
+● Research coverage, terms, conditions and price
+● Recommend the insurance policy that best fits the customer bill
+● Assist the customer in every step till the time the policy is purchased.
+Customer Care Executive - CCE
+Executive who provides a valuable connection between the insurer and the customer.
+● Handles all customer queries and complaints
+● Amends the existing customer records on their behalf with appropriate approvals from respective leads
+● Mediates communications and interactions betweens other agents such as customer, underwriter, policy manager, csr etc
+Manager - Policy Admin - CCM
+Admin representative who oversees and verifies the policy procedures.
+● Create and modify procedures and documents related to insurance policies
+● Identify and analyse the risk associated with policies
+● Decision maker for any request approvals, authentications
+● Point of contact for any policy admin related queries, support with interconnected verticals like accounts team, calling operations team etc.
+Underwriter
+Professional who evaluates and analyses the risk involved in insuring customer.
+● Analyse the risk during an insurance proposal by referring the customer key parameters such as age, gender, health condition, family medical history, income etc.
+● Determine policy terms and calculate premiums on the basis of actuarial, statistical and background information of the customer
+● Right decision making when the customer profile is at high risk.
+Customer Service Representative - CSR
+Service executive responsible for offering information and advice to customers signing insurance policiesI feel that the Customer Service Representative and Customer Care Executive need not be seperate as duties performed by former is a subset of latter. By taking away restriction of 2 roles, customer will be served better and lesser time
+.
+● Handling communications with the customer for specific support requests
+● Calling activities with potential customers for product related offerings and campaigns
+● Customer retention process during customer cancellations/seperations of active policies
+● Connecting / mediating the customers with the next level of management for important / urgent service requests.
+Customer Service Manager - CSM
+Service manager who manages the potential customers accounts and records.
+● High profile customer retention process during customer cancellations/seperations of active policies
+● Monitor the records of customer interactions and details of the actions taken on special customer requests
+● Manage a bulk calling activity data and communication storage.
+
+
+○ 2.2 Main Features of the Solution
+
+The purpose of this section is to establish standards and provide guidance on Health Insurance Policy Administration Solution.
+
+2.2.1 Functional description about our modules:
+
+
+
+2.2.2 Competitive Features List
+Insurance Features
+Remarks
+Access Control
+Overall organization level access control can be maintained
+Appointment Management
+We can schedule and manage the online medical appointments for the customer with their physicians
+Client Portal
+Complete customer dashboard including policy activities accessibility
+Authentication
+Password based authentication
+Contact Management
+Autosave the customer's details and tracking their interactions with the business
+Quote Management
+Quote recommendation to the potential customers based on their financial and health risk factors
+Content Library
+User demo and user guide 
+Data Import/Export
+Data related to the customer can be exported for further insights
+Data Synchronization
+Real time data gets synchronised between all the personas
+Permission Management
+Overall modules and solutions is restricted to personas
+Customer Database
+Organized collection of customer data that can be used for analysis during a product purchase
+Policy Management
+Perform all policy related tasks such as renewals, rewrites, reinstatements, issuance etc under single roof
+Role-Based Permissions
+Overall modules and solutions is restricted to personas
+SSL Security
+Use of SSL VPN to connect
+User Management
+Roles are mapped across the solutions
+Workflow Management
+Fully automated workflow orchestration
+
+2.2.3 Features that we are offering
+We offer the best in class features across the solution which are easy to use and give the best user experience and below are listed features which are used in the solution.
+Process Module
+Org Setup
+Creating, Editing, and Deleting Organizational Units
+Parent Child Hierarchy
+Upload Organization Unit
+Organisation grouping
+Create base products
+Unique ID
+Members Partaking
+Premium & Benefit value
+Enrollment grading
+Multichannel enrollments
+Pend enrollment automated reprocessing
+Automatic healthcare ID card
+Policy Digitisation
+Comprehensive product and coverage recommendation
+Individual and group policies management
+Automated renewals with premium calculation and recalculation
+Calculation of commission for brokers
+Creation of policy documents
+Policy Tracking
+Quote & Estimates
+Quote control
+Seamless premium calculation with automated retro calculations
+Complex rule engine
+Customer to customise option
+Comparable Quotes
+Insurance Policy Management
+Network hospitals mapping
+Policy Reinstatement / Cancellation
+Customer profiling
+Customer retention
+Reinstatement Tracking
+Cancellation Tracking
+
+Customer Portal
+360° customer centric visibility
+Appointment Management
+Contact Management
+
+Platform Feature
+Alerts in mails
+Push Notifications
+Event Scheduling
+Instacheck
+SMS Messaging
+Barcode / QR code scanning
+Suspenses (sticky notes)
+Image Capture
+Image Editing
+Image upload
+Multilingual Support
+Data Analytics
+Ad hoc Reporting
+Historical Reporting
+Real Time Reporting
+Scheduled Reporting
+Key Performance Indicators
+Reporting & Statistics
+Data Sources & Data Management
+Data Import & Export
+Import historical data
+Data Synchronization
+Database used
+Designer/End User Experience
+Customizable Forms
+Customizable Templates
+Customizable Questionnaire
+Customizable Fields
+Customizable Reports
+Drag and drop
+Tool tips
+Representative icons for GSI activation
+Heads up for sensitive data sharing
+
+Workflow Features & Logics
+Process/Workflow Automation
+Search/Filter
+Review and Approve Workflows
+Automatic Task Assigning to user
+Automatic Assigning to a Department or group
+Security & Trust
+Single Sign On
+SSL Security
+Encryption of sensitive data at rest
+Role based permissions
+Reports/alerts for security breaches
+Authentication
+Secure User Roles
+Integrations & Ecosystem
+API
+eKYC
+Quick books
+Formstack eSign doc
+Digital Signature
+Electronic Payments
+Compliance & Certification
+GDPR
+Mobility
+Web-based
+iPhone app
+Android app
+
+○ 2.3 Change Units
+
+Below is the complete list of change units which are used in the solution.
+
+Change Unit Name
+Change Unit Type
+Enrollment type
+Basic CU
+Insuree login_1
+Alternate CU
+insuree registration_1
+Alternate CU
+registration using email id_1
+Alternate CU
+registration using mobile number_1
+Alternate CU
+dashboard details
+Reserve Create
+dashboard details
+Reserve Search
+show the dashboard
+Basic CU
+My_Profile.
+Reserve Create
+Insuree choosing page
+Basic CU / Alternate CU
+Insuree-Address-Details
+Reserve Create
+Insuree-Contact-Details
+Reserve Create
+Insuree-Bank-Details
+Reserve Create
+Nominee-Change-Details
+Reserve Create
+Insuree-KYC-Details
+Reserve Create
+Statement_Master_Details.
+Reserve Create
+Insuree Choice_29
+Basic CU / Alternate CU
+Account Summary Details of insuree
+Reserve Create
+Show_details_AccountSummary
+Basic CU
+Individual premium details of insuree
+Reserve Create
+Show_details_of_individual_insuree
+Basic CU
+insuree books an appointment
+Reserve Create
+take network details
+Reserve Create
+search for network hospitals
+Reserve Search
+show network hospitals
+Basic CU
+insuree books an appointment
+Reserve Create
+payment using debit card
+Alternate CU
+payment using credit card
+Alternate CU
+Booking confirmation through email
+Basic CU
+nsl_emailreservedcu
+Reserved CU - Email
+booking confirmation through sms
+Basic CU
+nsl_smsreservedcu
+Reserve Sms CU
+watsapp confirmation
+Basic CU
+nsl_whatsappreservedcu
+Reserve Whats app CU
+view existing appointment
+Reserve Search
+show existing details to insuree
+Basic CU
+reschedule appointment
+Reserve Create
+updated reschedule appointment details
+Reserve Create
+Booking confirmation through email
+Reserved CU - Email
+nsl_emailreservedcu
+Reserved CU - Email
+booking confirmation through sms
+Reserve Sms CU
+nsl_smsreservedcu
+Reserve Sms CU
+watsapp confirmation
+Reserve Whats app CU
+nsl_whatsappreservedcu
+Reserve Whats app CU
+Health assessment-Basic
+Basic CU
+Health assessment-complete details
+Basic CU
+health reports upload
+Reserve Create
+search for health reports
+Reserve Search
+display my health reports
+Basic CU
+grievance redressal
+Basic CU
+intiate call back
+Basic CU
+if want to intiate call back
+Alternate CU
+want to change mobile no to intiate call back
+Alternate CU
+livechat
+Basic CU
+feedback _for_customers
+Basic CU
+sending_feedback_forms_through_mail
+Basic CU
+rccu_Ins
+Reserve Create
+rscu_Ins
+Reserve Search
+customerDetailsdisplay
+Basic CU
+customerRecordsfetch
+Basic CU
+customerCasesegregation&Review
+Basic CU
+BCU_policygeneration
+Basic CU
+BCU_UWCasereview
+Basic CU
+cceLogintoportal
+Basic CU
+customercaseVerification
+Basic CU
+Rewrite Intiation_2
+Basic CU
+CCE receives request from customer_2
+Basic CU
+Underwriter Examination_2
+Basic CU
+Send Finalized Details To CCE _2
+Basic CU
+CCE Sends Payment Detail To Customer_2
+Basic CU
+Customer Makes Payment_2
+Basic CU
+Debit Card Payments_2
+Alternate CU
+Credit Card Payment_2
+Alternate CU
+Email Confirmation After Payment_2
+Basic CU
+NSL_emailReservedCu
+Reserve Create
+Sms Confirmation After Payment_2
+Basic CU
+NSL_smsReservedCu
+Reserve Create
+Watsapp Confirmation After Payment_2
+Basic CU
+NSL_watsappReservedCu
+Reserve Create
+CCE Send Customer Policy File For Manager Approval_2
+Basic CU
+Manager Reviews And Approval_2
+Basic CU
+CCE Issuse Policy To Customer_2
+Basic CU
+Login
+Basic CU
+Grace Period Renewal
+Basic CU
+Sending Notification To Email
+Basic CU
+NSL_emailReservedCu
+Reserved CU - Email
+Customer Renewals Policy
+Basic CU
+Customer Uploads Document
+Basic CU
+Health Condition Confirmation
+Basic CU
+Display Renewal Amount
+Basic CU
+Rebate Calculation
+Basic CU
+Display Renewal After Rebate
+Basic CU
+Payment For Renewal
+Basic CU
+Payment by credit card
+Alternate CU
+Payment by debit card
+Alternate CU
+Save payment mode
+Basic CU
+Transaction Summary
+Basic CU
+Sms Confirmation After Payment_2
+Basic CU
+NSL_smsReservedCu
+Reserve Create
+Grace Period of insuree
+Basic CU
+Sending sms about lapsed policy
+Basic CU
+nsl_smsreservedcu
+Reserve Sms CU
+Revival/Reinstatement Policy
+Basic CU
+Transaction for reinstatement
+Basic CU
+Payment by credit card
+Alternate CU
+Payment by debit card
+Alternate CU
+Save payment mode
+Basic CU
+Transaction Summary
+Basic CU
+Sending an email about reinstatement policy update
+Basic CU
+NSL_emailReservedCu
+Reserved CU - Email
+New Enrollment
+Reserve Create
+proposer Info
+Reserve Create
+Submit Enrollment
+Basic CU
+Reconfirm the details for product recommendations
+Basic CU
+Recommendation Reserve CU
+Reserve Create
+Recommendation Logic RSCU
+Reserve Search
+Recommendation BasicCU
+Basic CU
+Coverage Selection
+Basic CU
+Premium Reserve CU
+Reserve Create
+Premium Logic RSCU
+Reserve Search
+view Premium Summary
+Basic CU
+KYC submission and Verification
+Basic CU
+nominee Submission
+Basic CU
+policy Purchase
+Basic CU
+card Payment
+Basic CU
+netbanking Payment
+Basic CU
+payment Confirmation
+Basic CU
+cu1_Menu
+Basic CU
+cu2_Menu_Ref
+Basic CU
+cu1_Submission Method
+Alternate CU
+cu1_Self
+Basic CU
+cu1_Submission Method_v1
+Alternate CU
+rcus1_can
+Basic CU
+cu1_catselect
+Basic CU
+cu3_category
+Basic CU
+rcus1_can
+Basic CU
+rcuc_mdb_V6
+Basic CU
+cu_ChangeSubmissionReason
+Basic CU
+sms_cp_bpc
+Basic CU
+NSL Reserved SMS
+Reserve Sms CU
+mail_cp_bpc
+Basic CU
+NSL Reserved Email
+Reserved CU - Email
+cu1_ack
+Basic CU
+cu_Premium_Coverage
+Basic CU
+cu_Riderchoice
+Basic CU
+cu_AddRider
+Basic CU
+cu_rider_hospitalCashBenefit
+Basic CU
+cu_rider_personalAccidentWaiver1
+Basic CU
+cu_rider_roomRentWaiver1
+Basic CU
+cu_rider_criticalIllnessCover
+Basic CU
+cu_rider_maternityCover
+Basic CU
+cu1_Submission Method_v1
+Alternate CU
+rcus1_can
+Basic CU
+cu1_catselect
+Basic CU
+cu3_category
+Basic CU
+rcuc_mdb_V6
+Basic CU
+rcuc_mdb_V5
+Basic CU
+sms1_cp_bpc
+Basic CU
+NSL Reserved SMS
+Reserve Sms CU
+mail1_cp_bpc
+Basic CU
+NSL Reserved Email
+Reserved CU - Email
+cu1_ack
+Basic CU
+rcuc_mdb_V6
+Basic CU
+cu_CCE_Manager Queue1 (Non Medical)
+Basic CU
+cu_CCE_Queue1 (Medical)
+Basic CU
+cu_UW_Queue1 (Medical)
+Basic CU
+cu_CCE_Queue1 (Medical)
+Basic CU
+mail1_cp_bpc
+Basic CU
+bcu2_basic profilesms
+Basic CU
+mail1_cp_bpc
+Basic CU
+bcu2_basic profilesms
+Basic CU
+mail1_cp_bpc
+Basic CU
+bcu2_basic profilesms
+Basic CU
+rcuc_refundgrid1
+Reserve Create
+rcu_CustomerMDB2
+Reserve Create
+customerlibrary2
+Reserve Search
+Cancelinitiation1
+Basic CU
+Cancellationsubmission
+Basic CU / Alternate CU
+CCEsupportforcancellation
+Basic CU / Alternate CU
+CSRsupport
+Basic CU / Alternate CU
+mac_act
+Basic CU / Alternate CU
+NSL_emailReservedCu
+Basic CU / Alternate CU
+Requestonhold
+Basic CU / Alternate CU
+custsms1
+Nested CU
+NSL Reserved SMS
+Reserve Sms CU
+smsresponse
+Basic CU
+custmail2
+Basic CU
+NSL Reserved Email
+Reserved CU - Email
+Profilingofcustomer
+Basic CU
+BRequestfinalisation
+Basic CU
+refundreviewandapprovala
+Basic CU
+refundreviewandapprovalb
+Basic CU
+GRequestFinalisation
+Basic CU
+refundreviewandapprovalc
+Basic CU
+refundreviewandapprovald
+Basic CU
+
+
+
+○ 2.4 Solution Navigation (User Story)
+The end to end solution walkthrough starts with the user taking a tour in the portal and then transforming into a potential customer Should 'Potential Customer' be read as 'Customer'?
+by purchasing the insurance policy. During this journey of transformation there are many key pointers to be guided for better understanding and ease of solution execution which is provided below as a process flow.
+
+2.4.1 The Policy Quote
+Policy Quote is the initial phase of the Insurance policy administration. This is the phase where a user logs in and provides the basic details such as Name and Mobile number to continue with the product exploration. During the exploration part the user will have the provision to go through each and every product offered in detail along with the pricing tags. The products referred are policy products, add ons, coverage benefits etc.
+Based on the workflow the module can be further explained as below:
+★ Enrolment
+★ Quote Comparison
+★ Product Recommendation
+★ KYC Submission
+★ Quote/Policy Purchase
+★ Transaction Confirmation
+Enrolment
+User will start the enrollment process (self/self&family) after exploring the products provided based on his/her interest wherein the insuree details will be provided that includes demographic, locality information, Individual and family health history, Income slab, hazardous habits etc. After providing the listed details, the user will submit the enrollment process.
+
+Quote Comparison
+Soon after the enrollment user can have the provision to view the list of products along with the comparison analysis of the individual product quotes. This will help the user to choose the best product that he/she feels to fit in the bill.
+
+Product Recommendation
+Based on the enrollment details provided by the user, product recommendation gets started wherein the user will start exploring individual features of the product in terms of coverage benefits and then comes up with a final product that he/she is ready to purchase.
+
+KYC Submission
+Out here the user uploads the KYC documents such as PAN, Aadhaar, Driving license along with a passport photograph which will be verified by the machine agent soon after the submission. Parallelly validation of the documents also will be completed which will now confirm the user with product purchase.
+
+Quote/Policy Purchase
+Now the user will transform to a potential customer by purchasing the policy through electronic payment gateways such as debit/credit card/netbanking/wallet/UPI etc parallely customer account also will be created and saved in the database for future reference purpose.
+
+
+
+
+Transaction Confirmation 
+Now a final confirmation of both purchase transaction along with the welcome onboard email confirmation will be sent to the customer with a detailed summary of the Insurance policy details.
+
+
+
+
+2.4.2 Policy Issuance
+This is the crux of the entire solution where the policies purchased will be queued under 2 categories.
+Auto Approved
+These are the policies of the customers with no associated health risk. Since there is no risk associated, there is no scope for risk analysis and a policy document will be generated in less than 30 minutes from the time of policy purchase by the customer and shared via mail to the customer registered email ID.
+
+Review Required
+These are the policies of the customers with associated health risk (Individual or family history) which needs the risk analysis done by the intervention of Underwriter. Based on the risk assessment either there will be a revision of the premium payment done or can get rejected. During the risk analysis the customer will also be advised to undergo a pre medical check up whose reports will be directly forwarded to the underwriter through customer care executive and after the customer health reports evaluation only there will be the premium revision done.
+This premium revision confirmation to the customer is mediated by the customer care executive through email and then guidance will be provided to the customer for an electronic payment gateway for finalised premium payment. After the payment, then this policy will be moved to auto approved queue where the customer receives the policy document to his/her registered email ID.
+
+2.4.3 Policy Change
+The customer has the chance to amend any of his/her existing records basic details in this phase. Customer has the provision to either self initiate a change or can request a customer care executive to make the change on his/her behalf. Depending on the nature of the change the flow is segregated into 2 categories listed below.
+★ Basic Level Of Change
+★ Advanced Level Of Change
+Basic Level
+All the customer details that do not require any supporting documents can be amended by the customer in this phase such as mobile number, name correction, billing address updates, any typographical errors in the existing records. These changes can either be amended by the customer directly or can be requested by the customer to customer care executive to amend.
+Advanced Level
+The changes related to addons, coverage revisions, changes that needed the supporting documents will be done in this phase by the request initiation from the customer to customer care executive.
+With every change request the database gets updated and confirmation of the change details will be sent to the customer's registered mail ID as well as sms form.
+
+2.4.4 Policy Renewal
+Policy renewal is the stage where the continuation of the customer policy coverage will be done with minor changes incorporated to the existing policy as requested by the customer. The customer can either continue the same policy for renewal or can update the existing policy with any addons or upgraded versions which will need the premium revision.
+The policy renewal can be initiated by the customer or can request the customer care executive to	initiate on his/her behalf. Before renewal the customer provides the health history and current health condition and accordingly the risk analysis is done and premium revision happens.
+
+This premium revision confirmation to the customer is mediated by the customer care executive through email and then guidance will be provided to the customer for an electronic payment gateway for finalised premium payment. After the payment, then this policy will be moved to auto approved queue where the customer receives the updated policy document to his/her registered email ID.
+
+
+
+
+                                                                                          
+2.4.5 Policy Reinstatement
+This is the stage where the customer re-activates his/her policy that was temporarily inactivated or terminated. Inactivation of customer policy could happen due to various reasons such as delay in premium payment from customer end, background verification failure, non responsive customer behavior etc.Customer has the provision to check the policy lapse details and accordingly can self request for reinstatement or can request customer care executive to initiate reinstatement on his/her behalf. After thorough cross check of the lapse details, the customer can continue to reinstate the policy by following the provided instructions which includes the customer record details verification and payment (adjustment and penalty charges) navigation.After the payment, then this policy will be moved to auto approved queue where the customer receives the updated policy document to his/her registered email ID.
+
+2.4.6 Policy Rewrite
+Customer has the provision to rewrite or churn his/her existing policy in which he/she receives a new policy document mentioning all the terms and conditions put across by the customer. During the rewrite process the customer is expected to provide all the supporting documents without which there will be no scope for the reissuance of revised policy document.Based on the rewrite conditions, a medical document needs to be provided from the customer's end and risk analysis will be done if required by the underwriter. Risk analysis might also lead to the premium revision based on the customer’s revised terms. And in order to reissue the new policy the customer should cancel the existing policy with the help of customer care executive guidance following policy instructions.
+Once the process of risk analysis is done then the customer opts for policy cancellation and completes the formalities in the cancellation  module so that post final approvals, new policy will be reissued. New policy will be reserved to the customer’s registered email ID and parallely the backend database also gets updated with revised policy changes.
+2.4.7 Policy Cancellation
+This is the last module of the solution where you can see the termination of the customer’s active policy due to various reasons. A customer can either self initiate the policy cancellation or can request a customer care executive to initiate cancellation on his/her behalf. Cancellation stage starts with the customer login with user ID. After login the customer verifies his existing records pertaining to the demographics, bank account details, policy details etc and picks either self initiate or CCE support for cancel initiate.
+If the customer chooses self initiation then the refund matrix table is made available to check whether he/she is eligible for refund along with refund proportion (percentage). Once the refund verification is done then the customer is asked to confirm his/her registered details
+Post the registered details confirmation by the customer, a nested trigger occurs to the customer service representative for customer profiling and first level of retention process. Based on the customer’s association with the insurer, premium charges and number of active policies the customer profiling will be done as bronze, gold, silver and platinum. 
+In the first level of retention process,  the customer service representative puts in maximum efforts to retain the customer who has initiated a cancellation of the policy. The retention process happens parallely via calling activity while running through the customer records and reason for the cancellation. Based on the output from first level retention, the customer service representative assigns the request to the customer service manager who does the second level retention. Not every customer profile goes for a second level retention process unless (i) The customer profile is gold and platinum (ii) The customer insistes to speak to the high level manager i.e., customer service manager.
+In the second level of retention process, the customer service manager tries to retain the customer by putting across rebates and offers as an addon benefit to current customer policy. Based on retention efforts (i) either the customer withdraws the cancellation request followed by an email confirmation to the customer which in return requests for customer acknowledgement (ii) the cancel request moves to the Policy Admin Manager’s queue for approval.
+The policy admin manager goes through the complete request since request initiation by the customer and makes the decision to approve or disapprove the request. During this process, the policy admin manager verifies the refund matrix and then even confirms the refund final proportion based on which the refund initiation happens triggering a communication to the accounting team and parallely the customer also receives the cancel request confirmation email to his/her registered email ID.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Customer Service Representative - First Level Retention Process
+
+
+Customer Profiling
+
+
+
+Customer Service Manager - Second Level Retention Process
+
+Policy Admin Manager - Final Approval For Cancellation
+
+
+2.4.8 The Customer Portal
+This is the best phase that connects the customer to his/her insurer. We are providing a secure customer portal, with features such as encryption and an updated dashboard which allows the customers to feel safe when inputting private information or accessing sensitive documents. Security is expected so be sure to deliver a secure experience for customers considering no digital experience should remain stagnant.
+Customers get complete visibility on the existing personal records which can be amended and updated here with the support of customer care executives as needed. Adding to this customer can track the key metrics, reminders, support requests or other information such as reference or supporting documents that can be easily shared in this module.
+This customer portal meets the unique needs of the customers by delivering the content, services and tools specific to each customer. Ultimately this customer portal enhances the customer experience that would best benefit the users.
+
+
+
+Customer Profile Dashboard and its Sub Modules
+
+
+
+
+
+
+
+
+
+
+
+
+Customer Activities and list of Self Initiate able Activities
+
+
+
+
+
+
+
+
+
+
+
+
+○ 2.5 List of Documents
+[This subsection provides the list of documents to be uploaded, if any.]
+Customers list of documents
+● Pan Card
+● Aadhaar Card
+● Photocopy
+● Digital signature
+● Blank Cheque
+● Health records
+● Diagnostic reports
+
+Insurer’s list of documents
+● Branch details
+● Employee details
+● Digital signatures
+● Product templates
+
+○ 2.6 Expected TATs
+Base data is collected during piloting internally.
+
+S.No
+Solution Name
+Module Name
+GSI
+Video Source
+Time Taken With Latency
+Time Taken Without Latency
+1
+Health Insurance Policy Administration
+Policy Cancellation
+HI_PolicySurrender
+Link
+3.35
+3.06
+2
+Health Insurance Policy Administration
+Policy Buy Quote
+Health Insurance Policy BuyQuote
+Link
+7.22
+6.56
+3
+Health Insurance Policy Administration
+Policy Issuance
+Health Insurance Policy Issuance
+Link
+3.05
+2.56
+4
+Health Insurance Policy Administration
+Policy Renewal
+Health Insurance Policy Renewal
+Link
+3.45
+3.19
+5
+Health Insurance Policy Administration
+Policy Reinstatement
+Health Insurance Policy Reinstatement
+Link
+2.53
+2.02
+7
+Health Insurance Policy Administration
+Customer Portal
+HI_CustomerPotalModule
+Link
+4.39
+4.08
+8
+Health Insurance Policy Administration
+Policy Change
+Health Insurance Policy Change
+Link
+8.52
+8.21
+9
+Health Insurance Policy Administration
+KPI Reports
+Total 30 GSI’S (5 prepared)
+
+
+
+10
+Health Insurance Policy Administration
+Org Set Up
+
+
+
+
+
+
+○ 2.7 Report Generation
+● Overall policies issued by any period
+● Overall Status of the quotes generated
+● Overall Status of cancelled policies
+● Overall Status of retained customers
+● Details of the minutes took for issuing the customer policies
+● Metrics calculations 
+
+○ 2.8 Solution User Guide
+This would provide you overall modules GSI, CU and use cases of the solution. You can refer to this Solution User Guide
+
+○ 2.9 Solution Training & Support
+[This subsection provides the references to the videos wherever solution training videos are available. Wherever the solution videos are not available and classroom training is required, they should be included as a task in the solution implementation tasks.]
+
+
+■ 2.9.1 Video Tutorials
+Below provided links will direct you to the video tutorials of solution module wise which can be used as a reference.
+★ Cancellation Module from HIPA 
+★ Policy Buy Quote with Issuance from HIPA
+★ Policy Change / Updates from HIPA
+★ Crop Insurance - AgriSaaS
+
+■ 2.9.2 Online Training & Support
+[This subsection provides the references to the links of the self-paced training courses online.]
+■ 2.9.3 Support Forums
+[The subsection provides the references to the links of the support forums where users’ questions are answered promptly. Also, the users can share their opinions and ideas with the community.]
+
+■ 2.9.4 Help
+[References to the online Help page can be mentioned where the latest user guide can also be downloaded for offline use]
+FAQ’s - anytime support for the users.
+
+Version Control updates
+● Updated the CU TAT details
+● Updated the documents list details
+● Updated Purpose details
+● Updated competitive feature list
+● Features offered by NSL
+● FAQ details
+
+
+
+
+
+
+
+1 | Page | © Brane Cognitives Pte Ltd 2020.  Private and Confidential. All rights reserved.	www.nslhub.com
+
+
+
+
