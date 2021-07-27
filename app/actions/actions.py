@@ -150,7 +150,7 @@ class ActionCreateDirectMessage(Action):
             Bot = []
             index = []
             i = 0
-            while "Hey! How can I help you?" not in response["messages"][i]["msg"]:
+            while i<len(response["messages"]) and "Hey! How can I help you?" not in response["messages"][i]["msg"]:
                 if response["messages"][i]["u"]["username"] == "yantr":
                     Bot.append(response["messages"][i]["msg"])
                     index.append("B")
@@ -166,15 +166,17 @@ class ActionCreateDirectMessage(Action):
             b = len(Bot) - 1
             u = len(User) - 1
             ind = len(index) - 1
-            strz = "Thanks for contacting NSLHUB\n This is user's chat history with the bot : "
-            strz = strz+("User: " + User[u] + "\n")
+            strz = "Thanks for contacting NSLHUB\n This is user's chat history with the bot : \n\n"
+            strz=strz+"-------------------------------------------------------------------------------------------------\n\n"
+            strz = strz+("USER: " + User[u] + "\n")
             u = u - 1
             while ind >= 0:
                 if index[ind] == "U":
-                    strz = strz + ('\033[1m'+"USER  : "+'\033[0m' + User[u] + "\n")
+                    strz=strz+"-------------------------------------------------------------------------------------------------\n\n"
+                    strz = strz + ("USER  : "+ User[u] + "\n")
                     u = u - 1
                 if index[ind] == "B":
-                    strz = strz + ('\033[1m'+"YANTR  : " +'\033[1m'+ Bot[b] + "\n")
+                    strz = strz + ("YANTR  : "+ Bot[b] + "\n")
                     b = b - 1
                 ind = ind - 1
             strz= strz+ "\n####################################\n"
@@ -322,7 +324,7 @@ class ActionMail(Action):
         Bot = []
         index = []
         i = 0
-        while "Hey! How can I help you?" not in response["messages"][i]["msg"]:
+        while i<len(response["messages"]) and "Hey! How can I help you?" not in response["messages"][i]["msg"]:
             if response["messages"][i]["u"]["username"] == "yantr":
                 Bot.append(response["messages"][i]["msg"])
                 index.append("B")
