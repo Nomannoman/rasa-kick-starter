@@ -83,7 +83,7 @@ class ActionCreateDirectMessage(Action):
     def name(self) -> Text:
         return "action_create_direct_message"
 
-    async def hello(self,tracker,dispatcher):
+    async def hello(self,tracker):
         uri = "ws://rocketchat:3000/websocket"
         async with websockets.connect(uri) as rocketChatSocket:
             # Receive ack
@@ -97,7 +97,6 @@ class ActionCreateDirectMessage(Action):
             await rocketChatSocket.send(json.dumps(connectRequest))
             # Receive connection accepted message
             await rocketChatSocket.recv()
-            dispatcher.utter_message(text="Transferring to human chat..")
             loginRequest = {
                 "msg":
                 "method",
@@ -171,8 +170,10 @@ class ActionCreateDirectMessage(Action):
             await rocketChatSocket.recv()
             await rocketChatSocket.recv()
 
-
+    def wait(self,dispatcher):
+            dispatcher.utter_message(text="Transferring to human chat..")
     def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            self.wait(dispatcher)
             asyncio.get_event_loop().run_until_complete(self.hello(tracker))
             return []
 
@@ -248,19 +249,11 @@ class ActionDefaultFallback(Action):
     def name(self) -> Text:
         return "action_default_fallback"
 
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
+    def wait(self,dispatcher):
         dispatcher.utter_message(text="🙋 I did not find anything in FAQs... Searching the knowledge base")
-        return [FollowupAction(name="action_search")]
-
-
-class Actionsearch(Action):
-    def name(self) -> Text:
-        return "action_search"
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+        self.wait(dispatcher)
         try:
             search = pipe.run(query=tracker.latest_message['text'], top_k_retriever=1, top_k_reader=1)
         except Exception as e:
@@ -271,7 +264,15 @@ class Actionsearch(Action):
         if text != "None" and confidence>0.01:
             dispatcher.utter_message(text)
         else:
-            dispatcher.utter_message(text="🙋 I did not find anything in Knowledge base... Shall I transfer it to human agent?")    
+            dispatcher.utter_message(text="🙋 I did not find anything in Knowledge base... Shall I transfer it to human agent?")   
+        return []
+
+
+class Actionsearch(Action):
+    def name(self) -> Text:
+        return "action_search"
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
         return [ActionReverted()]
 
 
@@ -282,6 +283,7 @@ class ActionMail(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
+        dispatcher.utter_message(text="Sending mail...Please wait\n")
         hist = tracker.events
         chat = []
 
