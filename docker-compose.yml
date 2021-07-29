@@ -54,8 +54,8 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - rasa
-    expose:
-      - 5055
+    ports:
+      - 5055:5055
   
   duckling:
     image: "rasa/duckling"

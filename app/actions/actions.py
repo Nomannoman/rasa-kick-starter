@@ -27,9 +27,10 @@ from rasa_sdk.forms import FormValidationAction
 from spacy import displacy
 import json
 import re
+from rasa_sdk.events import ActionReverted
 import en_core_web_md
 nlp = en_core_web_md.load()
-from rasa_sdk.events import SlotSet, FollowupAction
+from rasa_sdk.events import ActionReverted, SlotSet, FollowupAction, UserUtteranceReverted
 import requests
 import os
 import asyncio
@@ -82,7 +83,7 @@ class ActionCreateDirectMessage(Action):
     def name(self) -> Text:
         return "action_create_direct_message"
 
-    async def hello(self):
+    async def hello(self,tracker,dispatcher):
         uri = "ws://rocketchat:3000/websocket"
         async with websockets.connect(uri) as rocketChatSocket:
             # Receive ack
@@ -96,7 +97,7 @@ class ActionCreateDirectMessage(Action):
             await rocketChatSocket.send(json.dumps(connectRequest))
             # Receive connection accepted message
             await rocketChatSocket.recv()
-
+            dispatcher.utter_message(text="Transferring to human chat..")
             loginRequest = {
                 "msg":
                 "method",
@@ -134,51 +135,25 @@ class ActionCreateDirectMessage(Action):
             room = a4['result']['rid']
 
             #Sending chat history
-            headers = {
-            'X-Auth-Token': 'YrSyXcaoUsbphi1FpJk1BmJY9ANWwk5WNqws3yc5M2r',
-            'X-User-Id': 'Gd8wWh6bup3rat3ej'
-        }
-            #conversation_id = tracker.sender_id
-            #dispatcher.utter_message("The conversation id is {}".format(conversation_id))
-            response = requests.get(
-                "http://rocketchat:3000/api/v1/channels.messages?roomName=general",
-                headers=headers)
+            hist = tracker.events
+            chat = []
 
-            response = json.loads(response.text)
-            #msg = response[0]
-            User = []
-            Bot = []
-            index = []
-            i = 0
-            while i<len(response["messages"]) and "Hey! How can I help you?" not in response["messages"][i]["msg"]:
-                if response["messages"][i]["u"]["username"] == "yantr":
-                    Bot.append(response["messages"][i]["msg"])
-                    index.append("B")
-                else:
-                    User.append(response["messages"][i]["msg"])
-                    index.append("U")
-                i = i + 1
-            Bot.append(response["messages"][i]["msg"])
-            index.append("B")
-            i = i + 1
-            User.append(response["messages"][i]["msg"])
-            #index.append("U")
-            b = len(Bot) - 1
-            u = len(User) - 1
-            ind = len(index) - 1
+            for i in hist[::-1]:
+                if i['event']=="bot":
+                    str="YANTR : "+i["text"]+"\n"
+                    chat.append(str)
+                elif i['event']=="user":
+                    str="USER : "+i["text"]+"\n"
+                    chat.append(str)
+                    if i["parse_data"]["intent"]["name"]== "greet":
+                        break
+            chatr=chat[::-1]
+            
             strz = "Thanks for contacting NSLHUB\n This is user's chat history with the bot : \n\n"
             strz=strz+"-------------------------------------------------------------------------------------------------\n\n"
-            strz = strz+("USER: " + User[u] + "\n")
-            u = u - 1
-            while ind >= 0:
-                if index[ind] == "U":
-                    strz=strz+"-------------------------------------------------------------------------------------------------\n\n"
-                    strz = strz + ("USER  : "+ User[u] + "\n")
-                    u = u - 1
-                if index[ind] == "B":
-                    strz = strz + ("YANTR  : "+ Bot[b] + "\n")
-                    b = b - 1
-                ind = ind - 1
+            for x in chatr:
+                strz=strz+x
+                strz=strz+"\n"
             strz= strz+ "\n####################################\n"
             strz= strz+ "####################################\n"
             strz= strz +"####################################\n\n\nMoving ahead,How can I help you today...\n"
@@ -198,8 +173,7 @@ class ActionCreateDirectMessage(Action):
 
 
     def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            dispatcher.utter_message(text="Transferring to human chat..")
-            asyncio.get_event_loop().run_until_complete(self.hello())
+            asyncio.get_event_loop().run_until_complete(self.hello(tracker))
             return []
 
 embed = hub.load(os.getcwd() + "/actions/universal_sentence_encoder")
@@ -237,7 +211,7 @@ class ActionSentimentAnalysis(Action):
 
 document_store = FAISSDocumentStore()
 
-#converter2 = PDFToTextConverter()
+# #converter2 = PDFToTextConverter()
 converter3 = TextConverter()
 
 processor = PreProcessor(clean_empty_lines=True,
@@ -298,62 +272,35 @@ class Actionsearch(Action):
             dispatcher.utter_message(text)
         else:
             dispatcher.utter_message(text="🙋 I did not find anything in Knowledge base... Shall I transfer it to human agent?")    
+        return [ActionReverted()]
 
 
 class ActionMail(Action):
     def name(self) -> Text:
         return "action_mail"
-
+      
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        hist = tracker.events
+        chat = []
 
-        #dispatcher.utter_message(text="Started")
-        headers = {
-            'X-Auth-Token': 'YrSyXcaoUsbphi1FpJk1BmJY9ANWwk5WNqws3yc5M2r',
-            'X-User-Id': 'Gd8wWh6bup3rat3ej'
-        }
-        conversation_id = tracker.sender_id
-        #dispatcher.utter_message("The conversation id is {}".format(conversation_id))
-        response = requests.get(
-            "http://rocketchat:3000/api/v1/channels.messages?roomName=general",
-            headers=headers)
-
-        response = json.loads(response.text)
-        #msg = response[0]
-        User = []
-        Bot = []
-        index = []
-        i = 0
-        while i<len(response["messages"]) and "Hey! How can I help you?" not in response["messages"][i]["msg"]:
-            if response["messages"][i]["u"]["username"] == "yantr":
-                Bot.append(response["messages"][i]["msg"])
-                index.append("B")
-            else:
-                User.append(response["messages"][i]["msg"])
-                index.append("U")
-            i = i + 1
-        Bot.append(response["messages"][i]["msg"])
-        index.append("B")
-        i = i + 1
-        User.append(response["messages"][i]["msg"])
-        #index.append("U")
-        b = len(Bot) - 1
-        u = len(User) - 1
-        ind = len(index) - 1
-        strz = ("User: " + User[u] + "\n")
-        u = u - 1
-        while ind >= 0:
-            if index[ind] == "U":
-                strz = strz + ("User: " + User[u] + "\n")
-                u = u - 1
-            if index[ind] == "B":
-                strz = strz + ("Bot: " + Bot[b] + "\n")
-                b = b - 1
-            ind = ind - 1
-
+        for i in hist[::-1]:
+            if i['event']=="bot":
+                str="YANTR: "+i["text"]+"\n"
+                chat.append(str)
+            elif i['event']=="user":
+              str="USER: "+i["text"]+"\n"
+              chat.append(str)
+              if i["parse_data"]["intent"]["name"]== "greet":
+                  break
+        chatr=chat[::-1]
+        strz = "The chat is: \n"
+        for x in chatr:
+            strz=strz+x
+        
         sender = 'nslsample123@gmail.com'
         receivers = ['noman.siddiqui@nslhub.com', "vinith.reddy@nslhub.com"]
-        strz = "The chat is: \n" + strz
 
         SUBJECT = "Message from rocketchat"
 
