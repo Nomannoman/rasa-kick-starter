@@ -170,10 +170,7 @@ class ActionCreateDirectMessage(Action):
             await rocketChatSocket.recv()
             await rocketChatSocket.recv()
 
-    def wait(self,dispatcher):
-            dispatcher.utter_message(text="Transferring to human chat..")
     def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            self.wait(dispatcher)
             asyncio.get_event_loop().run_until_complete(self.hello(tracker))
             return []
 
