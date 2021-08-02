@@ -1,0 +1,16 @@
+{
+    "id": "c0d1cb2e-20af-46f5-879b-e913d2bd1b10",
+    "version": "0.0.1",
+    "requiredApiVersion": "^1.19.0",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Noman",
+        "homepage": "http://github.com/Nomannoman",
+        "support": "http://github.com/Nomannoman"
+    },
+    "name": "Slasher",
+    "nameSlug": "slasher",
+    "classFile": "SlasherApp.ts",
+    "description": "Includes slash commands",
+    "implements": []
+}
