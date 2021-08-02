@@ -67,7 +67,7 @@ services:
 
   rasa-x:
     image: rasa/rasa-x
-    container_name: "rasa"
+    container_name: "rasax"
     volumes:
       - ./rasa:/app
     command:
