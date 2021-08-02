@@ -1,7 +1,8 @@
-version: '3.8'
+version: '3.9'
 services:
-  rocketchat:
-    image: rocket.chat:latest
+  rocket:
+    image: rocket.chat
+    container_name: "rocket"
     restart: unless-stopped
     volumes:
       - ./uploads:/app/uploads
@@ -16,49 +17,60 @@ services:
       - WAIT_HOST_CONNECT_TIMEOUT=30
     depends_on:
       - mongo
-      - replica
     ports:
       - 3000:3000
 
   mongo:
     image: mongo:latest
     restart: unless-stopped
+    container_name: "mongo"
     volumes:
       - ./data_db/db:/data/db
     command: 'mongod --oplogSize 128 --replSet rs0'
-    ports:
-      - 27017:27017
+    expose:
+      - 27017
 
-  # this container's job is just run the command to initialize the replica set.
-  # it will run the command and remove himself (it will not stay running)
   replica:
     image: mongo:latest
+    container_name: "replica"
     command: 'mongo mongo/rocketchat --eval "rs.initiate({ _id: ''rs0'', members: [ { _id: 0, host: ''localhost:27017'' } ]})"'
     depends_on:
       - mongo
 
   rasa:
-    image: rasa/rasa:latest
+    image: rasa/rasa:latest-full
+    container_name: "rasa"
     volumes:
       - ./rasa:/app
     command:
       - run
-    ports:
-      - 5005:5005
+    expose:
+      - 5005
 
   app:
-    image: "app"
-    container_name: "app"
-    build:
+    image: "app"   
+    build: 
       context: app
       dockerfile: Dockerfile
+    container_name: "app"
+    expose:
+      - 5055
     depends_on:
       - rasa
-    ports:
-      - 5055:5055
-  
+
   duckling:
     image: "rasa/duckling"
     container_name: "duckling"
     expose:
       - 8000
+
+
+  rasa-x:
+    image: rasa/rasa-x
+    container_name: "rasa"
+    volumes:
+      - ./rasa:/app
+    command:
+      - run
+    ports:
+      - 5002:5002
