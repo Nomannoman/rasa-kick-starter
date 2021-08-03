@@ -106,7 +106,7 @@ class ActionCreateDirectMessage(Action):
                 "42",
                 "params": [{
                     'resume':
-                    'rY9Xg0rN_S6RS0fH-KzdV7m6ptU3GeWlHVZFzwFC2WO'
+                    'eZpKzOUop9l-UpzOV7VB7jUIAqj1w6VjFp8Z_lwcBGi'
                 }]
             }
             await rocketChatSocket.send(json.dumps(loginRequest))

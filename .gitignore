@@ -6,6 +6,12 @@ app/actions/universal_sentence_encoder
 ### Rasa ###
 rasa/models/
 rasa_core.log
+rasa/events.db
+rasa/events.db-shm
+rasa/events.db-wal
+rasa/rasa.db
+rasa/rasa.db-shm
+rasa/rasa.db-wal
 
 ### Rocketchat ###
 data/

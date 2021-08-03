@@ -47,6 +47,17 @@ services:
     expose:
       - 5005
 
+  rasax:
+    image: rasa/rasa-x
+    container_name: "rasax"
+    volumes:
+      - ./rasa:/app
+    command: rasa x --no-prompt --endpoints endpoints.yml --port 5005 --cors "*" --debug
+    ports:
+      - 5002:5002
+
+
+
   app:
     image: "app"   
     build: 
@@ -65,12 +76,3 @@ services:
       - 8000
 
 
-  rasa-x:
-    image: rasa/rasa-x:latest
-    container_name: "rasax"
-    volumes:
-      - ./rasa:/app
-    command:
-      - run
-    ports:
-      - 5002:5002
