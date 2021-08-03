@@ -1,433 +1,840 @@
-version: "2.0" 
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - q1
-  - q2
-  - q3
-  - q4
-  - q5
-  - q6
-  - q7
-  - q8
-  - q9
-  - q10
-  - q11
-  - q12
-  - q13
-  - q14
-  - q15
-  - q16
-  - q17
-  - q18
-  - q19
-  - q20
-  - q21
-  - q22
-  - q23
-  - q24
-  - q25
-  - q26
-  - q27
-  - q28
-  - q29
-  - q30
-  - q31
-  - q32
-  - q33
-  - q34
-  - q35
-  - q36
-  - q37
-  - q38
-  - q39
-  - q40
-  - q41
-  - q42
-  - q43
-  - q44
-  - q45
-  - q46
-  - q47
-  - q48
-  - q49
-  - q50
-  - q51
-  - q52
-  - q53
-  - q54
-  - q55
-  - q56
-  - q57
-  - q58
-  - q59
-  - q60
-  - q61
-  - q62
-  - q63
-  - q64
-  - q65
-  - q66
-  - q67
-  - q68
-  - q69
-  - q70
-  - q71
-  - q72
-  - q73
-  - q74
-  - q75
-  - q76
-  - q77
-  - q78
-  - q79
-  - q80
-  - q81
-  - q82
-  - q83
-  - q84
-  - q85
-  - q86
-  - q87
-  - q88
-  - q89
-  - q90
-  - q91
-  - q92
-  - q93
-  - q94
-  - q95
-  - q96
-  - q97
-  - q98
-  - q99
-  - q100
-  - q101
-  - q102
-  - q103
-  - q104
-  - q105
-  - q106
-  - q107
-  - q108
-  - q109
-  - q110
-  - q111
-  - q112
-  - q113
-  - q114
-  - q115
-  - q116
-  - q117
-  - q118
-  - q119
-  - q120
-  - q121
-  - q122
-  - q123
-  - q124
-  - q125
-  - q126
-  - q127
-  - q128
-  - q129
-  - q130
-  - q131
-  - q132
-  - q133
-  - q134
-  - q135
-  - q136
-  - q137
-  - q138
-  - q139
-  - q140
-  - q141
-  - q142
-  - q143
-  - q144
-  - q145
-  - q146
-  - q147
-  - q148
-  - q149
-  - q150
-  - q151
-  - q152
-  - q153
-  - q154
-  - q155
-  - q156
-  - q157
-  - q158
-  - q159
-  - q160
-  - q161
-  - q162
-  - q163
-  - q164
-  - q165
-  - q166
-  - q167
-  - q168
-  - q169
-  - q170
-  - q171
-  - q172
-  - q173
-  - q174
-  - q175
-  - q176
-  - q177
-  - q178
-  - q179
-  - q180
-  - q181
-  - q182
-  - q183
-  - q184
-  - q185
-  - q186
-  - q187
-  - q188
-  - q189
-  - q190
-  - q191
-  - q192
-  - q193
-  - q194
-  - q195
-  - q196
-  - q197
-  - q198
-  - q199
-  - q200
-  - q201
-  - q202
-  - q203
-  - q204
-  - q205
-  - q206
-  - q207
-  - q208
-  - q209
-  - q210
-  - q211
-  - q212
-  - q213
-  - q214
-  - q215
-  - q216
-  - q217
-  - q218
-  - q219
-  - q220
-  - q221
-  - q222
-  - q223
-  - q224
-  - q225
-  - q226
-  - q227
-  - q228
-  - q229
-  - q230
-  - q231
-  - q232
-  - q233
-  - q234
-  - q235
-  - q236
-  - q237
-  - q238
-  - q239
-  - q240
-  - q241
-  - q242
-  - q243
-  - q244
-  - q245
-  - q246
-  - q247
-  - q248
-  - q249
-  - q250
-  - q251
-  - q252
-  - q253
-  - q254
-  - q255
-  - q256
-  - q257
-  - q258
-  - q259
-  - q260
-  - q261
-  - q262
-  - q263
-  - q264
-  - q265
-  - q266
-  - q267
-  - q268
-  - q269
-  - q270
-  - q271
-  - q272
-  - q273
-  - q274
-  - q275
-  - q276
-  - q277
-  - q278
-  - q279
-  - q280
-  - q281
-  - q282
-  - q283
-  - q284
-  - q285
-  - q286
-  - q287
-  - q288
-  - q289
-  - q290
-  - q291
-  - q292
-  - q293
-  - q294
-  - q295
-  - q296
-  - q297
-  - q298
-  - q299
-  - q300
-  - q301
-  - q302
-  - q303
-  - q304
-  - q305
-  - q306
-  - q307
-  - q308
-  - q309
-  - q310
-  - q311
-  - q312
-  - q313
-  - q314
-  - q315
-  - q316
-  - q317
-  - q318
-  - q319
-  - q320
-  - q321
-  - q322
-  - q323
-  - q324
-  - q325
-  - q326
-  - q327
-  - q328
-  - q329
-  - q330
-  - q331
-  - q332
-  - q333
-  - q334
-  - q335
-  - q336
-  - q337
-  - q338
-  - q339
-  - q340
-  - q341
-  - q342
-  - q343
-  - q344
-  - q345
-  - q346
-  - q347
-  - q348
-  - q349
-  - q350
-  - q351
-  - q352
-  - q353
-  - q354
-  - q355
-  - q356
-  - q357
-  - q358
-  - q359
-  - q360
-  - q361
-  - q362
-  - q363
-  - q364
-  - q365
-  - q366
-  - q367
-  - q368
-  - q369
-  - q370
-  - q371
-  - q372
-  - q373
-  - q374
-  - q375
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - hello_world
-  - myname
-  - myname_last
-  - emailid
-  - phone_number
-  - mail
-  - call_haystack
-  - createdirect
-
+- q1:
+    use_entities: true
+- q2:
+    use_entities: true
+- q3:
+    use_entities: true
+- q4:
+    use_entities: true
+- q5:
+    use_entities: true
+- q6:
+    use_entities: true
+- q7:
+    use_entities: true
+- q8:
+    use_entities: true
+- q9:
+    use_entities: true
+- q10:
+    use_entities: true
+- q11:
+    use_entities: true
+- q12:
+    use_entities: true
+- q13:
+    use_entities: true
+- q14:
+    use_entities: true
+- q15:
+    use_entities: true
+- q16:
+    use_entities: true
+- q17:
+    use_entities: true
+- q18:
+    use_entities: true
+- q19:
+    use_entities: true
+- q20:
+    use_entities: true
+- q21:
+    use_entities: true
+- q22:
+    use_entities: true
+- q23:
+    use_entities: true
+- q24:
+    use_entities: true
+- q25:
+    use_entities: true
+- q26:
+    use_entities: true
+- q27:
+    use_entities: true
+- q28:
+    use_entities: true
+- q29:
+    use_entities: true
+- q30:
+    use_entities: true
+- q31:
+    use_entities: true
+- q32:
+    use_entities: true
+- q33:
+    use_entities: true
+- q34:
+    use_entities: true
+- q35:
+    use_entities: true
+- q36:
+    use_entities: true
+- q37:
+    use_entities: true
+- q38:
+    use_entities: true
+- q39:
+    use_entities: true
+- q40:
+    use_entities: true
+- q41:
+    use_entities: true
+- q42:
+    use_entities: true
+- q43:
+    use_entities: true
+- q44:
+    use_entities: true
+- q45:
+    use_entities: true
+- q46:
+    use_entities: true
+- q47:
+    use_entities: true
+- q48:
+    use_entities: true
+- q49:
+    use_entities: true
+- q50:
+    use_entities: true
+- q51:
+    use_entities: true
+- q52:
+    use_entities: true
+- q53:
+    use_entities: true
+- q54:
+    use_entities: true
+- q55:
+    use_entities: true
+- q56:
+    use_entities: true
+- q57:
+    use_entities: true
+- q58:
+    use_entities: true
+- q59:
+    use_entities: true
+- q60:
+    use_entities: true
+- q61:
+    use_entities: true
+- q62:
+    use_entities: true
+- q63:
+    use_entities: true
+- q64:
+    use_entities: true
+- q65:
+    use_entities: true
+- q66:
+    use_entities: true
+- q67:
+    use_entities: true
+- q68:
+    use_entities: true
+- q69:
+    use_entities: true
+- q70:
+    use_entities: true
+- q71:
+    use_entities: true
+- q72:
+    use_entities: true
+- q73:
+    use_entities: true
+- q74:
+    use_entities: true
+- q75:
+    use_entities: true
+- q76:
+    use_entities: true
+- q77:
+    use_entities: true
+- q78:
+    use_entities: true
+- q79:
+    use_entities: true
+- q80:
+    use_entities: true
+- q81:
+    use_entities: true
+- q82:
+    use_entities: true
+- q83:
+    use_entities: true
+- q84:
+    use_entities: true
+- q85:
+    use_entities: true
+- q86:
+    use_entities: true
+- q87:
+    use_entities: true
+- q88:
+    use_entities: true
+- q89:
+    use_entities: true
+- q90:
+    use_entities: true
+- q91:
+    use_entities: true
+- q92:
+    use_entities: true
+- q93:
+    use_entities: true
+- q94:
+    use_entities: true
+- q95:
+    use_entities: true
+- q96:
+    use_entities: true
+- q97:
+    use_entities: true
+- q98:
+    use_entities: true
+- q99:
+    use_entities: true
+- q100:
+    use_entities: true
+- q101:
+    use_entities: true
+- q102:
+    use_entities: true
+- q103:
+    use_entities: true
+- q104:
+    use_entities: true
+- q105:
+    use_entities: true
+- q106:
+    use_entities: true
+- q107:
+    use_entities: true
+- q108:
+    use_entities: true
+- q109:
+    use_entities: true
+- q110:
+    use_entities: true
+- q111:
+    use_entities: true
+- q112:
+    use_entities: true
+- q113:
+    use_entities: true
+- q114:
+    use_entities: true
+- q115:
+    use_entities: true
+- q116:
+    use_entities: true
+- q117:
+    use_entities: true
+- q118:
+    use_entities: true
+- q119:
+    use_entities: true
+- q120:
+    use_entities: true
+- q121:
+    use_entities: true
+- q122:
+    use_entities: true
+- q123:
+    use_entities: true
+- q124:
+    use_entities: true
+- q125:
+    use_entities: true
+- q126:
+    use_entities: true
+- q127:
+    use_entities: true
+- q128:
+    use_entities: true
+- q129:
+    use_entities: true
+- q130:
+    use_entities: true
+- q131:
+    use_entities: true
+- q132:
+    use_entities: true
+- q133:
+    use_entities: true
+- q134:
+    use_entities: true
+- q135:
+    use_entities: true
+- q136:
+    use_entities: true
+- q137:
+    use_entities: true
+- q138:
+    use_entities: true
+- q139:
+    use_entities: true
+- q140:
+    use_entities: true
+- q141:
+    use_entities: true
+- q142:
+    use_entities: true
+- q143:
+    use_entities: true
+- q144:
+    use_entities: true
+- q145:
+    use_entities: true
+- q146:
+    use_entities: true
+- q147:
+    use_entities: true
+- q148:
+    use_entities: true
+- q149:
+    use_entities: true
+- q150:
+    use_entities: true
+- q151:
+    use_entities: true
+- q152:
+    use_entities: true
+- q153:
+    use_entities: true
+- q154:
+    use_entities: true
+- q155:
+    use_entities: true
+- q156:
+    use_entities: true
+- q157:
+    use_entities: true
+- q158:
+    use_entities: true
+- q159:
+    use_entities: true
+- q160:
+    use_entities: true
+- q161:
+    use_entities: true
+- q162:
+    use_entities: true
+- q163:
+    use_entities: true
+- q164:
+    use_entities: true
+- q165:
+    use_entities: true
+- q166:
+    use_entities: true
+- q167:
+    use_entities: true
+- q168:
+    use_entities: true
+- q169:
+    use_entities: true
+- q170:
+    use_entities: true
+- q171:
+    use_entities: true
+- q172:
+    use_entities: true
+- q173:
+    use_entities: true
+- q174:
+    use_entities: true
+- q175:
+    use_entities: true
+- q176:
+    use_entities: true
+- q177:
+    use_entities: true
+- q178:
+    use_entities: true
+- q179:
+    use_entities: true
+- q180:
+    use_entities: true
+- q181:
+    use_entities: true
+- q182:
+    use_entities: true
+- q183:
+    use_entities: true
+- q184:
+    use_entities: true
+- q185:
+    use_entities: true
+- q186:
+    use_entities: true
+- q187:
+    use_entities: true
+- q188:
+    use_entities: true
+- q189:
+    use_entities: true
+- q190:
+    use_entities: true
+- q191:
+    use_entities: true
+- q192:
+    use_entities: true
+- q193:
+    use_entities: true
+- q194:
+    use_entities: true
+- q195:
+    use_entities: true
+- q196:
+    use_entities: true
+- q197:
+    use_entities: true
+- q198:
+    use_entities: true
+- q199:
+    use_entities: true
+- q200:
+    use_entities: true
+- q201:
+    use_entities: true
+- q202:
+    use_entities: true
+- q203:
+    use_entities: true
+- q204:
+    use_entities: true
+- q205:
+    use_entities: true
+- q206:
+    use_entities: true
+- q207:
+    use_entities: true
+- q208:
+    use_entities: true
+- q209:
+    use_entities: true
+- q210:
+    use_entities: true
+- q211:
+    use_entities: true
+- q212:
+    use_entities: true
+- q213:
+    use_entities: true
+- q214:
+    use_entities: true
+- q215:
+    use_entities: true
+- q216:
+    use_entities: true
+- q217:
+    use_entities: true
+- q218:
+    use_entities: true
+- q219:
+    use_entities: true
+- q220:
+    use_entities: true
+- q221:
+    use_entities: true
+- q222:
+    use_entities: true
+- q223:
+    use_entities: true
+- q224:
+    use_entities: true
+- q225:
+    use_entities: true
+- q226:
+    use_entities: true
+- q227:
+    use_entities: true
+- q228:
+    use_entities: true
+- q229:
+    use_entities: true
+- q230:
+    use_entities: true
+- q231:
+    use_entities: true
+- q232:
+    use_entities: true
+- q233:
+    use_entities: true
+- q234:
+    use_entities: true
+- q235:
+    use_entities: true
+- q236:
+    use_entities: true
+- q237:
+    use_entities: true
+- q238:
+    use_entities: true
+- q239:
+    use_entities: true
+- q240:
+    use_entities: true
+- q241:
+    use_entities: true
+- q242:
+    use_entities: true
+- q243:
+    use_entities: true
+- q244:
+    use_entities: true
+- q245:
+    use_entities: true
+- q246:
+    use_entities: true
+- q247:
+    use_entities: true
+- q248:
+    use_entities: true
+- q249:
+    use_entities: true
+- q250:
+    use_entities: true
+- q251:
+    use_entities: true
+- q252:
+    use_entities: true
+- q253:
+    use_entities: true
+- q254:
+    use_entities: true
+- q255:
+    use_entities: true
+- q256:
+    use_entities: true
+- q257:
+    use_entities: true
+- q258:
+    use_entities: true
+- q259:
+    use_entities: true
+- q260:
+    use_entities: true
+- q261:
+    use_entities: true
+- q262:
+    use_entities: true
+- q263:
+    use_entities: true
+- q264:
+    use_entities: true
+- q265:
+    use_entities: true
+- q266:
+    use_entities: true
+- q267:
+    use_entities: true
+- q268:
+    use_entities: true
+- q269:
+    use_entities: true
+- q270:
+    use_entities: true
+- q271:
+    use_entities: true
+- q272:
+    use_entities: true
+- q273:
+    use_entities: true
+- q274:
+    use_entities: true
+- q275:
+    use_entities: true
+- q276:
+    use_entities: true
+- q277:
+    use_entities: true
+- q278:
+    use_entities: true
+- q279:
+    use_entities: true
+- q280:
+    use_entities: true
+- q281:
+    use_entities: true
+- q282:
+    use_entities: true
+- q283:
+    use_entities: true
+- q284:
+    use_entities: true
+- q285:
+    use_entities: true
+- q286:
+    use_entities: true
+- q287:
+    use_entities: true
+- q288:
+    use_entities: true
+- q289:
+    use_entities: true
+- q290:
+    use_entities: true
+- q291:
+    use_entities: true
+- q292:
+    use_entities: true
+- q293:
+    use_entities: true
+- q294:
+    use_entities: true
+- q295:
+    use_entities: true
+- q296:
+    use_entities: true
+- q297:
+    use_entities: true
+- q298:
+    use_entities: true
+- q299:
+    use_entities: true
+- q300:
+    use_entities: true
+- q301:
+    use_entities: true
+- q302:
+    use_entities: true
+- q303:
+    use_entities: true
+- q304:
+    use_entities: true
+- q305:
+    use_entities: true
+- q306:
+    use_entities: true
+- q307:
+    use_entities: true
+- q308:
+    use_entities: true
+- q309:
+    use_entities: true
+- q310:
+    use_entities: true
+- q311:
+    use_entities: true
+- q312:
+    use_entities: true
+- q313:
+    use_entities: true
+- q314:
+    use_entities: true
+- q315:
+    use_entities: true
+- q316:
+    use_entities: true
+- q317:
+    use_entities: true
+- q318:
+    use_entities: true
+- q319:
+    use_entities: true
+- q320:
+    use_entities: true
+- q321:
+    use_entities: true
+- q322:
+    use_entities: true
+- q323:
+    use_entities: true
+- q324:
+    use_entities: true
+- q325:
+    use_entities: true
+- q326:
+    use_entities: true
+- q327:
+    use_entities: true
+- q328:
+    use_entities: true
+- q329:
+    use_entities: true
+- q330:
+    use_entities: true
+- q331:
+    use_entities: true
+- q332:
+    use_entities: true
+- q333:
+    use_entities: true
+- q334:
+    use_entities: true
+- q335:
+    use_entities: true
+- q336:
+    use_entities: true
+- q337:
+    use_entities: true
+- q338:
+    use_entities: true
+- q339:
+    use_entities: true
+- q340:
+    use_entities: true
+- q341:
+    use_entities: true
+- q342:
+    use_entities: true
+- q343:
+    use_entities: true
+- q344:
+    use_entities: true
+- q345:
+    use_entities: true
+- q346:
+    use_entities: true
+- q347:
+    use_entities: true
+- q348:
+    use_entities: true
+- q349:
+    use_entities: true
+- q350:
+    use_entities: true
+- q351:
+    use_entities: true
+- q352:
+    use_entities: true
+- q353:
+    use_entities: true
+- q354:
+    use_entities: true
+- q355:
+    use_entities: true
+- q356:
+    use_entities: true
+- q357:
+    use_entities: true
+- q358:
+    use_entities: true
+- q359:
+    use_entities: true
+- q360:
+    use_entities: true
+- q361:
+    use_entities: true
+- q362:
+    use_entities: true
+- q363:
+    use_entities: true
+- q364:
+    use_entities: true
+- q365:
+    use_entities: true
+- q366:
+    use_entities: true
+- q367:
+    use_entities: true
+- q368:
+    use_entities: true
+- q369:
+    use_entities: true
+- q370:
+    use_entities: true
+- q371:
+    use_entities: true
+- q372:
+    use_entities: true
+- q373:
+    use_entities: true
+- q374:
+    use_entities: true
+- q375:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- hello_world:
+    use_entities: true
+- myname:
+    use_entities: true
+- myname_last:
+    use_entities: true
+- emailid:
+    use_entities: true
+- phone_number:
+    use_entities: true
+- mail:
+    use_entities: true
+- call_haystack:
+    use_entities: true
+- createdirect:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- direct_message:
+    use_entities: true
+entities:
+- phno
+- lastname
+- firstname
+- email
 slots:
-    email:
-      type: unfeaturized
-      auto_fill: false
-    phno:
-      type: unfeaturized
-      auto_fill: false
-    firstname:
-      type: unfeaturized
-      auto_fill: false
-    lastname:
-      type: unfeaturized
-      auto_fill: false
-
+  email:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  phno:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  firstname:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  lastname:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+responses: {}
+actions:
+- action_sentiment_analysis
+- action_iambot
+- action_mail
+- action_set_first
+- action_default_fallback
+- validate_details_form
+- action_create_user
+- action_create_direct_message
+- action_search
 forms:
   details_form:
     required_slots:
+      email:
+      - type: from_text
       firstname:
       - type: from_text
       lastname:
       - type: from_text
-      email:
-      - type: from_text
       phno:
       - type: from_text
-
-
-actions:
-  - action_sentiment_analysis
-  - action_iambot
-  - action_mail
-  - action_set_first
-  - action_default_fallback
-  - validate_details_form
-  - action_create_user
-  - action_create_direct_message 
-  - action_search
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+e2e_actions: []
