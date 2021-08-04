@@ -38,3 +38,4 @@ policies:
     max_history: 0
     epochs: 100
   - name: RulePolicy
+  - name: MappingPolicy

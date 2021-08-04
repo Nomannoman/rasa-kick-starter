@@ -789,11 +789,13 @@ intents:
     use_entities: true
 - direct_message:
     use_entities: true
+- converid:
+    triggers: action_session_id
 entities:
-- phno
-- lastname
-- firstname
-- email
+    - phno
+    - lastname
+    - firstname
+    - email
 slots:
   email:
     type: rasa.shared.core.slots.UnfeaturizedSlot
@@ -817,15 +819,15 @@ slots:
     influence_conversation: false
 responses: {}
 actions:
-- action_sentiment_analysis
-- action_iambot
-- action_mail
-- action_set_first
-- action_default_fallback
-- validate_details_form
-- action_create_user
-- action_create_direct_message
-- action_search
+    - action_sentiment_analysis
+    - action_iambot
+    - action_mail
+    - action_set_first
+    - action_default_fallback
+    - validate_details_form
+    - action_create_user
+    - action_create_direct_message
+    - action_session_id
 forms:
   details_form:
     required_slots:
