@@ -5,6 +5,7 @@ services:
     container_name: "rocket"
     restart: unless-stopped
     volumes:
+      - ./slasher:/app/slasher
       - ./uploads:/app/uploads
     environment:
       - PORT=3000
@@ -74,5 +75,3 @@ services:
     container_name: "duckling"
     expose:
       - 8000
-
-

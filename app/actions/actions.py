@@ -84,7 +84,7 @@ class ActionCreateDirectMessage(Action):
         return "action_create_direct_message"
 
     async def hello(self,tracker):
-        uri = "ws://rocketchat:3000/websocket"
+        uri = "ws://rocket:3000/websocket"
         async with websockets.connect(uri) as rocketChatSocket:
             # Receive ack
             await rocketChatSocket.recv()
@@ -98,15 +98,12 @@ class ActionCreateDirectMessage(Action):
             # Receive connection accepted message
             await rocketChatSocket.recv()
             loginRequest = {
-                "msg":
-                "method",
-                "method":
-                "login",
-                "id":
-                "42",
+                "msg":"method",
+                "method":"login",
+                "id":"42",
                 "params": [{
                     'resume':
-                    'eZpKzOUop9l-UpzOV7VB7jUIAqj1w6VjFp8Z_lwcBGi'
+                    'ai-n3DC-NpxKmLfbnj4PnjvjqwNxoVtb_jD26c27s-l'
                 }]
             }
             await rocketChatSocket.send(json.dumps(loginRequest))
