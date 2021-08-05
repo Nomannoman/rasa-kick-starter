@@ -788,8 +788,6 @@ intents:
     use_entities: true
 - nlu_fallback:
     use_entities: true
-- direct_message:
-    use_entities: true
 
 entities:
     - phno
