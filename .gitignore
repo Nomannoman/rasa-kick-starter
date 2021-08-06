@@ -13,6 +13,15 @@ rasa/rasa.db
 rasa/rasa.db-shm
 rasa/rasa.db-wal
 
+### Rasa X ###
+rasax/models/
+rasax/events.db
+rasax/events.db-shm
+rasax/events.db-wal
+rasax/rasa.db
+rasax/rasa.db-shm
+rasax/rasa.db-wal
+
 ### Rocketchat ###
 data/
 uploads/
