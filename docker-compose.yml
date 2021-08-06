@@ -37,21 +37,21 @@ services:
     depends_on:
       - mongo
 
-  rasa:
-    image: rasa/rasa:latest-full
-    container_name: "rasa"
-    volumes:
-      - ./rasa:/app
-    command:
-      - run
-    expose:
-      - 5005
+  # rasa:
+  #   image: rasa/rasa:latest-full
+  #   container_name: "rasa"
+  #   volumes:
+  #     - ./rasa:/app
+  #   command:
+  #     - run
+  #   expose:
+  #     - 5005
 
   rasax:
     image: rasa/rasa-x
     container_name: "rasax"
     volumes:
-      - ./rasa:/app
+      - ./rasax:/app
     command: rasa x --no-prompt --endpoints endpoints.yml --port 5005 --cors "*" --debug
     ports:
       - 5002:5002
@@ -67,7 +67,7 @@ services:
     expose:
       - 5055
     depends_on:
-      - rasa
+      - rasax
 
   duckling:
     image: "rasa/duckling"

@@ -40,6 +40,18 @@ import websockets
 #from requests.auth import HTTPBasicAuth 
 
 
+class ActionSessionId(Action):
+    def name(self) -> Text:
+        return "action_session_id"
+
+    async def run(
+    self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+
+        conversation_id=tracker.sender_id
+        dispatcher.utter_message("The conversation id is {}".format(conversation_id))
+        return []
+
 class ActionCreateUser(Action):
      def name(self) -> Text:
          return "action_create_user"
@@ -84,7 +96,7 @@ class ActionCreateDirectMessage(Action):
         return "action_create_direct_message"
 
     async def hello(self,tracker):
-        uri = "ws://rocketchat:3000/websocket"
+        uri = "ws://rocket:3000/websocket"
         async with websockets.connect(uri) as rocketChatSocket:
             # Receive ack
             await rocketChatSocket.recv()
