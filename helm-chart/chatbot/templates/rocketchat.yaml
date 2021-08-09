@@ -1,0 +1,61 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: rocket
+spec:
+  selector:
+    app: rocket
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 3000
+      # nodePort: 3000
+  type: LoadBalancer
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rocket
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rocket
+  template:
+    metadata:
+      labels:
+        app: rocket
+    spec:
+      containers:
+        - name: rocket
+          image: rocketchat/rocket.chat:latest
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - mountPath: /app/uploads
+              name: rocket-storage
+          env:
+            - name: PORT
+              value: "3000"
+            - name: ROOT_URL
+              value: http://rocket:3000
+            - name: MONGO_URL
+              value: mongodb://rocketmongo:27017/rocketchat
+            - name: MONGO_OPLOG_URL
+              value: mongodb://rocketmongo:27017/local?replSet=rs0
+            - name: WAIT_HOSTS
+              value: rocketmongo:27017
+            - name: WAIT_HOSTS_TIMEOUT
+              value: "300"
+            - name: WAIT_SLEEP_INTERVAL
+              value: "30"
+            - name: WAIT_HOST_CONNECT_TIMEOUT
+              value: "30"
+          imagePullPolicy: Always
+      volumes:
+        - name: rocket-storage
+          persistentVolumeClaim:
+            claimName: rocket-claim
