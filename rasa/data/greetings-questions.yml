@@ -72,4 +72,11 @@ nlu:
       - I want to chat with support team
       - support team
       - talk to support team
+
+  - intent: converid
+    examples: |
+      - What is my conversation ID
+      - Tell my conversation ID
+      - Conversation ID
+      - Can I know Conversation ID
  

@@ -1594,3 +1594,16 @@ stories:
   - action: action_default_fallback
   - intent: affirm
   - action: action_create_direct_message
+
+
+- story: fallback2
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+  - intent: deny
+  - action: utter_askquestion
+
+- story: conversation
+  steps:
+  - intent: converid
+  - action: action_session_id
