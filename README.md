@@ -187,8 +187,8 @@ Here are some links to examples and documentation:
 2. docker build -t app:v3 ./app/
 3. docker images
 4. docker ps
-5. docker tag app localhost:49170/app:v3
-6. docker push localhost:49170/app:v3
+5. docker tag app localhost:xxxxx/app:v3
+6. docker push localhost:xxxxx/app:v3
 7. kubectl get deploy
-8. kubectl edit deploy <app-deployment-name>
+8. kubectl edit deploy app-deployment-name
 9. kubectl get pods
