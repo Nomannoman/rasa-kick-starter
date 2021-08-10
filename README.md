@@ -190,5 +190,5 @@ Here are some links to examples and documentation:
 5. docker tag app localhost:49170/app:v3
 6. docker push localhost:49170/app:v3
 7. kubectl get deploy
-8. kubectl edit deploy rasa-app
+8. kubectl edit deploy <app-deployment-name>
 9. kubectl get pods
