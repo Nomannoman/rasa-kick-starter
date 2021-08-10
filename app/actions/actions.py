@@ -33,13 +33,24 @@ nlp = en_core_web_md.load()
 from rasa_sdk.events import ActionReverted, SlotSet, FollowupAction, UserUtteranceReverted
 import requests
 import os
-import webbrowser
 import asyncio
 
 import websockets
 #from rocketchat.api import RocketChatAPI
 #from requests.auth import HTTPBasicAuth 
 
+
+class ActionSessionId(Action):
+    def name(self) -> Text:
+        return "action_session_id"
+
+    async def run(
+    self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+
+        conversation_id=tracker.sender_id
+        dispatcher.utter_message("The conversation id is {}".format(conversation_id))
+        return []
 
 class ActionCreateUser(Action):
      def name(self) -> Text:
@@ -80,40 +91,16 @@ class ActionCreateUser(Action):
 
 
 class ActionCreateDirectMessage(Action):
+#
     def name(self) -> Text:
         return "action_create_direct_message"
 
     async def hello(self,tracker):
-        #Sending chat history
-        hist = tracker.events
-        chat = []
-
-        for i in hist[::-1]:
-            if i['event']=="bot":
-                str="YANTR : "+i["text"]+"\n"
-                chat.append(str)
-            elif i['event']=="user":
-                str="USER : "+i["text"]+"\n"
-                chat.append(str)
-                if i["parse_data"]["intent"]["name"]== "greet":
-                    break
-        chatr=chat[::-1]
-        
-        strz = "Thanks for contacting NSLHUB\n This is user's chat history with the bot : \n\n"
-        strz=strz+"-------------------------------------------------------------------------------------------------\n\n"
-        for x in chatr:
-            strz=strz+x
-            strz=strz+"\n"
-        strz= strz+ "\n####################################\n"
-        strz= strz+ "####################################\n"
-        strz= strz +"####################################\n\n\nMoving ahead,How can I help you today...\n"
-        humanMessage=tracker.latest_message['text']
-
-        #for logging in as support and making a channel
         uri = "ws://rocket:3000/websocket"
         async with websockets.connect(uri) as rocketChatSocket:
-            # Receive acknowledgement from rocketchat
+            # Receive ack
             await rocketChatSocket.recv()
+
             connectRequest = {
                 "msg": "connect",
                 "version": "1",
@@ -122,14 +109,16 @@ class ActionCreateDirectMessage(Action):
             await rocketChatSocket.send(json.dumps(connectRequest))
             # Receive connection accepted message
             await rocketChatSocket.recv()
-
             loginRequest = {
-                "msg":"method",
-                "method":"login",
-                "id":"42",
+                "msg":
+                "method",
+                "method":
+                "login",
+                "id":
+                "42",
                 "params": [{
                     'resume':
-                    'ai-n3DC-NpxKmLfbnj4PnjvjqwNxoVtb_jD26c27s-l'
+                    'eZpKzOUop9l-UpzOV7VB7jUIAqj1w6VjFp8Z_lwcBGi'
                 }]
             }
             await rocketChatSocket.send(json.dumps(loginRequest))
@@ -138,51 +127,60 @@ class ActionCreateDirectMessage(Action):
             # Wait for method updated signal
             await rocketChatSocket.recv()
             a3 = json.loads(await rocketChatSocket.recv())
+            print(a3)
+            id = a3['result']['id']
+            token = a3['result']['token']
 
-            message_list = {
+            # step 4
+            sub = {
                 "msg": "method",
-                "method": "loadHistory",
+                "method": "createDirectMessage",
                 "id": "42",
-                "params": ["GENERAL", None, 7, None]
+                "params": ["customer"]
             }
 
-            await rocketChatSocket.send(json.dumps(message_list))
+            await rocketChatSocket.send(json.dumps(sub))
             # await updated response
             await rocketChatSocket.recv()
-            messages = json.loads(await rocketChatSocket.recv())['result']['messages']
+            a4 = json.loads(await rocketChatSocket.recv())
+            room = a4['result']['rid']
 
-            #Search for the latest message
-            if len(messages) > 0:
-                human_requests = [
-                    message for message in messages
-                    if humanMessage == message['msg']
-                ]
-                if len(human_requests) > 0:
-                    user_name = human_requests[0]['u']['username']
-                    sub = {
-                        "msg": "method",
-                        "method": "createDirectMessage",
-                        "id": "42",
-                        "params": [user_name]
-                    }
-                    await rocketChatSocket.send(json.dumps(sub))
-                    # await updated response
-                    await rocketChatSocket.recv()
-                    response = json.loads(await rocketChatSocket.recv())
-                    room = response['result']['rid']
-                    message = {
-                        "msg":"method",
-                        "method":"sendMessage",
-                        "id":"42",
-                        "params": [{
-                            "rid":room,
-                            "msg":strz
-                        }]
-                    }
-                    await rocketChatSocket.send(json.dumps(message))
-                    await rocketChatSocket.recv()
-                    await rocketChatSocket.recv()
-            rocketChatSocket.close()
+            #Sending chat history
+            hist = tracker.events
+            chat = []
+
+            for i in hist[::-1]:
+                if i['event']=="bot":
+                    str="YANTR : "+i["text"]+"\n"
+                    chat.append(str)
+                elif i['event']=="user":
+                    str="USER : "+i["text"]+"\n"
+                    chat.append(str)
+                    if i["parse_data"]["intent"]["name"]== "greet":
+                        break
+            chatr=chat[::-1]
+            
+            strz = "Thanks for contacting NSLHUB\n This is user's chat history with the bot : \n\n"
+            strz=strz+"-------------------------------------------------------------------------------------------------\n\n"
+            for x in chatr:
+                strz=strz+x
+                strz=strz+"\n"
+            strz= strz+ "\n####################################\n"
+            strz= strz+ "####################################\n"
+            strz= strz +"####################################\n\n\nMoving ahead,How can I help you today...\n"
+            message = {
+                "msg": "method",
+                "method": "sendMessage",
+                "id": "42",
+                "params": [{
+                    "rid": room,
+                    "msg": strz
+                }]
+            }
+
+            await rocketChatSocket.send(json.dumps(message))
+            await rocketChatSocket.recv()
+            await rocketChatSocket.recv()
 
     def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             asyncio.get_event_loop().run_until_complete(self.hello(tracker))
@@ -277,6 +275,15 @@ class ActionDefaultFallback(Action):
         else:
             dispatcher.utter_message(text="🙋 I did not find anything in Knowledge base... Shall I transfer it to human agent?")   
         return []
+
+
+class Actionsearch(Action):
+    def name(self) -> Text:
+        return "action_search"
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
+        return [ActionReverted()]
+
 
 class ActionMail(Action):
     def name(self) -> Text:
@@ -556,17 +563,3 @@ class DetailsForm(FormValidationAction):
         
         dispatcher.utter_message(text="please enter a valid phone number")
         return{"phno": None}
-
-
-
-class ActionSessionId(Action):
-    def name(self) -> Text:
-        return "action_session_id"
-
-    async def run(
-    self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
-    ) -> List[Dict[Text, Any]]:
-
-        conversation_id=tracker.sender_id
-        dispatcher.utter_message("The conversation id is {}".format(conversation_id))
-        return []

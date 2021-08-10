@@ -54,7 +54,7 @@ python3 scripts/bot_config.py -an admin -ap admin -bn bot_rasa -bp bot_rasa -r h
     * **If using Docker**
         
         ```sh
-        docker run -it -v $(pwd)/bot_rasa:/app rasa/rasa train
+        docker run -it -v $(pwd)/rasa:/app rasa/rasa:latest-full train
         ```
     
     * **If using Rasa CLI**
