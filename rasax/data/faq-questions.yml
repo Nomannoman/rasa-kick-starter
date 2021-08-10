@@ -1,0 +1,1682 @@
+version: "2.0"
+nlu:
+- intent: q1
+  examples: |
+    - How do I add Assert False Validator?
+    - How do I select Assert False Validator ?
+    - How to choose assert false Validator?
+- intent: q2
+  examples: |
+    - What is Negative under Change Driver Type?
+- intent: q60
+  examples: |
+    - What is negative at an Entity level?
+    - When do we use Negative Type UI Control?
+    - What is the use of Negative UI control?
+    - Can I limit the user to provide only negative value ?
+    - What is Negative Type for Number UI control?
+- intent: q3
+  examples: |
+    - What is NSL_AadharCardReservedCU?
+- intent: q4
+  examples: |
+    - What is the purpose of an Agent?
+- intent: q5
+  examples: |
+    - Who is an Agent?
+    - What is an Agent?
+    - What is the use of an Agent in a solution?
+    - who is an agent
+    - what is an agent
+- intent: q6
+  examples: |
+    - How can I create a sequential CU?
+    - How to add sequential CU?
+- intent: q7
+  examples: |
+    - How to define the CU type?
+    - How can I choose the CU type?
+- intent: q8
+  examples: |
+    - How can we create a new solution?
+- intent: q9
+  examples: |
+    - what is NSL_Template _ Aggregate Function?
+    - Can we develop a solution to prefix the min and max values in the solution?
+    - Is it possible to develop a solution which can calculate average values whenever inputs are provided?
+- intent: q10
+  examples: |
+    - How to choose sequential CU?
+- intent: q11
+  examples: |
+    - Where does the solution data stored?
+    - Where do you store all the solution data?
+- intent: q12
+  examples: |
+    - What is alternate under Change Driver type?
+- intent: q13
+  examples: |
+    - What is Assert False under select Validators for Boolean UI control?
+- intent: q14
+  examples: |
+    - What is Assert True under select Validators for Boolean UI control?
+- intent: q15
+  examples: |
+    - What is the use of Attribute?
+    - What is the purpose of an Attribute?
+    - What is an Attribute?
+    - what is an attribute
+- intent: q16
+  examples: |
+    - Can we insert the audio files into the solution?
+    - Can we provide an option for the users to upload audio files into the solution?
+    - Can an Entity be in the form of an audio?
+- intent: q17
+  examples: |
+    - What is NSL_BankChequeReservedCU?
+    - Where can we use NSL_BankChequeReservedCU?
+    - Can we develop a solution that extracts the fields from the image of bank cheque and convert it to data?
+- intent: q18
+  examples: |
+    - When should I use Boolean Function Reserved CU?
+    - What is a Boolean Function in NSLhub Kit?
+    - Where can we use Boolean Function reserved CU?
+    - What is the use of Boolean Function in NSLhub Kit?
+- intent: q19
+  examples: |
+    - Can I link a CU with any previous CU to form a loop based on condition?
+- intent: q20
+  examples: |
+    - Can we add CCAvenue payment request to the solution?
+    - What is NSL_CCAvenuePaymentRequest?
+- intent: q21
+  examples: |
+    - Can we develop a solution that extracts the details from the image of car insurance policy and convert to data?
+    - Where can we use NSL_CarInsuranceReservedCU ?
+    - What is NSL_CarInsuranceReservedCU ?
+- intent: q22
+  examples: |
+    - What is the difference between complete and triggered status under my transactions?
+- intent: q23
+  examples: |
+    - What is the complete status under My Transaction?
+- intent: q24
+  examples: |
+    - What is the use of configure option while creating an Entity?
+- intent: q25
+  examples: |
+    - What is Date Range UI control?
+    - Can we develop a solution which provide two dates like "to and from" or specific date ranges into a solution?
+- intent: q26
+  examples: |
+    - Can we develop a solution with calendar or a date option?
+    - What is the UI control to insert date into a solution?
+    - What is Date UI control?
+- intent: q27
+  examples: |
+    - What is a default Value?
+    - When do we use default value?
+    - What is the use of default value?
+- intent: q28
+  examples: |
+    - Can we develop a solution that extracts the details from the image of deposit slip and convert to data?
+    - What is NSL_DepositslipReservedCU?
+    - Where can we use NSL_DepositslipReservedCU?
+- intent: q29
+  examples: |
+    - From which mode should I publish my GSI when once edited?
+- intent: q30
+  examples: |
+    - What is NSL_DrivingLicenceReservedCU?
+    - Where can we use NSL_DrivingLicenceReservedCU?
+    - Can we develop a solution that extracts the details from the image of driving license and convert to data?
+- intent: q31
+  examples: |
+    - What is an embedded GSI?
+    - What is meant by embedded GSI?
+    - What is the purpose of embedded GSI?
+- intent: q32
+  examples: |
+    - What is the use of extract option?
+- intent: q33
+  examples: |
+    - Can we develop a solution that can generate Barcode for the information?
+    - Where can we use NSL_GenerateBarCode Reserved CU?
+    - What is NSL_GenerateBarCode Reserved CU?
+- intent: q34
+  examples: |
+    - What is NSL_GenerateQRCode Reserved CU?
+    - Where can we useNSL_GenerateQRCode Reserved CU?
+    - Can we develop a solution to generate QR code which can be scanned to display the information or links?
+- intent: q35
+  examples: |
+    - What if I want to add an additional Attribute after publishing the Entity?
+- intent: q36
+  examples: |
+    - What is the procedure to publish a solution?
+    - How to publish a solution?
+    - How can I publish a solution?
+    - How do I publish a solution?
+    - What are the steps involved to publish a solution?
+- intent: q37
+  examples: |
+    - What is the use of Change Driver type under UI controls?
+    - What are Change Driver type at Entity level?
+- intent: q38
+  examples: |
+    - What is NSL_IntermediateMarksSheet Reserved CU?
+    - Can we develop a solution that extracts the details from the image of intermediate marks sheet and convert to data?
+    - Where can we use NSL_IntermediateMarksSheet Reserved CU?
+- intent: q39
+  examples: |
+    - What is Time and Space option while assigning CUs?
+- intent: q40
+  examples: |
+    - Where can we use NSL_JobDescription Reserved CU?
+    - Can we develop a solution that extracts the details from the image of job description and convert to data?
+    - What is NSL_JobDescription Reserved CU?
+- intent: q41
+  examples: |
+    - What is NSL_LabReport Reserved CU?
+    - Where can we use SL_LabReport Reserved CU?
+    - Can we develop a solution that extracts the details from the image of any lab report and convert to data?
+- intent: q42
+  examples: |
+    - What is label UI Control?
+    - Is it possible to mention the description below the fields to describe what to be mentioned in the fields?
+- intent: q43
+  examples: |
+    - How do I restrict the number of items to an input ?
+    - How do I restrict the number of characters to a value ?
+    - How do I select length type Validator?
+    - How do I use Length Type Validator?
+    - What are the steps to use length type Validator?
+    - How do I limit the length of a input?
+- intent: q44
+  examples: |
+    - What is the use of link option while editing CU?
+- intent: q45
+  examples: |
+    - What is NSL_LipidProfile Reserved CU?
+    - Where can we use NSL_LipidProfile Reserved CU?
+    - Can we develop a solution that extracts the details from the image of Lipid And convert to data?
+- intent: q46
+  examples: |
+    - When to select the Machine Agent?
+    - When should I choose the Machine agent?
+    - When can we select the Machine Agent?
+    - When can we consider the Machine Agent?
+- intent: q47
+  examples: |
+    - Is there a way to check maximum file size before uploading?
+- intent: q48
+  examples: |
+    - What is Max file size type in select Validators for Audio?
+    - What is Max file size type in select Validators for File UI control?
+    - Can I set maximum file size for uploading a file ?
+    - when do we use max file size type Validator?
+    - What is the purpose of max file type Validator?
+- intent: q49
+  examples: |
+    - How do I select Max Type Validator?
+    - How do I limit a field to accept a value which is lower than a specified number?
+    - How to choose Max Type Validator?
+    - How can I make an Attribute to accept a value lower than or equal to a specific number?
+- intent: q50
+  examples: |
+    - Can I restrict a user to give a value less than or equal to specific number?
+    - What is Max Type Validator?
+    - What is the use of Max Type Validator?
+- intent: q51
+  examples: |
+    - Can I make an Attribute to accept a value lower than or equal to a specific number?
+- intent: q52
+  examples: |
+    - What is the Metadata?
+- intent: q53
+  examples: |
+    - What is Metric UI Control?
+    - Is it possible to define the measures like KG, Pounds etc. beside the fields?
+- intent: q54
+  examples: |
+    - Can I set minimum size for uploads ?
+    - What is min file size type in select Validators for Audio?
+    - What is the use of min file size type Validator?
+    - When do we add min file size type Validator to an Attribute
+    - Is there a way to check minimum file size before uploading?
+    - What is min file size type in select Validators for File UI control?
+- intent: q55
+  examples: |
+    - Where can I choose to select CU type?
+    - What is the use of More option?
+    - What is the function of More option?
+    - When do you use More option?
+- intent: q56
+  examples: |
+    - How can I use Date Reserved CU?
+    - Do we have the Reserved CUs for Days counter, Dates and Years?
+    - Can we develop a solutions to count time, days and years?
+    - How to use the Date Time Function CU?
+    - Can we develop a solution with different dates and times and calculate the differences?
+    - Can I develop a solution that can calculate the duration between two dates?
+- intent: q57
+  examples: |
+    - How can I use NSL String Functions?
+    - What is the use of NSL String Functions?
+    - When is NSL String Function used?
+    - What is the purpose of NSL String Function?
+    - What are the String Functions?
+    - What is the use of String Functions?
+    - Where can I use NSL String functions?
+    - What is the function of String Function?
+    - What is the purpose of String Function?
+- intent: q58
+  examples: |
+    - How can I limit a user to provide only negative values to an Attribute?
+    - How do I select negative type Validator?
+    - How to chose negative type Validator?
+    - How do I make the Attribute to accept only negative values?
+    - How can I restrict a user to provide only negative input?
+- intent: q59
+  examples: |
+    - How do I select Negative or Zero type Validator?
+    - How do I choose Negative or zero type Validator?
+    - How do I make an Attribute accept only negative or zero values?
+    - How do I restrict a user to input only negative values including zero?
+- intent: q61
+  examples: |
+    - What is Nested CUs?
+- intent: q62
+  examples: |
+    - Can I link two CUs through DCD?
+    - Can I provide DCD at CU level?
+    - Is it possible to link CUs through DCDs?
+- intent: q63
+  examples: |
+    - Is it necessary to add an agent at the Entity level?
+    - Is it mandatory to add an agent at theEntity level?
+- intent: q64
+  examples: |
+    - Is it possible to delete the physical layer?
+    - Do we have an option to delete the physical layer?
+- intent: q65
+  examples: |
+    - Do I need to save the solution all the time?
+    - Do we have the auto save option in the platform?
+- intent: q66
+  examples: |
+    - What is the use of not empty type in Validators ?
+    - What is not empty type?
+    - When do I use Not Empty Type Validator?
+    - What is the purpose of Not Empty Type Validator?
+    - When Can I use Not Empty Type Validator?
+    - Can I make sure that the end user must enter some value to an Attribute?
+- intent: q67
+  examples: |
+    - How to make an Attribute filed not empty?
+    - How do I make sure that a user gives some input to a field ?
+    - What are the steps to select Not Empty Type Validator?
+    - How do I select Not Empty Type Validator?
+- intent: q68
+  examples: |
+    - How do I restrict users to provide any integer value accept 0?
+    - How can I make an Attribute to accept all integer values but 0?
+    - How to choose not zero type Validator?
+    - How do I select not zero type Validator?
+    - How do I make an input field to accept any integer value excluding 0
+- intent: q69
+  examples: |
+    - What use the use of not zero type Validator?
+    - What are the steps to add not zero type Validator
+    - Can I limit the user to provide any integer value but zero
+    - When can I use not zero type Validator?
+    - What is not zero type Validator?
+- intent: q70
+  examples: |
+    - Can we develop a solution with a filed to insert only numeric values?
+    - What is Number UI control?
+- intent: q71
+  examples: |
+    - Can we develop a solution that extracts the details from the image of odometer and convert to data?
+    - What is NSL_Odometer Reserved CU?
+    - Where can we use NSL_Odometer Reserved CU?
+- intent: q72
+  examples: |
+    - How to create a new book?
+- intent: q73
+  examples: |
+    - How can we add an Agent in the solution?
+    - How to add agent while creating the GSI or CUs?
+    - How do I add an agent to a GSI or a CU?
+- intent: q74
+  examples: |
+    - How to assign Rights to an Agent?
+    - How to assign Rights?
+    - How can I assign the Rights?
+- intent: q75
+  examples: |
+    - What is optional under Change Driver type?
+- intent: q76
+  examples: |
+    - What is the use of optional Change Driver type?
+- intent: q77
+  examples: |
+    - What are the steps to make an input value optional ?
+    - How to add a function which will make an Attribute field optional?
+    - How can I make middle name as optional field?
+    - How do I make an Attribute optional ?
+    - How to select optional Type Validator?
+    - How to add optional Type under select Validators?
+- intent: q78
+  examples: |
+    - What is NSL_Passport Reserved CU?
+    - Where can we use NSL_Passport Reserved CU?
+    - Can we develop a solution that extracts the details from the image of Passport and convert to data?
+- intent: q79
+  examples: |
+    - When do I use pattern type Validator?
+    - What is Pattern Type in select Validators?
+    - What is the use of Pattern Type Validator?
+- intent: q80
+  examples: |
+    - Can we develop a solution with instamojo payment gateway for online transactions?
+    - What is NSL_paymentdetailsinstamojo Reserved CU?
+    - Where can we useNSL_paymentdetailsinstamojo Reserved CU?
+- intent: q81
+  examples: |
+    - What is NSL_PaytmInitiateTransaction Reserved CU?
+    - Where can we use NSL_PaytmInitiateTransaction Reserved CU?
+    - Can we develop a solution which initiates the Paytm transactions?
+- intent: q82
+  examples: |
+    - What is NSL_PaytmProcessTransaction Reserved CU?
+    - Where can we use NSL_PaytmProcessTransaction Reserved CU?
+    - Can we develop a solution with Paytm transactions?
+- intent: q83
+  examples: |
+    - What is NSL_PaytmSendOTP Reserved CU?
+    - Where can we use NSL_PaytmSendOTP Reserved CU?
+    - Can we develop a solution with Paytm transactions and generate OTP?
+- intent: q84
+  examples: |
+    - Where can I find the Physical Layer and Information Layer?
+- intent: q85
+  examples: |
+    - What are the elements that exists in physical layer?
+- intent: q86
+  examples: |
+    - How can I make an Attribute to accept only positive values?
+    - How do I restrict the end user to give only positive input?
+    - How do I add positive type Validator?
+    - How do I select positive type Validator?
+- intent: q87
+  examples: |
+    - What is the purpose of positive type Validator?
+    - What is positive type Validator?
+    - Can I make an Attribute accept only positive values?
+    - When do we use positive type Validator?
+    - Can I restrict the users to give natural numbers as an input
+- intent: q88
+  examples: |
+    - How do I make an Attribute to accept only positive or zeros as input value?
+    - What is the process to add Positive or Zero Validator to an Attribute?
+    - How do I select Positive or Zero Validator?
+    - How do I make users to enter only the whole numbers as values?
+    - How to restrict the users to input only positive or zeros into the field?
+- intent: q89
+  examples: |
+    - What is quantification UI Control?
+- intent: q90
+  examples: |
+    - What is NSL_RazorpayCreateCheckoutPayment Reserved CU?
+    - Where can we use NSL_RazorpayCreateCheckoutPaymentReservedCU?
+    - Is it possible to incorporate Razorpay API into the solution?
+- intent: q91
+  examples: |
+    - Is it possible to verify the payments via Razorpay?
+    - What is NSL_razorpayVerifyGetPayment Reserved CU?
+    - Where can we use NSL_razorpayVerifyGetPayment Reserved CU?
+- intent: q92
+  examples: |
+    - Can we develop a solution which can scan the QR code and display the information?
+    - Where can we use NSL_Read_QR_BarCode?
+    - What is NSL_Read_QR_BarCode Reserved CU?
+- intent: q93
+  examples: |
+    - What is read, write and execute in the Rights?
+    - What is the use of read, write and execute option while assigning Rights?
+- intent: q94
+  examples: |
+    - How can I use Recursion?
+- intent: q95
+  examples: |
+    - How to create Recursive CU?
+- intent: q96
+  examples: |
+    - How do I make sure that a user does not skip to enter a value?
+    - How to choose Required Validator?
+    - How do I make an Attribute field as required?
+    - What are the steps to add required Validator to an input field ?
+    - How to make users enter data without skipping it ?
+- intent: q97
+  examples: |
+    - Is there an option to develop our own Reserved CUs?
+    - How do I develop my own Reserved CU?
+    - Can we create our own Reserved CUs?
+    - Is it possible to develop Reserved CUs?
+- intent: q98
+  examples: |
+    - How do we add the reserved CU?
+    - How to add reserved CU?
+    - How can I add reserved CU ?
+    - What is the procedure to add reserved CU?
+    - What are the steps involved to add reserved CU?
+    - How do I add a reserved CU into a solution?
+    - How to add a reserved CU?
+    - How do you add a reserved CU?
+- intent: q99
+  examples: |
+    - How can I use SMS Reserved CU?
+- intent: q100
+  examples: |
+    - Can we develop a solution that extracts the details from the image of SSC marks sheet and convert to data?
+    - Where can we use NSL_SSCMarksSheet Reserved CU?
+    - What is NSL_SSCMarksSheet Reserved CU?
+- intent: q101
+  examples: |
+    - Can we develop a solution which can performs actions to schedule the notifications?
+    - What is NSL_ScheduleNotification Reserved CU?
+    - Where can we use NSL_ScheduleNotificationReserved CU?
+- intent: q102
+  examples: |
+    - What is the full form of SCORM?
+- intent: q103
+  examples: |
+    - What is show unlinked CUs?
+- intent: q104
+  examples: |
+    - Where can we use NSL_Template_StatisticalFunctions?
+    - What is NSL_Template_Statistical functions?
+    - Can we develop a solution with the feature that performs Statistical Calculations?
+- intent: q105
+  examples: |
+    - How to create embedded GSI as alternate CU?
+    - How can we create embedded GSI as alternate CU?
+- intent: q106
+  examples: |
+    - What are the steps to create an alternate CU?
+- intent: q107
+  examples: |
+    - How to create an alternate CU?
+    - How to add alternate CUs?
+- intent: q108
+  examples: |
+    - Can we develop a solution that can convert the given numbers into Currency values?
+    - How to use the Currency Functions CU?
+    - What are steps involved to add a Currency Function CU into a solution?
+- intent: q109
+  examples: |
+    - How to connect the DCDs for Reserved CU?
+    - What are the steps to connect DCDs for Reserved CUs?
+    - How do I link DCDs for a Reserved CU?
+- intent: q110
+  examples: |
+    - How to develop a solution with auto product IDs?
+    - Can we develop a solution with the feature to generate auto product IDs?
+- intent: q111
+  examples: |
+    - How to create a Change Unit?
+    - How to add a CU?
+    - What is the process of adding CU in a soultion
+    - How can we add CU to a solution?
+    - How can I add a CU?
+- intent: q112
+  examples: |
+    - How to edit an Entity?
+- intent: q113
+  examples: |
+    - How to add a book from the library?
+- intent: q114
+  examples: |
+    - How can I connect Change Units using DCD?
+    - How to use DCDs?
+    - What is the process of connecting Change Units?
+    - What is the process of adding DCD?
+    - How to provide DCD?
+- intent: q115
+  examples: |
+    - How do I add Assert True Validator?
+    - How do I select assert true Validator?
+    - How can I select assert true Validator?
+- intent: q116
+  examples: |
+    - How to add the previous CUs in Current solution?
+    - How to add Change Unit from the library?
+    - How can I add previous CU?
+    - How to add saved CU in the Current solution?
+    - How to add Pre developed Change Unit to a solution ?
+    - What are the steps to add a saved CU in a Current solution?
+- intent: q117
+  examples: |
+    - How to create an Entity?
+    - How to create a new Entity?
+    - How can I create an Entity in the CU?
+- intent: q118
+  examples: |
+    - How can we add the saved entities in CUs?
+    - How can I add the saved entities in a CU?
+    - What is the procedure to add saved entities in CUs?
+    - How do I add saved entities in a CU?
+    - How to add multiple entities?
+- intent: q119
+  examples: |
+    - How can I add an Attribute?
+    - How can we add  the Attributes to an Entity?
+    - How to add Attributes in the solution?
+    - What are the steps to add  Attributes to an Entity?
+- intent: q120
+  examples: |
+    - How do I use the UI controls?
+    - How do we select the UI Control for an Attribute?
+    - How to use the UI controls?
+    - How can I select the UI controls?
+- intent: q121
+  examples: |
+    - What is the process of extracting a solution from a file?
+    - How to extract solutions from sources/files?
+- intent: q122
+  examples: |
+    - How to edit the published solutions?
+    - How to edit a published solution?
+    - How to open and edit my saved solutions?
+    - How can I edit the solutions that are published?
+- intent: q123
+  examples: |
+    - How can we create a GSI?
+    - Where shall I enter my wish?
+    - How to create GSI?
+    - What is the procedure to create a GSI?
+    - What are the steps to create a GSI?
+- intent: q124
+  examples: |
+    - How to save my solution in a Book?
+    - What are steps to save my solution in a Book?
+    - What is the procedure to save a solution in a Book
+    - How to save solution in a book?
+- intent: q125
+  examples: |
+    - How can I directly create a Change Unit in the library?
+    - How can I directly create the CUs in the Library?
+    - How to create a CU without creating a GSI ?
+    - How to directly Create a CU?
+- intent: q126
+  examples: |
+    - How to create an Entity directly in the library?
+    - How can I create an Entity directly?
+    - How can I create an Entity before creating a CU?
+    - How to create an Entity at Library level?
+- intent: q127
+  examples: |
+    - How do I edit the content of the message or SMS after publishing the solution?
+- intent: q128
+  examples: |
+    - How to edit the DCD ?
+    - How do I delete or edit the DCD connections?
+    - How to delete a DCD?
+- intent: q129
+  examples: |
+    - Can we edit a DCD After Giving One?
+    - What is the process to delete a DCD?
+    - What are the steps involved to delete DCDs?
+- intent: q130
+  examples: |
+    - What are the steps to open published solutions?
+    - How to open my published solution?
+    - How to open my published solutions?
+- intent: q131
+  examples: |
+    - What is NSL_TDS Reserved CU?
+    - Where can we useNSL_TDS Reserved CU?
+    - Can we develop a solution that extracts the details from the image of Form 16 or TDS and convert to data?
+- intent: q132
+  examples: |
+    - What is NSL_Template_Create?
+    - Can we develop a solution to display or capture the data in defined format or template?
+- intent: q133
+  examples: |
+    - When to use text and rich text while selecting UI?
+    - What is the difference between text and rich text?
+- intent: q134
+  examples: |
+    - What are the Aggregate Functions allowed in the CU?
+- intent: q135
+  examples: |
+    - Can we develop a solution which would prompt users to enter the amount in Currency?
+    - What is Currency UI control?
+- intent: q136
+  examples: |
+    - Can we develop a solution with an option to insert only the Email ID?
+    - What is Email UI Control?
+- intent: q137
+  examples: |
+    - Can we develop a solution with an option to insert files into the solution?
+    - What is File UI Control?
+- intent: q138
+  examples: |
+    - What is HTML UI Control?
+    - Can we develop a solution with an option to insert or give the URL that can be opened in the solution?
+- intent: q139
+  examples: |
+    - What is Hyperlink UI Control?
+    - Can we develop a solution with an option to open the webpage once we select the word or hyperlink?
+- intent: q140
+  examples: |
+    - Can we develop a solution with an option to select multiple options from the list?
+    - What is Multi select UI control?
+- intent: q141
+  examples: |
+    - Can we develop a solution that extracts the details from the image of PAN card and convert to data?
+    - Where can we use NSL_Pancard Reserved CU?
+    - What is NSL_Pancard Reserved CU?
+- intent: q142
+  examples: |
+    - Can we develop a solution to insert and use the SCROM videos?
+    - What is SCORM Video UI Control?
+- intent: q143
+  examples: |
+    - Can we develop a solution to display the status of SCROM in the solution?
+    - What is SCORM Progress UI Control?
+- intent: q144
+  examples: |
+    - What is the difference between SEC and MCC?
+- intent: q145
+  examples: |
+    - Can we develop a solution with an option to insert or mention the time within the field?
+    - What is Time UI Control?
+- intent: q146
+  examples: |
+    - What is Typeahead UI control?
+    - Can we develop a solution to search and display the search results in the dropdown?
+- intent: q147
+  examples: |
+    - Is it possible to develop a solution to insert WebEx credentials?
+    - What is WebEx UI Control?
+- intent: q148
+  examples: |
+    - What are the agents available in a GSI?
+    - What are the available agent options at a GSI level?
+- intent: q149
+  examples: |
+    - What is the browse option under create Entity?
+- intent: q150
+  examples: |
+    - Is it possible to provide multiple options with checkboxes?
+    - What is the Checkbox UI control?
+- intent: q151
+  examples: |
+    - What is constant Change Drivers?
+- intent: q152
+  examples: |
+    - What is Decimal UI control?
+    - Can we develop a solution with an option to insert decimals in an input?
+- intent: q153
+  examples: |
+    - What is the Display option under Entity configuration?
+- intent: q154
+  examples: |
+    - Can we develop a solution with an option to insert distance metrics ?
+    - What is distance UI control?
+- intent: q155
+  examples: |
+    - What is the dropdown UI control?
+    - Can I insert a drop down box in the solution to list out cities, states or any other list of items?
+- intent: q156
+  examples: |
+    - What is Encrypt Text UI Control?
+    - Can we develop a solution with the filed to enter text that can be encrypted?
+- intent: q157
+  examples: |
+    - What is Events Under UI Control?
+    - How can we use the option Events under UI control?
+- intent: q158
+  examples: |
+    - What are the available agent options at a CU level?
+    - Which agent can be selected at the time of creating a CU?
+    - What are the agents available in a CU?
+    - What are the agents in a CU?
+- intent: q159
+  examples: |
+    - Can an Entity be in the form of an image?
+    - What is Image UI Control?
+    - Can we develop a solution to upload the image files into the solution?
+- intent: q160
+  examples: |
+    - Can we develop the solution with an option to provide the users Current location?
+    - What is location UI Control?
+- intent: q161
+  examples: |
+    - Can we create an Entity / solution with an option to insert only mobile number?
+    - What is Mobile Number UI Control?
+- intent: q162
+  examples: |
+    - What is the purpose of Number Function Reserved CU?
+    - Do we have the Reserved CU on Number Functions?
+    - What are the number function Reserved CUs?
+    - Can we develop a solution with the feature to perform Calculations?
+- intent: q163
+  examples: |
+    - Can we develop a solution where end- user needs to enter an encrypted password?
+    - What is Password UI control?
+- intent: q164
+  examples: |
+    - Can we develop a solution with the field to preview the file or data as a thumbnail?
+    - What is Preview UI control?
+- intent: q165
+  examples: |
+    - Is it possible to calculate the probability with the values?
+    - What is Probability UI control?
+- intent: q166
+  examples: |
+    - What is Progress UI control?
+    - Can we develop a solution to display the status bar showing the status of percentage?
+- intent: q167
+  examples: |
+    - Where can we use NSL_PushNotificationReserved CU?
+    - What is NSL_PushNotification Reserved CU?
+    - Can we develop a solution that can send push notifications?
+- intent: q168
+  examples: |
+    - What is the use of a radio button?
+    - What are the uses of radio button?
+    - What is the purpose of a radio button?
+- intent: q169
+  examples: |
+    - What is NSL_CCAvenueVerifyResponse?
+    - Can I add CCAvenue verify request in the solution?
+    - Can we develop a solution with an option to verify the payment response from the service provider?
+- intent: q170
+  examples: |
+    - Where can we use NSL_Template_Generate_QR_Code?
+    - Can we develop a solution with a fixed format to display the information once the QR code is scanned?
+    - What is NSL_Template_Generate_QR_Code Reserved CU?
+- intent: q171
+  examples: |
+    - What is NSL_validateotppaytm Reserved CU?
+    - Can we develop a solution with Paytm transactions and also validate the transactions?
+    - Where can we use NSL_validateotppaytm Reserved CU?
+- intent: q172
+  examples: |
+    - Where can we use NSL_Template_Read_QR_Code?
+    - Can we develop a solution with default template that can scan and display the information accordingly?
+    - NSL_Template_Read_QR_Code?
+- intent: q173
+  examples: |
+    - Where can we useNSL_Resume Reserved CU?
+    - What is NSL_Resume Reserved CU?
+    - Can we develop a solution that extracts the details from the image of resume and convert to data?
+- intent: q174
+  examples: |
+    - What is Signature UI Control?
+    - Can we develop a solution with an option to insert the signature into the solution?
+- intent: q175
+  examples: |
+    - What are solution design Rights at the time of creating CU?
+- intent: q176
+  examples: |
+    - Where can I find the solution that was sent for approval?
+- intent: q177
+  examples: |
+    - What happens if we Select Cancel while developing the solution?
+- intent: q178
+  examples: |
+    - Can we develop a solution with an option to upload the video files?
+    - Can an Entity be in the form of video?
+    - What is Video UI control?
+- intent: q179
+  examples: |
+    - What are the different options available under UI controls?
+- intent: q180
+  examples: |
+    - How many DCD can be added?
+    - Is there any restriction on DCDs that can be given from one CU?
+    - Can I create any number of DCDs?
+    - On what basis should I add DCDs?
+    - How many DCDs can I create in a solution?
+- intent: q181
+  examples: |
+    - What is the Boolean UI control?
+    - Can we provide an option to the users to verify any one of the files are true and convert the text into Boolean expression?
+- intent: q182
+  examples: |
+    - what is an audio UI control?
+- intent: q183
+  examples: |
+    - Can we develop a solution to capture Current date and time values in the solution?
+    - What is Current date and time UI control?
+- intent: q184
+  examples: |
+    - What is Date time UI control?
+    - Can we develop a solution to book appointments with date and time options?
+- intent: q185
+  examples: |
+    - How to develop a solution with Number Functions?
+    - What are the steps to make a solution with Number Functions?
+- intent: q186
+  examples: |
+    - How to Delete the CUs?
+- intent: q187
+  examples: |
+    - How to edit the Change Unit?
+    - How do I edit the Change Unit?
+    - How to edit a Change Unit?
+- intent: q188
+  examples: |
+    - How Can I review and approve the solutions?
+- intent: q189
+  examples: |
+    - How can I review and reject the solution?
+- intent: q190
+  examples: |
+    - What are Transaction Rights at the time of creating the CU?
+    - What are the Transaction Rights?
+- intent: q191
+  examples: |
+    - What is the  Triggered Status under My Transaction?
+- intent: q192
+  examples: |
+    - What is a UI control?
+- intent: q193
+  examples: |
+    - What is the unlink option under each CU?
+- intent: q194
+  examples: |
+    - What is NSL_Template_Update Reserved CU?
+    - Where can we use NSL_Template_Update?
+    - Where can we use the Update Reserved CU?
+    - Can we provide a feature in the solution to update the files once uploaded and want to update new?
+- intent: q195
+  examples: |
+    - What is NSL_Utilitybill Reserved CU?
+    - Where can we use NSL_Utilitybill Reserved CU?
+    - Can we develop a solution that extracts the details from the image of Bills and convert to data?
+- intent: q196
+  examples: |
+    - What is the use of Select Validators in UI controls?
+- intent: q197
+  examples: |
+    - What is NSL_VehicleRegistration Reserved CU?
+    - Where can we use NSL_VehicleRegistration Reserved CU?
+    - Can we develop a solution that extracts the details from the image of Vehicle registration certificate and convert to data?
+- intent: q198
+  examples: |
+    - What types of API can be integrated within the platform?
+- intent: q199
+  examples: |
+    - How do I change or edit my GSI Name?
+    - How to Edit the name of a GSI?
+    - What are the steps to edit GSI name?
+- intent: q200
+  examples: |
+    - Can we create auto product IDs in the solution?
+- intent: q201
+  examples: |
+    - Can I delete the GSI?
+- intent: q202
+  examples: |
+    - Can we upload the Aadhar card details into the solution?
+    - Is it possible to upload the Aadhar card into the solution and convert in into the data?
+- intent: q203
+  examples: |
+    - Can I delete few Attributes in an Entity in that particular solution?
+- intent: q204
+  examples: |
+    - Can we develop the solutions which can send Emails.?
+    - How can I use Email Reserved CU?
+    - Can I develop a solution which can send auto generated emails?
+    - Does the platform enables to develop solution to send Emails and Text messages?
+- intent: q205
+  examples: |
+    - Is there an option to develop a solution for payment details?
+    - Can we create payment details solutions?
+    - Can we develop a solution with payment details ?
+- intent: q206
+  examples: |
+    - Can I add WebEx widgets?
+    - Can we incorporate WebEx widgets ?
+- intent: q207
+  examples: |
+    - Are logics Case sensitive?
+- intent: q208
+  examples: |
+    - Are the GSI and CU case sensitive?
+- intent: q209
+  examples: |
+    - Does the solution get saved without saving?
+- intent: q210
+  examples: |
+    - Can I develop the solutions on payment gateways and transactions?
+- intent: q211
+  examples: |
+    - Can we also add several other payment options like gpay,paytm,Phonepe Razorpay,Mobikwik etc.?
+- intent: q212
+  examples: |
+    - Can we create WebEx user with the solutions ?
+    - Is there an option to create WebEx user from the solution?
+- intent: q213
+  examples: |
+    - Is it possible to carry out functions like verify username and password?
+    - Can we implement the functions like verify username and password?
+    - Can I develop a solution which can verify between Attributes?
+- intent: q214
+  examples: |
+    - Can I directly create the CUs in Library?
+    - Can I create the CUs first and then create my solution?
+    - Can we create a CU with out GSI?
+    - Can I directly create a CU?
+    - Can I create the CUs first and then add them to the solution
+- intent: q215
+  examples: |
+    - Can we develop ERP solutions?
+- intent: q216
+  examples: |
+    - Can we develop a solution to generate invoices, Bills etc.?
+- intent: q217
+  examples: |
+    - Can a end user upload a video?
+    - Can I develop a solution which ask for a video upload ?
+    - Can we create an option in the solution to upload videos?
+    - Can we develop a solution which can upload videos ?
+- intent: q218
+  examples: |
+    - Does the platform support to develop the solution for payment gateways and Transactions?
+- intent: q219
+  examples: |
+    - Is there a possibility to develop solutions on payment gateways and transaction like Paytm and Google Pay?
+- intent: q220
+  examples: |
+    - Can I develop solutions like bill and recharge payments?
+- intent: q221
+  examples: |
+    - Can we use NSLhub to develop website?
+- intent: q222
+  examples: |
+    - Is it possible to use already developed solution to create a new GSI?
+- intent: q223
+  examples: |
+    - Can we add several other payment options?
+- intent: q224
+  examples: |
+    - Can I enable the option to upload PDFs in the solution?
+    - Can we add an Entity to Upload PDFs in the solution?
+    - Can PDFs be uploaded in the solution?
+    - Is it possible to create an Entity allows users to upload PDFs and documents?
+- intent: q225
+  examples: |
+    - Can we make embedded GSI as an alternate CU?
+- intent: q226
+  examples: |
+    - Is it possible to change the Entity names?
+    - Can we change the Entity name?
+- intent: q227
+  examples: |
+    - Is there an option to change the name of Reserved CUs?
+    - Is it possible to edit the name of Reserved CU?
+    - Can we change the name of Reserved Change Unit?
+    - Can I edit the name of Reserved CU?
+- intent: q228
+  examples: |
+    - Is it possible to change the name of a Change Unit?
+    - Is there an option to edit the CU name?
+    - Can I edit/ change the name of CU?
+- intent: q229
+  examples: |
+    - Can two or more GSI's be linked?
+    - Can GSI's be connected?
+    - Can we connect two GSIs?
+- intent: q230
+  examples: |
+    - Can we convert an image to PDF in the solution?
+    - Can I convert Images to PDF in my solution?
+    - Is there an option to convert images to PDF?
+- intent: q231
+  examples: |
+    - Is it possible to create an Entity directly?
+    - Can I create an Entity directly in the Library?
+    - Can I create an Entity without creating a CU?
+- intent: q232
+  examples: |
+    - Can we create WebEx authentication ?
+    - Is it possible to develop WebEx authentication?
+- intent: q233
+  examples: |
+    - How to add dependent dropdown to a solution?
+    - What are the steps to create a dependent Dropdown?
+    - Can we create a dependent Dropdown?
+- intent: q234
+  examples: |
+    - Does the trigger CES also have entities?
+- intent: q235
+  examples: |
+    - Is it possible to delete the Entity?
+    - Can we delete the Entity?
+- intent: q236
+  examples: |
+    - Is it possible to delete the CUs once created?
+    - Is it possible to delete the CUs?
+    - Can I delete the CU?
+- intent: q237
+  examples: |
+    - Can we delete the DCD connections?
+    - Can DCDs be deleted once created?
+    - Do I have an option to delete DCDs?
+    - Is it possible to remove the linked DCDs?
+- intent: q238
+  examples: |
+    - Do we have an option to remove the entities from trigger CES?
+    - Can we delete the entities from Trigger CES?
+- intent: q239
+  examples: |
+    - Can we integrate CRM in the solutions?
+    - Can CRM solutions be integrated?
+    - Does the platform support to develop CRM solutions?
+    - Is it possible to develop CRM into a solution?
+    - Is it possible to integrate CRM into a solution?
+- intent: q240
+  examples: |
+    - Is it possible to edit the solutions that are published?
+    - Can I edit the published solutions?
+- intent: q241
+  examples: |
+    - Can I edit my solution after publishing it ?
+- intent: q242
+  examples: |
+    - Can we choose another UI option after developing a solution?
+    - Can I edit UI option once selected?
+- intent: q243
+  examples: |
+    - Do we have the option to edit the context of emails and messages after the solutions has been developed?
+    - Can I edit the content of the message or SMS after publishing the solution?
+- intent: q244
+  examples: |
+    - Can we edit the reserved CUs?
+    - Do I have an option to a edit Reserved CU?
+    - Is it possible to edit reserved CUs?
+- intent: q245
+  examples: |
+    - Can I edit my GSI Name?
+    - Is it possible to change the GSI name after we publish?
+- intent: q246
+  examples: |
+    - Is it possible to extract the solution from sources?
+    - Can I upload the solutions from other files?
+- intent: q247
+  examples: |
+    - Is there a possibility to send a WhatsApp message using the solution?
+    - Can we use WhatsApp to send messages from the solution?
+- intent: q248
+  examples: |
+    - Does the platform support to integrate APIs?
+    - Is there an option to integrate APIs into the solution?
+    - Does the platform support to incorporate different APIs?
+- intent: q249
+  examples: |
+    - Can we see the recently used CU and Entities in the search?
+    - Can we directly search used entities and CUs?
+    - Is it possible to search for already developed CUs and entities?
+    - Can I look CUs and entities which are recently saved?
+- intent: q250
+  examples: |
+    - Can I specify a pattern for passwords ?
+    - Can I specify a pattern in which users must enter the data?
+    - Can I specify a pattern for passwords, usernames, email IDs etc.?
+- intent: q251
+  examples: |
+    - Can we use multiple Validators for a single Attribute?
+- intent: q252
+  examples: |
+    - Can I reuse an existing Change Unit or Entity?
+    - Is it possible to reuse existing CU or Entity?
+    - Can we reuse the GSI and CUs which are already developed?
+    - Can we use the previously created GSI and CUs in the Current developing solution?
+    - Can I add already created GSIs and CUs in a new solution?
+- intent: q253
+  examples: |
+    - Can we implement auto calculation functions to generate Bills?
+    - Does platform support auto calculations for generating bills and payments?
+    - Do I have an option to auto calculate amount while generating receipts or bill?
+- intent: q254
+  examples: |
+    - Do we have the function to convert the Currency values?
+    - Can we develop a solution which can convert any given value to specific Currency value?
+- intent: q255
+  examples: |
+    - Can I connect Physical layer to Information Layer?
+- intent: q256
+  examples: |
+    - Can I edit an Entity to add more Attributes?
+- intent: q257
+  examples: |
+    - Can I add agent at the Entity level?
+- intent: q258
+  examples: |
+    - Can I provide Rights at Attribute level?
+    - Can I provide Rights at CU level?
+    - Can I provide Rights at Entity level?
+    - At what level can I provide Rights in a solution?
+    - Can I provide Rights at GSI level?
+    - When can I provide Rights in a solution?
+- intent: q259
+  examples: |
+    - How can I create a CU with the timeout option?
+- intent: q260
+  examples: |
+    - How many CUs are required to develop a basic solution?
+- intent: q261
+  examples: |
+    - Is there a feature which can give an Aggregate value for items?
+    - Is there a function which can calculate total sum?
+- intent: q262
+  examples: |
+    - Is there a function where I can apply OR operation and get output as either false or true?
+- intent: q263
+  examples: |
+    - Is there a function to save content as a PDF?
+    - Can I develop a solution where the end-user can save content as PDFs?
+- intent: q264
+  examples: |
+    - Is there a function to save content as text files or documents?
+    - Can I develop a solution where the end-user can directly save content as text file?
+- intent: q265
+  examples: |
+    - Can I develop a solution where the content would be in password protected PDFs
+    - Is there a function where the content can be saved as password protected PDFs?
+- intent: q266
+  examples: |
+    - Is there a function which add elements to a list?
+    - Is there a feature which can add items to a list?
+- intent: q267
+  examples: |
+    - Is there function which can remove items from a list?
+    - Is there a feature which can remove elements from a list?
+- intent: q268
+  examples: |
+    - Is there a feature where I can convert text into a Boolean value?
+- intent: q269
+  examples: |
+    - Is there a function which can remove all the items from a list?
+    - Can I remove all the elements from a list?
+- intent: q270
+  examples: |
+    - Is there a function which gives highest of the two given argument?
+    - Is there a function which gives maximum of two values?
+- intent: q271
+  examples: |
+    - Is there a function to check whether a number is even or not?
+    - Is there a feature to check if a number is even?
+- intent: q272
+  examples: |
+    - Is there a function to check whether a number is odd or not?
+    - Is there a feature to check if a number is odd?
+- intent: q273
+  examples: |
+    - What is On Change event?
+    - How can we use the option On change in UI control?
+- intent: q274
+  examples: |
+    - What is On Focus event?
+- intent: q275
+  examples: |
+    - What is On_Load event?
+    - How can we use the option On Load in UI controls?
+- intent: q276
+  examples: |
+    - When can we define the CU type?
+- intent: q277
+  examples: |
+    - How CUs are connected?
+    - How do I link two CUs?
+    - How to connect the Change Units?
+- intent: q278
+  examples: |
+    - When do I need to connect Physical layer to information Layer?
+- intent: q279
+  examples: |
+    - When can we create Parallel CU?
+- intent: q280
+  examples: |
+    - What can be created in information layer?
+    - What is the use of Information Layer?
+- intent: q281
+  examples: |
+    - How can I edit the Attributes?
+    - Can we edit the Attributes once created?
+- intent: q282
+  examples: |
+    - What can I edited in the Change Unit?
+    - Can I edit all the options under the Change Unit?
+- intent: q283
+  examples: |
+    - Can I provide limit to an Attribute?
+    - Can I add a limit to the Input values ?
+    - What is the purpose of a Validator?
+    - What is the use of Validator?
+    - When can we use Validator?
+    - What is a Validator?
+- intent: q284
+  examples: |
+    - Where can I see the solution approval Notification?
+- intent: q285
+  examples: |
+    - Where can I find the solutions that are not saved in a Book?
+    - Where can I find the solutions that are not saved?
+- intent: q286
+  examples: |
+    - Is it possible to move from one CU to another CU?
+    - Is it possible to switch to other CUs?
+    - Can we switch around different CUs?
+    - Can I swap between CUs?
+- intent: q287
+  examples: |
+    - How to edit the solution at the time of review?
+    - Can we edit the solution at the time of review?
+- intent: q288
+  examples: |
+    - How can I retrieve the data that exists in the database?
+- intent: q289
+  examples: |
+    - How many solution can we save in a Book?
+- intent: q290
+  examples: |
+    - Where to save a solution?
+    - Where can I save my solution?
+- intent: q291
+  examples: |
+    - How can I use the previously created GSI and CUs in the Current solution?
+- intent: q292
+  examples: |
+    - Where can we search for our Books?
+- intent: q293
+  examples: |
+    - What are the type of CUs?
+    - What are the various types of CUs?
+- intent: q294
+  examples: |
+    - How do I upload or attach a local files which are not in the library as an Entity?
+- intent: q295
+  examples: |
+    - Can I limit the length of a username or a password?
+    - Can I limit the number of characters for an input?
+    - Can I limit the number of items that can be entered in an Attribute?
+    - What is length Type in select Validators?
+    - What is the use of length Type in select Validators?
+- intent: q296
+  examples: |
+    - What is Multi Value option under UI controls?
+    - What is the purpose of multi value option under UI control?
+    - What is Multi Value option at Entity level?
+    - What is the purpose of multi value option at Entity level?
+- intent: q297
+  examples: |
+    - What is optional Type under select Validators?
+    - What is the use of optional Type Validator?
+    - Can I make an Attribute optional ?
+    - Can I make middle name as optional field?
+    - Is there a feature which can make an input value optional ?
+- intent: q298
+  examples: |
+    - Can I make users to enter only the whole numbers as an input?
+    - Can I make an Attribute accept only positive or zeros as an input?
+    - Can I make users only enter positive values including 0 as input?
+    - What is the use of positive or zero Validator ?
+    - What is positive or Zero Validator?
+- intent: q299
+  examples: |
+    - What is required under select Validators?
+    - What is the use of required in select Validators?
+    - What functions does the required Validator perform?
+    - Can I make an Attribute mandatory to answer ?
+    - Can I make a field as required?
+    - Is there a possibility to make sure a users input some value ?
+- intent: q300
+  examples: |
+    - Can I make an input field accept a filename with restricted number of characters?
+    - Can I make an Attribute accept a file name that is within a specified limit?
+    - Can I specify a maximum length of characters for a file name ?
+    - Can I limit the length of a file name?
+    - What is the use of file name length type Validator?
+    - What is File Name length type in select Validators for Audio?
+    - When do we use file name length type Validator?
+- intent: q301
+  examples: |
+    - How do I add file name length type Validator?
+    - How do I select file name length type Validator ?
+    - How to make an Attribute accept a file name with restricted number of characters?
+    - How do I specify maximum filename length that needs to be uploaded?
+- intent: q302
+  examples: |
+    - How can I validate a file name?
+    - How do I select file name pattern type Validator?
+    - How to add file name pattern type Validator?
+    - How can I add file name pattern type Validator to an Attribute?
+    - How can I limit users to enter a file name which follows a specific pattern?
+- intent: q303
+  examples: |
+    - When is the use file name pattern type Validator?
+    - When do we select file name pattern type Validator?
+    - What is File Name Pattern type in select Validators for Audio?
+    - What is file name pattern type Validator?
+- intent: q304
+  examples: |
+    - How do I select Future Type Validator?
+    - What are the steps to add Future Type Validator?
+- intent: q305
+  examples: |
+    - Can I make an Attribute filed accept a date or time in the future?
+    - Can I restrict users to enter a date or time only in the future?
+    - What is the use of Future Type Validator?
+    - Can I restrict users to enter a date only in the future?
+    - What is Future Type under select Validators for CUrrent Date Time UI Control?
+    - When do I select future type Validator?
+    - What is Future Type under select Validators for Date UI control?
+    - What is Future Type under select Validators for Date Time UI control?
+- intent: q306
+  examples: |
+    - How to set maximum file size for upload?
+    - How do I select max file size type Validator?
+    - What are the steps to add max file type Validator?
+    - How do I make an Attribute accept a file which meets maximum file requirement ?
+    - How to validate a file meets maximum size requirement before uploading?
+- intent: q307
+  examples: |
+    - What are the steps to select min file size Validator?
+    - How to select min file size Validator?
+    - How do I add min file size type Validator?
+    - How to set minimum file size for upload?
+- intent: q308
+  examples: |
+    - What is the difference between the multi-line and rich text?
+- intent: q309
+  examples: |
+    - What is negative or Zero type for Number UI control?
+    - When do I use negative or zero type Validator?
+    - When do I select the Negative or zero Type Validator?
+    - Is there a function which will only accept negative numbers or 0 as inputs?
+- intent: q310
+  examples: |
+    - How do I add past type Validator to an Attribute?
+    - How do I select past type Validator ?
+    - How can I make an Attribute accept a date only in the past?
+    - How do I limit users to give only present date or time as an input?
+    - How do I restrict users to enter a date or time only in the past?
+    - What are the steps to select past type Validator ?
+- intent: q311
+  examples: |
+    - What is Past Type under select Validators?
+    - When do I select Past Type under select Validators?
+    - Is there a function to restrict users to add only dates in the past?
+    - Can I make an Attribute accept a date or time in the past?
+    - What is the use of Past Type under select Validators?
+    - Can I restrict users to enter a date or time only in the past?
+- intent: q312
+  examples: |
+    - How do I select past or Present Validator?
+    - How to choose past or Present Validator?
+    - How do I add past or Present Validator to an Attribute ?
+- intent: q313
+  examples: |
+    - Can I restrict users to provide a date or time only in the past or in the present?
+    - When do I use past or present Validator?
+    - What is the use of past or present Validator?
+    - What is Past or present under select Validators for Date UI control?
+    - Can I make an Attribute accept a date or time either in the past or in the present?
+- intent: q314
+  examples: |
+    - How do I select Pattern Type Validator?
+- intent: q315
+  examples: |
+    - How do I restrict a field to a pattern ?
+    - How do I give a pattern to an Attribute?
+- intent: q316
+  examples: |
+    - How do I limit users to give only present date or time as an input ?
+    - How do I restrict an input field to only accept present date?
+    - How do I make an Attribute only accept the present date or time?
+    - What are the steps to add Present Validator?
+    - How do I select the present Validator?
+    - How to add Present Validator to an Attribute ?
+- intent: q317
+  examples: |
+    - When do I select Present Validator?
+    - Can I make an Attribute only accept the present date or time?
+    - Is there a function which will only accept present time ?
+    - Is there a function which will only accept present date ?
+    - What is the use of present Validator?
+    - What is present Validator?
+- intent: q318
+  examples: |
+    - How do I restrict users to provide a date or time either in present or in future?
+    - How do I make an Attribute only accept time either in future or present ?
+    - How do I make an Attribute only accept present or future dates?
+    - How do I select present or future Validator?
+    - How do I add present or future Validator ?
+- intent: q319
+  examples: |
+    - What is the use of present or future Validator ?
+    - Can I restrict users to provide a date or time either in present or in future?
+    - Can I make an Attribute only accept a date either in present or future?
+    - When do I select present or future Validator?
+    - What is present or Future under select Validators?
+- intent: q320
+  examples: |
+    - When do we use the text and multi line?
+- intent: q321
+  examples: |
+    - Where can we use the decimal number functions in NSLhub Kit?
+    - Can we develop a solution to calculate the functions on decimal numbers?
+- intent: q322
+  examples: |
+    - Can I develop a solution where the user can Get first Day of Current Month
+- intent: q323
+  examples: |
+    - What is Get Time Zone name NSLdate datatype?
+    - Can I develop a solution that can give the Time Zone name?
+- intent: q324
+  examples: |
+    - Can I Add a Number of Days to a Date?
+- intent: q325
+  examples: |
+    - Can I develop a solution with the feature where the end users can Add Hours to the Current time
+- intent: q326
+  examples: |
+    - Can I develop a solution with the feature where the end users can Add Minutes value to the Current time
+- intent: q327
+  examples: |
+    - Can I develop a solution with the feature that can Add Months to the Current date?
+    - Can I develop a solution with the feature where the end users can Add Months to the Current date?
+    - What is Add Months in Date NSLdate datatype?
+- intent: q328
+  examples: |
+    - Can I develop a solution with the feature where the end users can Add Nanoseconds value to the Current time.
+- intent: q329
+  examples: |
+    - Can I develop a solution with the feature where the end users can Add Seconds value to the Current time.
+- intent: q330
+  examples: |
+    - Can I develop a solution with the feature where the end users can Add specified Number of Weeks to the Current date?
+- intent: q331
+  examples: |
+    - Can I develop a solution with the feature where the end users can Add number of Years to the Current date
+- intent: q332
+  examples: |
+    - Can I develop a solution with the feature which can convert date and time to Local Date and Time
+- intent: q333
+  examples: |
+    - Can I develop a solution with a feature to convert the other time formats to Local Time format
+- intent: q334
+  examples: |
+    - Is there a feature to convert strings to lowercase?
+    - Is there a function to converts all characters of the string into lower case letters?
+- intent: q335
+  examples: |
+    - Can I develop a solution which will show updated Local Date in a string?
+- intent: q336
+  examples: |
+    - Can I calculate difference in two dates in nanoseconds?
+    - What is Date Difference in Nanoseconds NSLdate datatype?
+    - Is there a feature to calculate difference between two dates in nanoseconds?
+- intent: q337
+  examples: |
+    - What is Date Difference in Seconds NSL date datatype?
+    - Is there a feature to calculate difference between two dates in seconds?
+    - Can I calculate difference in two dates in seconds?
+- intent: q338
+  examples: |
+    - Can we develop a solution with a feature to fetch the day name in a week?
+- intent: q339
+  examples: |
+    - Can we develop a solution to calculate the Day Number in a Year?
+- intent: q340
+  examples: |
+    - Can we develop a solution to pick only the day of a date?
+    - Can we develop a solution to display only the Day of a Date?
+- intent: q341
+  examples: |
+    - Is there a function to check whether a text ends with a particular value?
+- intent: q342
+  examples: |
+    - Can I develop a solution which would show the First Day of the Current Year?
+- intent: q343
+  examples: |
+    - Can I develop a solution with a feature which will fetch the name of First Day of Next Month
+- intent: q344
+  examples: |
+    - Can I develop a solution where the user can view First Day of the Next Year?
+- intent: q345
+  examples: |
+    - Can I develop a solution which can display Current Date and Time?
+- intent: q346
+  examples: |
+    - Is there a function that can show the Local Time?
+    - What is Get Local Time NSLdate datatype?
+- intent: q347
+  examples: |
+    - Can I develop a solution with a feature to fetch the Time Delay between the local time and UTC.
+- intent: q348
+  examples: |
+    - Can I develop a solution to display different Time Zones
+- intent: q349
+  examples: |
+    - Can I get the total number of elements in an array?
+    - Is there a functions which can count total number of letters in a string?
+- intent: q350
+  examples: |
+    - Can we develop a solution to pick/display only the Hour of a day?
+- intent: q351
+  examples: |
+    - Can I develop a solution which would show the Last Day of the Current Month?
+- intent: q352
+  examples: |
+    - Can I develop a solution where the user can view Last Day of the Current Year?
+- intent: q353
+  examples: |
+    - Can we develop a solution to pick the Minutes of the Time?
+    - Is it possible to develop a solution which can fetch the Minutes of a given Time?
+- intent: q354
+  examples: |
+    - Can we develop a solution with the feature which will display the name of month in a year?
+    - Is it possible to develop a solution which can display the Name of a Month in a Year?
+- intent: q355
+  examples: |
+    - What is Update Minute Value NSLdate datatype?
+    - Can I alter Minutes Value of an hour of a local time?
+- intent: q356
+  examples: |
+    - Can I alter the Seconds of a Minute of a local time?
+    - Is there a feature to Update the Seconds of a Minute of a local time?
+- intent: q357
+  examples: |
+    - What is update Month Value NSLdate datatype?
+    - Is there a feature to update the Month Value in a date?
+- intent: q358
+  examples: |
+    - Is there a feature which can replace an old string with new?
+    - Is there a function which can update a sentence with a new sentence?
+- intent: q359
+  examples: |
+    - What is Update Nanoseconds Value NSLdate datatype?
+    - Is there a feature to Update Nanoseconds of a local time?
+    - Can I alter the Nanoseconds of a local time
+- intent: q360
+  examples: |
+    - What is Update Year Day value NSLdate datatype?
+    - Is there a feature to Update a Day of a Year?
+    - Can I alter a day of a year?
+- intent: q361
+  examples: |
+    - What is Update Year Value NSLdate datatype?
+    - Is there a feature to Update the Year in a date?
+- intent: q362
+  examples: |
+    - Is there a feature which can give an output either as true or false against a value?
+    - Is there a function that can represent Boolean value as a text?
+- intent: q363
+  examples: |
+    - Is there a function that can tell whether a list is empty or not?
+    - Can I use a feature that can check if a list is empty or not?
+- intent: q364
+  examples: |
+    - When can we use the List function Reserved CU?
+    - What is the use of List Function in NSLhub Kit?
+    - Where can we use List Function reserved CU?
+    - What is List Functions in NSLhub Kit?
+- intent: q365
+  examples: |
+    - When can we use the triggers?
+    - When can we apply triggers?
+    - When should we put triggers into play?
+- intent: q366
+  examples: |
+    - Is there a function which gives minimum of two values?
+    - Is there a function which gives minimum of two numbers?
+    - Is there a function which gives lowest of the two given argument?
+- intent: q367
+  examples: |
+    - Can I check if a list contains sequence of elements?
+    - Is there a function to check whether a sentence contains a sequence of characters or not?
+    - Can I search for sequence of characters in a string?
+- intent: q368
+  examples: |
+    - Is there a function which can provide the total number of elements present in a list?
+    - Can I get total count of items/elements of a list?
+- intent: q369
+  examples: |
+    - Can I view a specific range within a list?
+    - Is there a function to view sublist of a list?
+- intent: q370
+  examples: |
+    - How can we create solution from other programming languages?
+- intent: q371
+  examples: |
+    - Will my solution be saved if there is a technical glitch midway?
+- intent: q372
+  examples: |
+    - When can we deploy the solutions?
+- intent: q373
+  examples: |
+    - What will happen if I don't publish my solution?
+    - Where do I find my unpublished solutions?
+    - Where can I find unpublished solutions?
+- intent: q374
+  examples: |
+    - How to select Zero Validator?
+    - What are the steps to choose the zero Validator?
+    - How can I make the end user to only give 0 as an input ?
+    - How do I make an Attribute to accept only zero/null values?
+    - How do I restrict a user to provide only zeros as an input ?
+    - How do I select zero Validator at an Attribute level?
+- intent: q375
+  examples: |
+    - What is the use of zero Validator?
+    - When do I select the zero Validator ?
+    - What is Zero under select Validator.?
+    - Can I limit the Attribute to accept only 0 value ?
