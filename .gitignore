@@ -257,3 +257,8 @@ Session.vim
 tags
 
 packfile
+
+
+#Db files
+
+/db_data/db

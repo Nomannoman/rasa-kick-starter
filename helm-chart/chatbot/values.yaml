@@ -1,4 +1,4 @@
 pv:
-  rocketHostPath: /test_folder/rocket_data/uploads
-  mongoHostPath: /test_folder/mongo_data/db_data/db/db-0
-  rasaHostPath: /test_folder/rasa_data/rasa
+  rocketHostPath: /test_folder/uploads
+  mongoHostPath: /test_folder/db_data/db
+  rasaHostPath: /test_folder/rasa
