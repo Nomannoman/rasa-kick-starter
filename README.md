@@ -181,3 +181,14 @@ Here are some links to examples and documentation:
   - [App Guides](https://forums.rocket.chat/c/rocket-chat-apps/guides)
   - [Top View of Both Categories](https://forums.rocket.chat/c/rocket-chat-apps)
 - [#rocketchat-apps on Open.Rocket.Chat](https://open.rocket.chat/channel/rocketchat-apps)
+
+## Docker build steps updated
+1. docker run -it -v $(pwd)/rasa:/app rasa/rasa:latest-full train
+2. docker build -t app:v3 ./app/
+3. docker images
+4. docker ps
+5. docker tag app localhost:49170/app:v3
+6. docker push localhost:49170/app:v3
+7. kubectl get deploy
+8. kubectl edit deploy rasa-app
+9. kubectl get pods
