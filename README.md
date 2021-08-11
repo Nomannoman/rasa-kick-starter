@@ -182,13 +182,18 @@ Here are some links to examples and documentation:
   - [Top View of Both Categories](https://forums.rocket.chat/c/rocket-chat-apps)
 - [#rocketchat-apps on Open.Rocket.Chat](https://open.rocket.chat/channel/rocketchat-apps)
 
-## Docker build steps updated
-1. docker run -it -v $(pwd)/rasa:/app rasa/rasa:latest-full train
-2. docker build -t app:v3 ./app/
-3. docker images
-4. docker ps
-5. docker tag app localhost:xxxxx/app:v3
-6. docker push localhost:xxxxx/app:v3
-7. kubectl get deploy
-8. kubectl edit deploy app-deployment-name
-9. kubectl get pods
+
+## Docker build steps updated for minikube
+1. Make sure local docker registry is running in minikube
+     run "docker run -d -p 5000:5000 --name registry2 registry" inside minikube container
+2. Get exposed port of registry docker container running in minikube 
+    docker ps | grep minikube
+3. Build the action server app
+    docker run -it -v $(pwd)/rasa:/app rasa/rasa:latest-full train
+    docker build -t app:v3 ./app/
+4.  Tag built docker image app to localhost:xxxxx/app:vx (xxxxx is the exposed port of docker registry by minikube)  
+        docker tag app localhost:xxxxx/app:vx
+5. Push this docker image to the local registry
+        docker push localhost:xxxxx/app:vx
+6. Edit the helm-chart/chatbot/templates/app.yaml file with new image name and then run helm install command or if helm chart is already deployed, run helm upgrade command
+7. Or optionally use kubectl edit deploy command and change the image name
