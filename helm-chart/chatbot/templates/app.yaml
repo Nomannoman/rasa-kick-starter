@@ -30,7 +30,7 @@ spec:
         app: app
     spec:
       containers:
-        - image: app
+        - image: localhost:5000/app:v1
           name: app
           imagePullPolicy: Always
           ports:

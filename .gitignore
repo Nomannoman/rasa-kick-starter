@@ -271,3 +271,4 @@ packfile
 #Db files
 
 /db_data/db
+rasa/out.log

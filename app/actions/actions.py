@@ -95,95 +95,100 @@ class ActionCreateDirectMessage(Action):
     def name(self) -> Text:
         return "action_create_direct_message"
 
-    async def hello(self,tracker):
-        uri = "ws://rocket:3000/websocket"
-        async with websockets.connect(uri) as rocketChatSocket:
-            # Receive ack
-            await rocketChatSocket.recv()
+    # async def hello(self,tracker):
+    #     uri = "ws://rocket:3000/websocket"
+    #     async with websockets.connect(uri) as rocketChatSocket:
+    #         # Receive ack
+    #         await rocketChatSocket.recv()
 
-            connectRequest = {
-                "msg": "connect",
-                "version": "1",
-                "support": ["1", "pre2", "pre1"]
-            }
-            await rocketChatSocket.send(json.dumps(connectRequest))
-            # Receive connection accepted message
-            await rocketChatSocket.recv()
-            loginRequest = {
-                "msg":
-                "method",
-                "method":
-                "login",
-                "id":
-                "42",
-                "params": [{
-                    'resume':
-                    'eZpKzOUop9l-UpzOV7VB7jUIAqj1w6VjFp8Z_lwcBGi'
-                }]
-            }
-            await rocketChatSocket.send(json.dumps(loginRequest))
-            # Wait for receiving login user details
-            await rocketChatSocket.recv()
-            # Wait for method updated signal
-            await rocketChatSocket.recv()
-            a3 = json.loads(await rocketChatSocket.recv())
-            print(a3)
-            id = a3['result']['id']
-            token = a3['result']['token']
+    #         connectRequest = {
+    #             "msg": "connect",
+    #             "version": "1",
+    #             "support": ["1", "pre2", "pre1"]
+    #         }
+    #         await rocketChatSocket.send(json.dumps(connectRequest))
+    #         # Receive connection accepted message
+    #         await rocketChatSocket.recv()
+    #         loginRequest = {
+    #             "msg":
+    #             "method",
+    #             "method":
+    #             "login",
+    #             "id":
+    #             "42",
+    #             "params": [{
+    #                 'resume':
+    #                 'YV_lTAi9vRkB6bJe_XDxRh66LqagdI0MldCYQLQPH4R'
+    #             }]
+    #         }
+    #         await rocketChatSocket.send(json.dumps(loginRequest))
+    #         # Wait for receiving login user details
+    #         await rocketChatSocket.recv()
+    #         # Wait for method updated signal
+    #         await rocketChatSocket.recv()
+    #         a3 = json.loads(await rocketChatSocket.recv())
+    #         print(a3)
+    #         id = a3['result']['id']
+    #         token = a3['result']['token']
 
-            # step 4
-            sub = {
-                "msg": "method",
-                "method": "createDirectMessage",
-                "id": "42",
-                "params": ["customer"]
-            }
+    #         # step 4
+    #         sub = {
+    #             "msg": "method",
+    #             "method": "createDirectMessage",
+    #             "id": "42",
+    #             "params": ["customer"]
+    #         }
 
-            await rocketChatSocket.send(json.dumps(sub))
-            # await updated response
-            await rocketChatSocket.recv()
-            a4 = json.loads(await rocketChatSocket.recv())
-            room = a4['result']['rid']
+    #         await rocketChatSocket.send(json.dumps(sub))
+    #         # await updated response
+    #         await rocketChatSocket.recv()
+    #         a4 = json.loads(await rocketChatSocket.recv())
+    #         room = a4['result']['rid']
 
-            #Sending chat history
-            hist = tracker.events
-            chat = []
+    #         #Sending chat history
+    #         hist = tracker.events
+    #         chat = []
 
-            for i in hist[::-1]:
-                if i['event']=="bot":
-                    str="YANTR : "+i["text"]+"\n"
-                    chat.append(str)
-                elif i['event']=="user":
-                    str="USER : "+i["text"]+"\n"
-                    chat.append(str)
-                    if i["parse_data"]["intent"]["name"]== "greet":
-                        break
-            chatr=chat[::-1]
+    #         for i in hist[::-1]:
+    #             if i['event']=="bot":
+    #                 str="YANTR : "+i["text"]+"\n"
+    #                 chat.append(str)
+    #             elif i['event']=="user":
+    #                 str="USER : "+i["text"]+"\n"
+    #                 chat.append(str)
+    #                 if i["parse_data"]["intent"]["name"]== "greet":
+    #                     break
+    #         chatr=chat[::-1]
             
-            strz = "Thanks for contacting NSLHUB\n This is user's chat history with the bot : \n\n"
-            strz=strz+"-------------------------------------------------------------------------------------------------\n\n"
-            for x in chatr:
-                strz=strz+x
-                strz=strz+"\n"
-            strz= strz+ "\n####################################\n"
-            strz= strz+ "####################################\n"
-            strz= strz +"####################################\n\n\nMoving ahead,How can I help you today...\n"
-            message = {
-                "msg": "method",
-                "method": "sendMessage",
-                "id": "42",
-                "params": [{
-                    "rid": room,
-                    "msg": strz
-                }]
-            }
+    #         strz = "Thanks for contacting NSLHUB\n This is user's chat history with the bot : \n\n"
+    #         strz=strz+"-------------------------------------------------------------------------------------------------\n\n"
+    #         for x in chatr:
+    #             strz=strz+x
+    #             strz=strz+"\n"
+    #         strz= strz+ "\n####################################\n"
+    #         strz= strz+ "####################################\n"
+    #         strz= strz +"####################################\n\n\nMoving ahead,How can I help you today...\n"
+    #         message = {
+    #             "msg": "method",
+    #             "method": "sendMessage",
+    #             "id": "42",
+    #             "params": [{
+    #                 "rid": room,
+    #                 "msg": strz
+    #             }]
+    #         }
 
-            await rocketChatSocket.send(json.dumps(message))
-            await rocketChatSocket.recv()
-            await rocketChatSocket.recv()
+    #         await rocketChatSocket.send(json.dumps(message))
+    #         await rocketChatSocket.recv()
+    #         await rocketChatSocket.recv()
 
     def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            asyncio.get_event_loop().run_until_complete(self.hello(tracker))
+            #asyncio.get_event_loop().run_until_complete(self.hello(tracker))
+            headers = {'Content-type': 'application/json'}
+            sid=tracker.sender_id
+            data = '{"action": "handover","sessionId": '+sid+',"actionData": {"targetDepartment": "Livechat1" }}'
+            response = requests.post('http://192.168.49.2:32211/api/apps/public/646b8e7d-f1e1-419e-9478-10d0f5bc74d9/incoming', headers=headers, data=data)
+            
             return []
 
 embed = hub.load(os.getcwd() + "/actions/universal_sentence_encoder")
