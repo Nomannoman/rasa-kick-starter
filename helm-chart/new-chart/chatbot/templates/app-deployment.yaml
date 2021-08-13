@@ -37,7 +37,8 @@ spec:
       containers:
       - name: {{ .Chart.Name }}
         # image: "{{ .Values.app.name }}:{{ include "app.version" . }}"
-        image: "localhost:5000/appv1"
+        image: "{{ .Values.app.name }}"
+        # image: "localhost:5000/appv1"
         imagePullPolicy: {{ .Values.images.pullPolicy }}
         {{- if .Values.app.command }}
         command:
