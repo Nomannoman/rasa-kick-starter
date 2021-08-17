@@ -70,14 +70,14 @@ usePassword: true
 ## MongoDB admin password
 ## ref: https://github.com/bitnami/bitnami-docker-mongodb/blob/master/README.md#setting-the-root-password-on-first-run
 ##
-# mongodbRootPassword:
+mongodbRootPassword: test
 
 ## MongoDB custom user and database
 ## ref: https://github.com/bitnami/bitnami-docker-mongodb/blob/master/README.md#creating-a-user-and-database-on-first-run
 ##
-# mongodbUsername: username
-# mongodbPassword: password
-# mongodbDatabase: database
+mongodbUsername: rocketchat
+mongodbPassword: test
+mongodbDatabase: rocketchat
 
 ## Whether enable/disable IPv6 on MongoDB
 ## ref: https://github.com/bitnami/bitnami-docker-mongodb/blob/master/README.md#enabling/disabling-ipv6
@@ -121,14 +121,15 @@ service:
   ## Provide any additional annotations which may be required.
   ## The value is evaluated as a template, so, for example, the value can depend on .Release or .Chart
   annotations: {}
-  type: ClusterIP
+  # type: ClusterIP
+  type: NodePort
   # clusterIP: None
   port: 27017
 
   ## Specify the nodePort value for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
   ##
-  # nodePort:
+  nodePort: 30004
 
   ## Specify the externalIP value ClusterIP service type.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#external-ips
@@ -155,8 +156,8 @@ useStatefulSet: false
 #
 replicaSet:
   ## Whether to create a MongoDB replica set for high availability or not
-  enabled: false
-  # enabled: true
+  # enabled: false
+  enabled: true
   useHostnames: true
 
   ## Name of the replica set
@@ -165,7 +166,7 @@ replicaSet:
 
   ## Key used for replica set authentication
   ##
-  # key: key
+  key: key123
 
   ## Number of replicas per each node type
   ##
@@ -173,18 +174,18 @@ replicaSet:
     secondary: 1
     arbiter: 1
 
-  ## Pod Disruption Budget
-  ## ref: https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
+  # Pod Disruption Budget
+  # ref: https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
   pdb:
     enabled: true
     minAvailable:
-      primary: 1
-      secondary: 1
-      arbiter: 1
-    # maxUnavailable:
       # primary: 1
-      # secondary: 1
-      # arbiter: 1
+      secondary: 0
+      arbiter: 0
+    # maxUnavailable:
+    #   primary: 1
+    #   secondary: 1
+    #   arbiter: 1
 
 # Annotations to be added to the deployment or statefulsets
 annotations: {}
@@ -319,7 +320,8 @@ persistence:
 ##
 ingress:
   ## Set to true to enable ingress record generation
-  enabled: false
+  # enabled: false
+  enabled: true
 
   ## Set this to true in order to add the corresponding annotations for cert-manager
   certManager: false

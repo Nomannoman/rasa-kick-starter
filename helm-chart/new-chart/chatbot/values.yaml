@@ -907,25 +907,25 @@ externalMongodbOplogUrl:  # mongodb://user:password@localhost:27017/local?replic
 ##
 mongodb:
   ## Enable or disable MongoDB dependency completely.
-  enabled: true
+  # enabled: true
 
-  mongodbRootPassword: test
+  # mongodbRootPassword: test
 
-  mongodbUsername: rocketchat
-  mongodbPassword: test
-  mongodbDatabase: rocketchat
+  # mongodbUsername: rocketchat
+  # mongodbPassword: test
+  # mongodbDatabase: rocketchat
 
-  replicaSet:
-    enabled: true
-    replicas:
-      secondary: 0
-      arbiter: 0
-    pdb:
-      minAvailable:
-        secondary: 0
-        arbiter: 0
+  # replicaSet:
+  #   enabled: true
+  #   replicas:
+  #     secondary: 2
+  #     arbiter: 1
+  #   pdb:
+  #     minAvailable:
+  #       secondary: 0
+  #       arbiter: 0
 
-   # key:
+  # key: key123
 
   persistence:
     enabled: true
