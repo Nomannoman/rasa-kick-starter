@@ -186,7 +186,7 @@ class ActionCreateDirectMessage(Action):
             #asyncio.get_event_loop().run_until_complete(self.hello(tracker))
             headers = {'Content-type': 'application/json'}
             sid=tracker.sender_id
-            data = '{"action": "handover","sessionId": '+sid+',"actionData": {"targetDepartment": "Livechat1" }}'
+            data = json.dumps({"action": "handover","sessionId": sid,"actionData": {"targetDepartment": "Livechat1" }})
             response = requests.post('http://192.168.49.2:32211/api/apps/public/646b8e7d-f1e1-419e-9478-10d0f5bc74d9/incoming', headers=headers, data=data)
             
             return []
