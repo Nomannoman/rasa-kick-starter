@@ -2,3 +2,4 @@ tensorflow-hub
 tensorflow
 spacy
 farm-haystack
+rocketchat_API
