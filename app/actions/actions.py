@@ -34,7 +34,7 @@ from rasa_sdk.events import ActionReverted, SlotSet, FollowupAction, UserUtteran
 import requests
 import os
 import asyncio
-
+from rocketchat_API.rocketchat import RocketChat
 import websockets
 #from rocketchat.api import RocketChatAPI
 #from requests.auth import HTTPBasicAuth 
