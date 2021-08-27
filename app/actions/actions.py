@@ -347,13 +347,20 @@ class ActionFirstName(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            for event in tracker.events:
-                if event.get("event") == "bot":
-                    str = event.get("text")
-            if "Please once check your details:" not in str:
-                return[FollowupAction(name="action_default_fallback")]
-            dispatcher.utter_message(text="Recollecting details..")
-            return [SlotSet('firstname', None),SlotSet('lastname', None),SlotSet('email', None),SlotSet('phno', None)]
+            rocke = RocketChat('yantr', 'yantr',server_url="http://my-chatbot-rocketchat:3000")
+            conversation_id=tracker.sender_id
+ 
+            a1 =json.loads(rocke.rooms_info(conversation_id).text)
+            token = a1['room']['v']['token']
+ 
+            a2 = json.loads(rocke.livechat_get_visitor(token).text)
+ 
+            name = a2['visitor']['name']
+            email = a2['visitor']['visitorEmails'][0]['address']
+            tracker.slots["firstname"] = name
+            tracker.slots["email"] = email
+            return [SlotSet('firstname', name),SlotSet('email',email)]
+            
 
 
 class DetailsForm(FormValidationAction):
