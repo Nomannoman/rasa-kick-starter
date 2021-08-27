@@ -1521,33 +1521,34 @@ stories:
 
 - story: survey1
   steps:
-    - intent: greet
-    - action: action_sentiment_analysis
-    - action: details_form
-    - active_loop: details_form
-    - active_loop: null
-    - action: utter_slots_values
-    - intent: affirm
-    - action: action_create_user
-    - action: utter_askquestion
+  - intent: greet
+#     - action: action_sentiment_analysis
+#     - action: details_form
+#     - active_loop: details_form
+#     - active_loop: null
+#     - action: utter_slots_values
+#     - intent: affirm
+#     - action: action_create_user
+  - action: action_set_first
+  - action: utter_askquestion
   
-- story: survey2
-  steps:
-    - intent: greet
-    - action: action_sentiment_analysis
-    - action: details_form
-    - active_loop: details_form
-    - active_loop: null
-    - action: utter_slots_values
-    - intent: deny
-    - action: action_set_first
-    - action: details_form
-    - active_loop: details_form
-    - active_loop: null
-    - action: utter_slots_values
-    - intent: affirm
-    - action: action_create_user
-    - action: utter_askquestion
+# - story: survey2
+#   steps:
+#     - intent: greet
+#     - action: action_sentiment_analysis
+#     - action: details_form
+#     - active_loop: details_form
+#     - active_loop: null
+#     - action: utter_slots_values
+#     - intent: deny
+#     - action: action_set_first
+#     - action: details_form
+#     - active_loop: details_form
+#     - active_loop: null
+#     - action: utter_slots_values
+#     - intent: affirm
+#     - action: action_create_user
+#     - action: utter_askquestion
 
 
 # - story: handoff
