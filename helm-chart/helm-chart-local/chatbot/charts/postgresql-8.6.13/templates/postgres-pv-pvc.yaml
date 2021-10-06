@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-rasax
+  name: pv-postgres
 spec:
   storageClassName: manual
   capacity:
@@ -9,16 +9,16 @@ spec:
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: "/test_folder/rasa-x"
+    path: "/test_folder/postgres"
 
 ---
 
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-rasax
+  name: pvc-postgres
 spec:
-  volumeName: pv-rasax
+  volumeName: pv-postgres
   storageClassName: manual
   accessModes:
     - ReadWriteMany

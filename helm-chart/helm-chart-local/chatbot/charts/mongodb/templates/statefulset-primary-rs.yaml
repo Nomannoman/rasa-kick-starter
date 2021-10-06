@@ -265,6 +265,9 @@ spec:
 {{ toYaml .Values.sidecars | indent 8 }}
 {{- end }}
       volumes:
+      - name: datadir
+        persistentVolumeClaim: 
+          claimName: pvc-mongo-primary
         {{- if (.Files.Glob "files/docker-entrypoint-initdb.d/*[sh|js|json]") }}
         - name: custom-init-scripts
           configMap:
@@ -284,22 +287,22 @@ spec:
 {{ toYaml .Values.extraVolumes | indent 8}}
         {{- end }}
 {{- if .Values.persistence.enabled }}
-  volumeClaimTemplates:
-    - metadata:
-        name: datadir
-        annotations:
-        {{- range $key, $value := .Values.persistence.annotations }}
-          {{ $key }}: "{{ $value }}"
-        {{- end }}
-      spec:
-        accessModes:
-        {{- range .Values.persistence.accessModes }}
-          - {{ . | quote }}
-        {{- end }}
-        resources:
-          requests:
-            storage: {{ .Values.persistence.size | quote }}
-        {{ include "mongodb.storageClass" . }}
+  # volumeClaimTemplates:
+  #   - metadata:
+  #       name: datadir
+  #       annotations:
+  #       {{- range $key, $value := .Values.persistence.annotations }}
+  #         {{ $key }}: "{{ $value }}"
+  #       {{- end }}
+  #     spec:
+  #       accessModes:
+  #       {{- range .Values.persistence.accessModes }}
+  #         - {{ . | quote }}
+  #       {{- end }}
+  #       resources:
+  #         requests:
+  #           storage: {{ .Values.persistence.size | quote }}
+  #       {{ include "mongodb.storageClass" . }}
 {{- else }}
         - name: datadir
           emptyDir: {}

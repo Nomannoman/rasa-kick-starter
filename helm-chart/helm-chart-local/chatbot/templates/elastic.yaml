@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elasticsearch
+spec:
+  selector:
+    matchLabels:
+      app: elasticsearch
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: elasticsearch
+    spec:
+      containers:
+      - name: elasticsearch
+        image: elasticsearch:7.9.2
+        env:
+        - name: discovery.type
+          value: single-node
+        ports:
+        - containerPort: 9200
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: "elasticsearch"
+spec:
+  selector:
+    app: "elasticsearch"
+  ports:
+    - protocol: "TCP"
+      port: 9200
+      targetPort: 9200
+  type: LoadBalancer
+
+
+
+

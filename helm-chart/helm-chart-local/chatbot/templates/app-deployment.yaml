@@ -70,12 +70,24 @@ spec:
         {{- end }}
         env:
           {{- toYaml .Values.app.extraEnvs | nindent 10 }}
+        # volumeMounts:
+        #   - mountPath: "/app/actions"
+        #     name: app-storage
 {{- if .Values.app.extraVolumeMounts }}
-        volumeMounts:
+        # volumeMounts:
+        #   - mountPath: "/app/actions"
+        #     name: app-storage
 {{ toYaml .Values.app.extraVolumeMounts | indent 8 }}
 {{- end }}
+      # volumes:
+      #   - name: app-storage
+      #     persistentVolumeClaim:
+      #       claimName: pvc-app
 {{- if .Values.app.extraVolumes }}
-      volumes:
+      # volumes:
+      #   - name: app-storage
+      #     persistentVolumeClaim:
+      #       claimName: pvc-app
 {{ toYaml .Values.app.extraVolumes | indent 6 }}
 {{- end }}
 {{- end }}

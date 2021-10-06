@@ -50,7 +50,7 @@ rasax:
     finalizers:
     - kubernetes.io/pvc-protection
     # existingClaim which should be used instead of a new one
-    existingClaim: "rasax-claim"
+    existingClaim: "pvc-rasax"
   # livenessProbe checks whether rasa x needs to be restarted
   livenessProbe:
     # initialProbeDelay for the `livenessProbe`
@@ -142,7 +142,7 @@ rasa:
   # additionalChannelCredentials which should be used by Rasa to connect to various
   # input channels
   additionalChannelCredentials: 
-    # rest:
+    rest:
     # facebook:
     #   verify: "rasa-bot"
     #   secret: "3e34709d01ea89032asdebfe5a74518"
@@ -151,6 +151,9 @@ rasa:
       user: "yantr"
       password: "yantr"
       server_url: "http://my-chatbot-rocketchat:3000"
+    callback:
+      url: "http://my-chatbot-rocketchat:3000/api/apps/public/646b8e7d-f1e1-419e-9478-10d0f5bc74d9/callback"
+
   # input channels
   additionalEndpoints: {}
     # telemetry:
@@ -431,7 +434,8 @@ app:
   # override the default arguments to run in the container
   args: []
   # name of the custom action server image to use
-  name: "localhost:5000/app:v1"
+  # name: "localhost:5000/applatest2:latest"
+  name: "localhost:5000/app-faq:v6"
   # tag refers to the custom action server image tag
   # tag: "0.38.0"
   # replicaCount of the custom action server container
@@ -847,7 +851,7 @@ global:
 ##
 image:
   repository: docker.io/rocketchat/rocket.chat
-  tag: latest
+  tag: release-candidate
   pullPolicy: IfNotPresent
 
 ## Host for the application
